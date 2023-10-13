@@ -1,0 +1,47 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  width: 100%;
+  height: 100vh;
+  background: url(https://i.ytimg.com/vi/j8L1eQJ_4fY/maxresdefault.jpg);
+  background-position: center;
+  background-size: cover;
+  }
+  h1{
+    text-align: center;
+    color: rgb(223, 33, 197);
+    text-shadow:  2px 2px rgb(179, 152, 231),4px 4px 4px rgb(13, 56, 73), 9px 9px 9px rgb(241, 12, 211);
+  }
+.Avatar{
+  color: rgb(38, 36, 41);
+  text-shadow:2px 2px 2px rgb(24, 123, 204),5px 5px 5px rgb(10, 120, 163), 8px 8px 8px rgb(226, 21, 209);
+  margin: 45px;
+  padding: 30px;
+  font-size: 20px;
+  font-weight: bold;
+}
+ a{
+  padding: 5px;
+  margin-bottom: 50px;
+  border-radius: 20px;
+  text-decoration: none;
+  background: rgb(17, 0, 255);
+  color: rgba(255, 255, 255, 0.774);
+  
+
+  
+}
+ a:hover{
+  cursor: pointer;
+
+}
+
+.cast{
+  margin: 55px;
+  color:rgb(245, 4, 193);
+  font-weight: bold;
+  cursor: pointer;  
+}

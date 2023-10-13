@@ -1,0 +1,47 @@
+Introduction , Variables
+
+1. Printing Your Name, Id, DOB, Salary.
+Sample O/p:
+Your Name is XXXXX
+Your ID is  000
+Your DOB is xx-xx-XXXX
+Your Salary is 00000 
+
+2. Create Your Bio-data
+
+Data Types , Type Convertion, User Interaction
+
+1. Add Two Numbers
+
+Sample O/p: The sum of 5 and 3 is: 8
+
+2. Add Two Numbers Entered by the User
+
+Sample O/p: 
+Enter the first number 10
+Enter the second number 5
+The sum of 10 and 5 is: 15
+
+Operators
+
+1. Calculate the Area of a Triangle
+2. Calculate the Area of a Square
+3. Calculate the Area of a Circle
+4. Swap Two Variables
+5. Convert Celsius to Fahrenheit
+
+Conditional Branching and Looping
+
+1.Check if a number is Positive, Negative, or Zero
+2.Check if a Number is Odd or Even
+3.Find the Largest Among Three Numbers
+4.Program to Check Prime Number
+5.Program to Make a Simple Calculator using switch
+
+6.Program to Find the Sum of Natural Numbers
+7.Program to Find the Factors of a Number
+
+Functions
+
+1. Program to Find Factorial of Number Using Recursion
+2. Program to Find Sum of Natural Numbers Using Recursion

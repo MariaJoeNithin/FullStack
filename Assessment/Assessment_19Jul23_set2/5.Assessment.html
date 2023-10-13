@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+  margin: 0;
+  padding: 0;
+}
+
+.pagination-container {
+  display: flex;
+  overflow: auto;
+}
+
+.page {
+  flex: 1;
+  min-width: 100%;
+  height: 100vh;
+  background-color: blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  opacity: 0.5;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.page:target {
+  opacity: 1;
+}
+#page1
+{
+    background-color: yellow;
+}
+#page2
+{
+    background-color: red;
+}
+#page3
+{
+    background-color: blue;
+}
+
+.page:not(:target) {
+  transform: translateX(100%);
+  /*animation: anime1 4s ease-in 1s 1 normal forwards;*/
+}
+
+@keyframes anime1
+{
+    from{ transform: translateX(0%) ;}
+    to{ transform: translateX(-100%);}
+
+}
+
+  </style>
+</head>
+<body>
+  <div class="pagination-container">
+    <div class="page" id="page1">
+      Page 1
+      <a href="#page2">Next</a>
+    </div>
+    <div class="page" id="page2">
+      Page 2
+      <a href="#page1">Previous</a>
+      <a href="#page3">Next</a>
+    </div>
+    <div class="page" id="page3">
+      Page 3
+      <a href="#page2">Previous</a>
+    </div>
+  </div>
+</body>
+</html>

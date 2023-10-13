@@ -1,0 +1,13 @@
+
+3.Scenario: You have a div with the class "container" and you want to set its height to be equal to 100% of the viewport height. Which CSS property would you use?
+
+
+   If my understanding is correct and the default height of a div where no height is specified is auto 
+   then this is not possible without setting an explicit height on the containing div. 
+   If an explicit height is set on the containing div then height:100% on the contained div will mean that it grows to the height of the container.
+
+
+2.Scenario: You have an image with the class "avatar" and you want to apply a border to it when a user hovers over it. How would you write the CSS selector for the hover state?
+  
+    .avatar:hover{
+       }

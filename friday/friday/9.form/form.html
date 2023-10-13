@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="arivu.css">
+    <title>Document</title>
+    <style>
+       body
+       {
+        background-image: url(kk.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+       }
+       .h1{
+        color: rgb(96, 2, 2);
+       }
+       .main{
+        padding: 5px;
+        background-color: rgba(0, 0, 0,0.25);
+        margin: 5%;
+        margin-left: 30%;
+        margin-right: 30%;
+        border-radius: 5%;
+        color: white;
+       }
+       .container{
+        width: 700px;
+        margin: auto;
+        }
+    .img{
+      display: flex;
+      flex-wrap: wrap;
+      height: 500px;
+      width: 500px;
+
+    }
+
+    </style>
+    
+        
+
+</head>
+<div class="main"><main>
+    
+<h1>BRIKSHA HOTELS</h1>
+<p>A suite is a much larger accommodation. It usually has an attached bathroom,<br>
+     a living area, and most times, includes a dining area as well. <br>
+    Think of it as a furnished apartment-like stay that can be anywhere between <br>
+    400 sq. ft to 3000 sq.</p>
+
+<body align="center">
+    <div class="container">
+      
+    <div class="h1"><h1>Welcome to the BRIKSHA HOTELS</h1></div>
+    <h2>Fill the following Form to Book the Room</h2>
+    <form > 
+        <fieldset><legend>Reservation Form</legend>
+    
+   <label for="chkin">Check-in Date</label>
+   <input type="date" name="chkin" id="chkin"><br>
+
+   <label for="chkout">Check-Out Date</label>
+   <input type="date" name="chkout" id="chkout"><br>
+   <p><mark>Total Number of Peoples</mark></p>
+   <label for="Adults">Adults</label>
+   <input type="number" name="Adults" id="Adults" min="1" max="5">
+   
+   <label for="childs">Childrens</label>
+   <input type="number" name="childs" id="childs" min="1" max="5"><br><br>
+
+   <label for="Roomtype">Roomtype</label>
+   <input list="Roomtype" name="Roomtype">
+
+   <datalist id="Roomtype">
+    <option value="Single">Single</option>
+    <option value="Double">Double</option>
+    <option value="Suite">Suite</option>
+   </datalist><br><br>
+   <label for="comments">Special Requests</label>
+   <textarea name="comments" id="comments"  cols="20" rows="5"></textarea><br><br>
+
+   <input type="button" value="SUBMIT">
+
+</div>
+
+
+
+    </fieldset>
+    </form>
+
+</body>
+</main>
+</div>
+</html>

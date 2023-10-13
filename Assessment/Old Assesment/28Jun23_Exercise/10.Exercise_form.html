@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Roboto+Slab:wght@400;500&display=swap" rel="stylesheet">
+    <title>Survey Form</title>
+    <style>
+        *
+        {
+            color:white;
+            font-family: 'Roboto Slab', serif;
+        }
+        body
+        {
+            background-image:url(https://www.pcclean.io/wp-content/uploads/2020/4/ABnaii.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            min-height: 100vh;
+            background-size: cover;
+        }
+        form
+        {
+            margin-left: 10%;
+            margin-right: 10%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(2px);
+            border-radius: 15px ;
+        }
+        fieldset
+        {
+            border: 1px solid white ; 
+            border-radius: 15px ;
+        }
+        </style>
+</head>
+<body>
+    <h1 style="color:#d21919e8; " align="center">Page Survey</h1>
+    <form>
+        <fieldset>
+            <h2 align="center">Survey</h2> <br>
+            <label for="name">Name : </label>
+            <input style="background: rgba(250, 250, 250, 0.8); backdrop-filter: blur(2px); border-radius: 5px ;" type ="text" id="name" name="name" placeholder="Enter Your Name"></input><br><br>
+            <label for="age">Age : </label>
+            <input style="background: rgba(250, 250, 250, 0.8); backdrop-filter : blur(2px); border-radius: 5px ;" type="number" id="age" min="1" name="age" placeholder="age"><br><br>
+            <label for="gender">Gender : </label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Others</label><br><br>
+            <label for="favcolor">Favourite Colour : </label>
+            <input type="color" name="favcolor" id="favcolor"><br><br>
+            <label for="interest">Interests : </label>
+            <input type="checkbox" value="sports" name="sports" id="sports">
+            <label for="sports">Sports</label>
+            <input type="checkbox" value="swimming" name="swimming" id="swimming">
+            <label for="swimming">Swimming</label>
+            <input type="checkbox" value="dance" name="dance" id="dance">
+            <label for="dance">Dance</label>
+            <input type="checkbox" value="music" name="music" id="music">
+            <label for="music">Music</label>
+            <input type="checkbox" value="art" name="art" id="art">
+            <label for="art">Art</label><br><br>
+            <label for="comments">Comments : </label> <br><br>
+            <textarea style="background: rgba(250, 250, 250, 0.8); backdrop-filter: blur(2px); border-radius: 10px ;" name="comments" id="comments" cols="30" rows="5"></textarea><br><br>
+            <button align="center" type="submit" style="color: black; margin-right: 50%; margin-left: 50%;" >Submit</button>
+        </fieldset>
+    </form>
+</body>
+</html>

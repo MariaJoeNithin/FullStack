@@ -1,0 +1,22 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.navbar{
+  background: url(OIP.jpg);
+  width: 100%;
+  height: 40px;
+  padding: 20px;
+  
+  }
+a{
+  padding:60px;
+  text-decoration: none;
+  color: yellow;
+  font-weight: 30px;
+  text-align: center;
+}
+a:hover{
+  color: #fff;
+}

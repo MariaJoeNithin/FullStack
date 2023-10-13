@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto Slab', serif;
+            box-sizing: border-box;
+        }
+        body
+        {
+            display: grid;
+            place-items: center;
+            
+        }
+        .main
+        {
+            width: 750px;
+            border-bottom: 2px solid green;
+            background-image: url(https://e0.pxfuel.com/wallpapers/521/705/desktop-wallpaper-plain-grey-white-simple-background-simple-background.jpg);
+        }
+        .container
+        {
+            height: 950px;
+        }
+        .head1
+        {
+            width: 100%;
+            height: 350px;
+            display: absolute;
+            padding-top: 75px;
+            align-items: center;
+            border-bottom: 10px solid green;
+            background-image: url(https://c0.wallpaperflare.com/preview/7/760/960/document-paper-office-composition.jpg);
+        }
+        h1
+        {
+            width: 300px;
+            background-color: green;
+            backdrop-filter: blur(10px);
+            height: 200px;
+            padding-top: 25px;
+            padding-left: 20px;
+            color: white;
+            font-size: 35px;
+        }
+        form
+        {
+            padding-top: 10px;
+            width: 675px;
+            margin: 0 auto;
+        }
+        label
+        {
+            display: inline-block;
+            padding-top: 15px;
+            padding-bottom: 5px;
+            width: 25%;
+            font-weight: bold;
+        }
+        input[type="text"]
+        {
+            width: 72%;
+            height: 30px;
+            border-radius: 5px;
+            border-style: hidden;
+            background-color: rgba(0, 255, 183, 0.152);
+        }
+        .thead
+        {
+            font-size: small;
+        }
+        table
+        {
+            height: 200px;
+            width: 98%;
+        }
+        .th1
+        {
+            width: 25%;
+        }
+        td
+        {
+            width: 18%;
+            text-align: center;
+            background-color: rgba(0, 255, 183, 0.152);
+            border-radius: 5px;
+        }
+        textarea
+        {
+            width: 100%;
+            border-radius: 10px;
+            padding: 5px;
+            background-color: rgba(0, 255, 183, 0.152);
+            padding-top: 10px;
+            width: 98%;
+            margin: 0 auto;
+        }
+        .ta
+        {
+            padding: 20px;
+        }
+        footer
+        {
+            margin: 50px auto 20px auto;
+            font-family: 'Roboto', sans-serif;
+            width: 100%;
+            color: gray;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="head1">
+                <h1>Printable <br> Survey <br>Template</h1>
+            </div>  
+            <form>
+                <label for="business">BUSINESS</label>
+                <input type="text" id="business" name="business"><br>
+                <label for="service">SERVICE</label>
+                <input type="text" id="service" name="service"><br>
+                <label for="namedate">NAME & DATE:</label>
+                <input type="text" id="namedate" name="namedate"><br>
+                <table>
+                    <tr class="thead">
+                        <th class="th1"></th>
+                        <th>BAD</th>
+                        <th>FAIR</th>
+                        <th>GOOD</th>
+                        <th>EXCELLENT</th>
+                    </tr>
+                    <tr>
+                        <th style="text-align: left;">OPTION 1</th>
+                        <td><input type="radio" id="bad" name="rd"></td>
+                        <td><input type="radio" id="fair" name="rd"></td>
+                        <td><input type="radio" id="good" name="rd"></td>
+                        <td><input type="radio" id="bad" name="rd"></td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: left;">OPTION 2</th>
+                        <td><input type="radio" id="bad" name="rd"></td>
+                        <td><input type="radio" id="fair" name="rd"></td>
+                        <td><input type="radio" id="good" name="rd"></td>
+                        <td><input type="radio" id="bad" name="rd"></td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: left;">OPTION 3</th>
+                        <td><input type="radio" id="bad" name="rd"></td>
+                        <td><input type="radio" id="fair" name="rd"></td>
+                        <td><input type="radio" id="good" name="rd"></td>
+                        <td><input type="radio" id="bad" name="rd"></td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: left;">OPTION 4</th>
+                        <td><input type="radio" id="bad" name="rd"></td>
+                        <td><input type="radio" id="fair" name="rd"></td>
+                        <td><input type="radio" id="good" name="rd"></td>
+                        <td><input type="radio" id="bad" name="rd"></td>
+                    </tr>
+                </table>
+                <label class="ta" for="quest" style="width: 100%;">Write your question here.</label><br>
+                <textarea name="quest" id="quest" cols="30" rows="8" placeholder="Write your answer here."></textarea>
+            </form>
+        </div>
+        <footer>
+            94189 Elouise Valleys Apt. 689, 1-012-
+            456-789 | www.mywebsitehere.com
+        </footer>
+    </div> 
+
+</body>
+</html>

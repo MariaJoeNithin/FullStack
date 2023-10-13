@@ -1,0 +1,43 @@
+1.)How can you create a responsive image that automatically scales based on the screen size using HTML?
+Image can be made responsive by using
+-by using width tag.
+by giving width="100%" and height = auto.
+by using maxwidth tag and height = auto
+
+2.)Describe the purpose of the name and id attributes in HTML form elements and when to use each?
+
+id is used for CSS and JavaScript/jQuery (it has to be unique on a page).
+name is used for form handling on the server when a form is submitted via HTML (it has to be unique in a form - to some extend.
+
+ name attributes for form controls (such as <input> and <select>), as that's the identifier used in the POST or GET call that happens on form submission.
+
+ id attributes whenever you need to address a particular HTML element with CSS, JavaScript or a fragment identifier. It's possible to look up elements by name, too, but it's simpler and more reliable to look them up by ID.
+
+3.)How can you create an HTML table with alternating row colors using CSS?
+
+The :nth-child() pseudo-class selector in CSS is used to set an alternate row color for a table. The nth-child selector allows to select elements based on the position in a group of siblings. Basic syntax for setting alternate row color 
+
+    tr:nth-child(even) {
+   background-color: #f2f2f2;
+}
+
+4.)Explain the difference between the value attribute and the <option> tag in HTML <select> 
+elements.
+
+The value attribute specifies the value to be sent to a server when a form is submitted.
+     <input type="submit" value="Submit">
+
+The <option> tag defines an option in a select list.it's usually need the value attribute, which indicates what is sent to the server on form submission.
+    <label for="cars">Choose a car:</label>
+
+<select id="cars">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi</option>
+</select>
+
+5.)How can you create a hyperlink that opens a new window without the browser toolbar and navigation buttons?
+
+    The href attribute set to the URL of the page you want to link to, The target attribute set to _blank , which tells the browser to open the link in a new tab/window
+   <a href="website-link-goes-here" target="_blank">

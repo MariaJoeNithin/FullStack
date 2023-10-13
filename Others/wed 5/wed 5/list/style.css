@@ -1,0 +1,13 @@
+ol{
+    
+    background: #d79797;
+    padding: 20px;
+    width: 200px;
+  }
+   ol li{
+    
+    background: #fad6d6;
+    color: darkred;
+    padding: 5px;
+    margin-left: 35px;
+  }

@@ -1,0 +1,45 @@
+Set 3
+
+
+1.
+<span> tag
+It is used to select a part of a text or a content.
+It is similar to <div> tag. But <div> tag is an block level element , <span> tag is an inline element.
+eg :
+
+<p>
+Hello . This is an <span style="background-color=blue;">html<span> document.
+</p>
+
+here the the element within the span is selected and its background color property is changed.
+
+2.
+-<b> and <strong> are different.
+-<b> tag is used for styling purpose and <strong> tag is more like it represents the importance of a text rather than styling.
+-But both the tags are visually displayed as Bold
+
+3.Colors in html can be describe by using 
+- name of the color (eg)red,blue,white.
+- Hexadecimal value (eg)#00ff03 (here first two digits represent value of red, second two digits represent value of blue, third two digits represent value of green.
+-rgb(red,green,blue)
+-rgba(red,green,blue,alpha)
+-hsl(hue,saturation,light)
+-hsla(hue,saturation,light,alpha)
+{alpha represents transparency value}
+
+4.
+If no text present in between HTML tags , a blank page or an empty space will appear.
+
+5.	margin
+It is used to represent the space inbetween the border and the edge of the web page/edge of a content .
+
+	border
+It is used to control the total size of the cell/box of the content.
+	
+	padding
+It is used to control the distance between the border and the content.
+
+6.
+The border box in the box model represents the value and thickness of the border of box model.
+
+

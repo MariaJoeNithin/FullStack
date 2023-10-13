@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+.page{
+    width: 420px;
+    padding: 20px;
+    position: relative;
+    left:20em;
+    background: #3385ff;
+    border-radius: 20px;
+     }
+     .page a:hover{
+      background:#f2f2f2 ;
+      border-radius: 50%;
+      color:  #3385ff;
+     }  
+     .page a{
+      padding: 20px;
+      text-decoration: none;
+      color: #f2f2f2;
+     
+     }
+/*using medica quries*/
+@media only screen and (max-width: 600px) {
+  .page{ 
+    font-size:12px;
+    width:200x;
+    background: rgb(214, 221, 231);
+    position: relative;
+    left: 5em;
+    padding:20px;
+     }
+     .page:active{
+      background: #FFFF;
+     }
+ .page a{
+  color: #000000;
+  font-weight: bold;
+  cursor: pointer;
+ }
+}
+ @media only screen and (min-width:1000px ) {
+  .page{ 
+    font-size:12px;
+    width:200x;
+    background: rgb(224, 224, 142);
+    position: relative;
+    left: 20em;
+    padding:20px;
+     }
+     .page:active{
+      background: #FFFF;
+     
+     }
+ .page a{
+  color: #000000;
+  font-weight: bold;
+  cursor: pointer;
+ }
+}
+</style>
+<body>
+  <div class="page">
+    <a href="#">&laquo;</a>
+    <a href="#">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <a href="#">5</a>
+    <a href="#">6</a>
+    <a href="#">&raquo;</a>
+  </div>
+</body>
+</html>

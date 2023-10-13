@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  *
+  {
+    padding: 0;
+    margin: 0;
+  }
+  .container
+  {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    
+  }
+  .image
+  {
+    height: 100dvh;
+    width: 100dvw;
+    animation: ppt 10s linear infinite;
+    
+  }
+  img
+  {
+    height: 100dvh;
+    width: 100dvw;
+    object-fit: cover;
+  }
+  @keyframes ppt {
+    0%
+    {
+      transform: translateX(100dvw) ;
+    }
+    50%
+    {
+      transform: translateX(100dvw);
+    }
+    100%
+    {
+      transform: translateX(-200dvw);
+    }
+  }
+</style>
+<body>
+  <div class="container">
+    <div class="image">
+    <img src="https://wallpapers.com/images/hd/modern-city-skyscrapers-vgvreoogbh66b9gr.jpg" alt="">
+    </div>
+    <div class="image">
+    <img src="https://www.pixground.com/clouds-meet-the-sea-ai-generated-4k-wallpaper/?download-img=hd" alt="">
+    </div>
+    <div class="image">
+    <img src="https://www.pixground.com/wp-content/uploads/2023/03/Mysterious-Black-Hole-AI-Generated-4K-Desktop-Wallpaper-jpg.webp" alt="">
+    </div>
+  </div>
+</body>
+</html>

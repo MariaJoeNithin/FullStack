@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System</title>
+    <style>
+        *
+        {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        body
+        {
+            background-image: url(https://cdn.wallpapersafari.com/41/93/iR9Iy0.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .cnt
+        {
+            /* background-color: black; */
+            height: 100vh;
+            width: 100vw;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .sun
+        {
+            background-color: yellow;
+            border-radius: 50%;
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            box-shadow: 0px 0px 10px 10px rgba(255, 255, 0, 0.25),0px 0px 10px 20px rgba(255, 255, 0, 0.25);
+        }
+        .mercury
+        {
+            position: absolute;
+            height: 200px;
+            width: 200px;
+            border: 1px solid gray;
+            padding: 22px;
+            overflow: visible;
+            border-radius: 50%;
+            animation: round 3s linear 0s infinite normal forwards;
+        }
+        .mercury img
+        {
+            height: 5px;
+        }
+        .venus
+        {
+            position: absolute;
+            height: 230px;
+            width: 230px;
+            border: 1px solid gray;
+            padding: 25px;
+            overflow: visible;
+            border-radius: 50%;
+            animation: round 8s linear 0s infinite normal forwards;
+        }
+        .venus img
+        {
+            height: 10px;
+        }
+        .earth
+        {
+            position: absolute;
+            height: 320px;
+            width: 320px;
+            border: 1px solid gray;
+            /* padding: 0px;
+            margin: -10px; */
+            overflow: visible;
+            border-radius: 50%;
+            animation: round 10s linear 0s infinite normal forwards;
+        }
+        
+        .planet-earth
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 105px;
+        }
+        .earth-ob
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: round 5s linear 0s infinite normal forwards;
+        }
+        .earth-ob>img
+        {
+            height: 15px;
+        }
+        .moon
+        {
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            border: 1px solid gray;
+            overflow: visible;
+            border-radius: 50%;
+            top: -18px;
+            animation: round 0.85s linear 0s infinite normal forwards;
+        }
+        .moon img
+        {
+            position: absolute;
+            top: 10px;
+            height: 5px;
+        }
+        .mars
+        {
+            position: absolute;
+            height: 400px;
+            width: 400px;
+            border: 1px solid gray;
+            padding: 51px;
+            overflow: visible;
+            border-radius: 50%;
+            animation: round 20s linear 0s infinite normal forwards;
+        }
+        .mars img
+        {
+            height: 10px;
+        }
+        .jupiter
+        {
+            position: absolute;
+            height: 500px;
+            width: 500px;
+            border: 1px solid gray;
+            padding: 51px;
+            overflow: visible;
+            border-radius: 50%;
+            animation: round 140s linear 0s infinite normal forwards;
+        }
+        .jupiter img
+        {
+            height: 50px;
+        }
+        .saturn
+        {
+            position: absolute;
+            height: 630px;
+            width: 630px;
+            border: 1px solid gray;
+            padding: 50px;
+            overflow: visible;
+            border-radius: 50%;
+            animation: round 350s linear 0s infinite normal forwards;
+        }
+        .planet-sat
+        {
+            border: 5px solid rgba(0, 128, 0, 0.5);
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .saturn img
+        {
+            height: 65px;
+            border: 10px solid rgba(0, 128, 0, 0.5);
+            border-radius: 50%;
+            padding: 5px;
+        }
+        .uranus
+        {
+            position: absolute;
+            height: 750px;
+            width: 750px;
+            border: 1px solid gray;
+            padding: 100px;
+            overflow: visible;
+            border-radius: 50%;
+            animation: round 1000s linear 0s infinite normal forwards;
+        }
+        .uranus img
+        {
+            height: 20px;
+        }
+        .neptune
+        {
+            position: absolute;
+            height: 850px;
+            width: 850px;
+            border: 1px solid gray;
+            padding: 117px;
+            overflow: visible;
+            border-radius: 50%;
+            animation: round 2000s linear 0s infinite normal forwards;
+        }
+        .neptune img
+        {
+            height: 15px;
+        }
+        @keyframes round
+        {
+            from
+            {
+                transform: rotate(0deg);
+            }
+            to
+            {
+                transform: rotate(360deg);
+            }
+        }
+        @media only screen and (max-width:950px)
+        {
+            .cnt
+            {
+                transform: scale(.7);
+            }
+        }
+        @media only screen and (max-width:750px)
+        {
+            .cnt
+            {
+                transform: scale(.5);
+            }
+        }
+        @media only screen and (max-width:350px)
+        {
+            .cnt
+            {
+                transform: scale(.35);
+                margin-top: 50px;
+            }
+        }
+        .planet
+    {
+        float: right;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        padding: 25px;
+        height: fit-content;
+        width: max-content;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border-radius: 10px;
+    }
+    .planet a
+    {
+        text-decoration: none;
+        color: white;
+    }
+    #mer:hover #me
+    {
+        scale: 1.1;
+        height: 20px;
+    }
+    </style>
+</head>
+<body>
+    <div class="cnt">
+        <div class="sun">
+        </div>
+        <div class="mercury">
+            <div class="planet-merc">
+                <img id="me" src="https://static.vecteezy.com/system/resources/previews/021/657/608/original/mercury-planet-space-free-png.png" alt="">
+            </div>
+        </div>
+        <div class="venus">
+            <div class="planet-ven">
+                <img id="ve" src="https://static.vecteezy.com/system/resources/previews/020/922/026/original/isolated-realistic-venus-surface-illustration-png.png" alt="">
+            </div>
+        </div>
+        <div class="earth">
+            <div class="planet-earth">
+                <div class="earth-ob">
+                    <img id="ea" src="https://static.vecteezy.com/system/resources/previews/021/284/634/non_2x/earth-planet-globe-texture-map-in-flat-style-earth-view-from-space-green-and-blue-planet-solar-system-colorful-illustration-png.png" alt="">
+                </div>
+                <div class="moon">
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/017/785/725/small/full-moon-isolated-on-transparent-background-png.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="mars">
+            <div class="planet-mars">
+                <img id="ma" src="https://static.vecteezy.com/system/resources/previews/020/922/027/non_2x/isolated-realistic-mars-illustration-png.png" alt="">
+            </div>
+        </div>
+        <div class="jupiter">
+            <div class="planet-jup">
+                <img id="ju" src="https://static.vecteezy.com/system/resources/thumbnails/016/778/853/small/planet-galaxy-space-free-png.png" alt="">
+            </div>
+        </div>
+        <div class="saturn">
+            <div class="planet-sat">
+                <img id="sa" src="https://static.vecteezy.com/system/resources/previews/020/922/034/original/isolated-realistic-jupiter-illustration-png.png" alt="">
+            </div>
+        </div>
+        <div class="uranus">
+            <div class="planet-uru">
+                <img id="ur" src="https://static.vecteezy.com/system/resources/previews/011/178/729/original/uranus-elements-of-this-image-furnished-by-nasa-free-png.png" alt="">
+            </div>
+        </div>
+        <div class="neptune">
+            <div class="planet-nep">
+                <img id="ne" src="https://static.vecteezy.com/system/resources/previews/010/833/583/original/3d-neptune-planet-illustration-free-png.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="planet">
+        <p>Solar System Sun and Planets</p>
+        <ol>
+            <li id="mer"><a href="">Mercury</a></li>
+            <li id="ven"><a href="">Venus</a></li>
+            <li id="ear"><a href="">Earth</a></li>
+            <li id="mar"><a href="">Mars</a></li>
+            <li id="jup"><a href="">Jupiter</a></li>
+            <li id="sat"><a href="">Saturn</a></li>
+            <li id="ura"><a href="">Uranus</a></li>
+            <li id="nep"><a href="">Neptune</a></li>
+        </ol>
+    </div>
+</body>
+</html>

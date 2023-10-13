@@ -1,0 +1,63 @@
+2.
+For selecting the direct children we use '>' symbol.
+Here to select the link inside an unordered list :
+ul>li>a
+eg:
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    ul>li>a
+    {
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+</body>
+</html>
+
+
+Since link is the direct child of <li>tag , We first select list and then we select the link which is child of the <li>.
+
+3.
+to select the direct children of div with class boc:
+
+div.box p
+eg
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+div.box>h1
+{
+color:blue;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">
+      <h1>nav</h1>
+      <ul class="box">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <p>Additional content goes here.</p>
+    </div>
+  </div>
+</body>
+</html>
+
+here to select only the div with class box we use 'div.box'
+ul also contains class box.
+but we are selecting the h1 of div with a class named box.

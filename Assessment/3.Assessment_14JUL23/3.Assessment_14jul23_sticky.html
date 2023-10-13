@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        header {
+            height: 150px;
+        }
+
+        .navbar {
+            background-color: rgba(255, 255, 255,0.25);
+            position: sticky;
+            top: 0;
+            z-index: 1; 
+            display: flex;
+        }
+        .navbar .head1
+        {
+            color: black;
+            z-index: 2;
+        }
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+        .navbar .nav
+        {
+            position: absolute;
+            right: 10px;
+        }
+        
+        .navbar .nav li {
+            position: relative;
+            margin-right: 20px;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+            height: 50px;
+        }
+
+        .navbar li a {
+            color: black;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .page1
+        {
+            background-color: white;
+            width: 100%;
+            min-height: 100vh; 
+            display: flex;
+            flex-direction: column;
+            overflow: auto;
+        }
+        .page1{
+            padding: 10px;
+        }
+        .page2 
+        {
+            width: 100%;
+            min-height: 100vh; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: auto;
+        }
+        .foot{
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            display: flex;
+            width: 95%;
+        }
+        .footnav
+        {
+            
+           position: absolute;
+           right: 10px;
+        }
+        .foot a{
+           display: inline-block;
+           margin-right: 20px;
+           margin-top: 250px;
+           text-decoration: none;
+           color: black;
+        }
+        .container2
+        {
+            width: 100%;/*
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: auto auto;
+            gap: 50px;*/
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        .Tools {
+            height: 300px;
+            width: 500px;
+            border-radius: 25px;
+            text-align: center;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        .Tools img {
+            height: 270px;
+            width: 500px;
+            border-radius: 5px;
+        }
+        .Tools a {
+            text-decoration: none;
+            color: gray;
+        }
+        
+        .txt1
+        {
+            height: 50px;
+            padding: 20px;
+            width: 100%;
+            text-align: left;
+        }
+        .Tools h3
+        {
+            display: inline-block;
+            height: 100px;
+            font-size: 20px;
+        }
+        .Tools h4
+        {
+            display: inline-block;
+            position: absolute;
+            right: 20px;
+            height: 100px;
+            font-size: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <header class="hdr">
+        logo
+    </header>
+    
+    <div class="navbar">
+        <div class="head1">
+            <ul>
+                <li><i class='bx bxs-circle'></i></i> Jordan hughes</li>
+            </ul>
+            
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Readings</a></li>
+            </ul>
+        </div>
+        
+             
+    </div>
+    
+    <div class="container">
+        <div class="page1">
+            <p>Iam a protuct designer from Australia making usual <br>
+                things for the internet and exploring the world</p>
+                <div class="foot">
+                    <div class="imageblw">
+                        <img src="https://d33wubrfki0l68.cloudfront.net/b38960897eee58cb2380cd37098c079f549f3edc/3a205/images/jordan-hughes-p-500.webp" alt="" height="270px" width="400px">
+                    </div>
+                    <div class="footnav">
+                        <a href="#">Twitter</a>
+                    <a href="#">Dribles</a>
+                    <a href="#">Figma</a>
+                    <a href="#">Webflow</a>
+                    <a href="#">Linkedin</a>
+                    <a href="#">Instagram</a>
+                    </div>
+                    
+                </div>
+        </div>
+        <div class="page2">
+            <div class="container2">
+                <div class="Tools">
+                    <img src="https://d33wubrfki0l68.cloudfront.net/5564d88cf2f2794239533ac10d89c62e19b5a003/32ff2/images/untitled-ui-p-800.webp" alt="">
+                    <div class="txt1">
+                        <h3>Untitled UI</h3>
+                        <h4><a href="">untitledui.com</a></h4>
+                    </div>
+                </div>
+                <div class="Tools">
+                    <img src="https://d33wubrfki0l68.cloudfront.net/d84bb3a98877015694dccc29f9bcb3e2412fb163/1b701/images/untitled-ui-icons-p-800.webp" alt="">
+                    <div class="txt1">
+                        <h3>Untitled UI</h3>
+                        <h4><a href="">untitledui.com</a></h4>
+                    </div>
+                </div>
+                <div class="Tools">
+                    <img src="https://d33wubrfki0l68.cloudfront.net/822bc49c1405fb20dd4213862a77e7411698594b/74ea8/images/himalayas-p-800.webp" alt="">
+                    <div class="txt1">
+                        <h3>Untitled UI</h3>
+                        <h4><a href="">untitledui.com</a></h4>
+                    </div>
+                </div>
+                <div class="Tools">
+                    <img src="https://d33wubrfki0l68.cloudfront.net/6881b471a5b7056500d263bbdd0f3ee16a7f96bf/9c4a3/images/untitled-ui-relume-p-800.webp" alt="">
+                    <div class="txt1">
+                        <h3>Untitled UI</h3>
+                        <h4><a href="">untitledui.com</a></h4>
+                    </div>
+                </div>
+                <div class="Tools">
+                    <img src="https://d33wubrfki0l68.cloudfront.net/5682914e4e4e9af80ccc4db9cfb984e4a49c75c6/9d815/images/untitled-ui-webflow-p-800.webp" alt="">
+                    <div class="txt1">
+                        <h3>Untitled UI</h3>
+                        <h4><a href="">untitledui.com</a></h4>
+                    </div>
+                </div>
+                <div class="Tools">
+                    <img src="https://d33wubrfki0l68.cloudfront.net/cb7ac7bf71b9f51ea33bfa5c144c464acd1a0443/44d65/images/good-books-p-800.webp" alt="">
+                    <div class="txt1">
+                        <h3>Untitled UI</h3>
+                        <h4><a href="">untitledui.com</a></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

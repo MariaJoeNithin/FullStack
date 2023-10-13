@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .c1
+        {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            animation-name: example;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        .c2
+        {
+            
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: relative;
+            animation-name: example2;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            animation-delay: 2s;
+            animation-iteration-count: 5;
+            animation-direction:alternate;
+            animation-fill-mode: forwards;
+        }
+        /*
+        @keyframes new
+        {
+            animation-name
+            animation-duration
+            animation-delay
+            animation-direction
+            animation-iteration-count
+            animation-timing-function
+            animation-fill-mode
+            animation-play-state
+            animation: name duration timing-function delay iteration-count direction fill-mode;
+        }*/
+        @keyframes example
+        {
+            from{background-color: red;}
+            to{background-color: blue;}
+        }
+        @keyframes example2 {
+            0%   {background-color:red; left:0px; top:0px;}
+            25%  {background-color:yellow; left:200px; top:0px;}
+            50%  {background-color:blue; left:200px; top:200px;}
+            75%  {background-color:green; left:0px; top:200px;}
+            100% {background-color:red; left:0px; top:0px;}
+        }
+        @keyframes ns
+        {
+            from{left: 0px;}
+            to{left: 300px;}
+        }
+        @keyframes ns1
+        {
+            from{border-radius: none}
+            to{border-radius: 50%;}
+        }
+        h2{
+            display: inline-block;
+            height: 200px;
+            width: 200px;
+            position: relative;
+        }
+        #n1
+        {background-color: blue;
+            color: white;
+            animation: ns 2s ease-in-out 1s infinite alternate backwards;
+        }
+        #n2
+        {
+            background-color: red;
+            color: white;
+            text-align: center;
+            box-sizing: border-box;
+            padding: 20px;
+            height: 200px;
+            width: 200px;
+            animation: ns3 5s ease-in-out 1s infinite alternate backwards;
+        }
+        @keyframes ns3
+        {
+            0% {height: 100px;width: 100px;background-color: blue; left: 100px;top: 200px;border-radius: none;}
+            50% {height: 100px;width: 100px;background-color: red; left: 300px;top:500px;border-radius: 50%;}
+            100% {height: 100px;width: 200px;background-color: green; left: 500px;top:300px;border-radius: none;}
+        }
+</style>
+</head>
+<body>
+    <div class="c1"></div>
+    <div class="c2"></div>
+    <h2 id="n1">Hello</h2>
+    <h2 id="n2">Hello</h2>
+    <h2 id="n3">Hello</h2>
+    <h2 id="n4">Hello</h2>
+    <h2 id="n5">Hello</h2>
+    <h2 id="n6">Hello</h2>
+    <h2 id="n7">Hello</h2>
+</body>
+</html>

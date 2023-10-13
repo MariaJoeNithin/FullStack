@@ -1,0 +1,10 @@
+Advantages of Infinite Scroll Pagination.
+It improves the user engagement and retention, as the user can easily access more content without interrupting their flow or leaving the page.
+It reduces the server load and bandwidth, as the content is only loaded when needed and not all at once.
+It simplifies the user interface and eliminates the need for pagination controls, such as buttons or links, which can take up space and clutter the page.
+
+Disadvantages:
+1.It can affect the performance and memory usage of the browser, as more content is added to the DOM and needs to be rendered and processed.
+2.It can make it difficult for the user to find or return to a specific item or position in the list, as there is no clear indication of where they are or how much content is available.
+3.It can interfere with the browser’s native scrolling behavior and features, such as the back button, bookmarks, or history.
+4.It can create accessibility issues for users who rely on keyboard navigation or screen readers, as they may not be able to access or perceive the new content.

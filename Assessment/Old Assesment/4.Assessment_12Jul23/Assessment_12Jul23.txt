@@ -1,0 +1,168 @@
+1)Explain the CSS box model and its components. How does the box model impact the layout of elements on a webpage?
+ css box model is describes how elements on a webpage are rendered and how their dimensions are calculated.It consists of margin,border,padding,content.
+ content-actual content of an element.
+padding-space between content area and border .(or it is the space around the content.)
+border-space around the padding and content.
+margin-it is the space outside the border.
+
+These box models are used to calculate the size,space and the dimensions of an element. 
+
+2) Describe the different types of CSS selectors and provide examples of when you would use each type.
+ (i)simple selector-selects using name,id, class.
+ eg: p{} /*Here p is used to select all p elements*/
+ Further simple selector consists of
+                  element selector( eg : h1 {} here h1 element is selectod)
+                  class selector-using class(.new {} /*here a class named new is selected{To select elements with a specific class, write a period (.) character, followed by the class name.}*/)
+                  id selector-using id(#name{} /* To select an element with a specific id, write a hash (#) character, followed by the id of the element. An id of an selector is unique So it is used when a specific unique element is 			selected*/)
+                  Universal selector-(using(*) selects all HTML elements on page )
+                  grouping selector (p,h1 /*this is applied by using ','*/)
+ (ii)combinators selector-descendant selector (space)
+                      child selector (>)
+                      adjacent sibling selector (+)
+                      general sibling selector (~)
+ (iii)attribute selector- ([attribute]) eg : a[target]
+                     ([attribute="value"]) to select attributes value
+                     ([attribute~="value"]) to select attributes with specified value
+                     ([attribute|="value"]) to attributes with value followed by'-'(hyphen)
+                     ([attribute^="value"]) to select attribute value starts with specified value.
+                     ([attribute$="value"]) to select attribute value ends with specified value
+                     ([attribute*="value"]) to select value containing specified value
+(iv)Psuedo-class - to define special state of element (eg : hover,active,link,visited,focus)
+(v)Psuedo-elements
+ 
+3)How do the margin and padding properties in CSS affect the spacing around an element? Provide examples to illustrate their differences.
+
+Margin property controls the space outside the element .It helps in positioning the element.
+eg:
+.element
+{
+  margin:20px;
+}
+It provides the distance outside the element with 20px.
+
+padding is space between the content and border.So it does not affect with the position of element.
+padding affects the size(height and width) of an element.
+
+
+
+4) Explain the concept of CSS specificity and how it determines which styles are applied to an element. Provide an example scenario where specificity comes into play.
+CSS specificity is more like ranking or priority of a style ,when two or more same property given to same element
+
+<html>
+<head>
+  <style>
+    p 
+    {
+      color: red;
+    }
+     .blue
+     {
+      color:blue;
+     }
+  </style>
+</head>
+ <body>
+
+    <p (class="blue")>new</p>
+
+ </body>
+</html>
+
+ in above example the the blue color will be applied because the class has higher priority i.e. is specificity.
+
+5) Describe the different values of the CSS display property and how they affect the rendering of elements on a webpage. Provide use cases for each value.
+
+display property is used to determine how an element is shown(position and visibility) in a web page.
+flex-
+ Displays an element as a block-level flex container
+grid-
+Displays an element as a block-level grid container
+inline-
+the element is converted into inline element where it takes only required width and not start in a new line.
+block-
+This value makes an element generate a block-level box. It starts on a new line and takes up the full width available.
+none-
+The element value does appear and is hidden.
+intial-
+default value
+inherit-
+property of parent element.
+Grid - 
+The grid value turns an element into a grid container, creating a grid formatting context.
+
+6) What is responsive design in CSS? How can media queries be utilized to create responsive layouts and adapt to different screen sizes?
+
+ responsive view is where the website automatically adapts to any kind of device screen .
+
+@media only screen and (max-width: 600px)/*for devices with small screen*/ {
+  .container {
+    background-color: lightblue;
+  }
+  @media (min-width: 601px) and (max-width: 1024px) /* for big screen*/ {
+  .container {
+    width: 60%;
+    padding: 15px;
+  }
+}
+
+7) Describe the CSS position property and its values: static, relative, absolute, and fixed. Provide examples of when each value would be appropriate to use.
+
+static- Default position,elements render according to the document flow.(used when you want an element to appear in its normal position in the document flow)
+relative- positioned relative to its normal position(When you want an element to appear in a different position than its normal position in the document flow.).
+fixed-it gets fixed according to the browser(when you want an element to remain in a fixed position on a page regardless of where other elements are located.).
+absolute-positioned according to its ancestor.(used when you want an element to appear in a specific location on a page regardless of where other elements are located.)
+sticky-sticky is used to stick a content.after scroll also it was in place(When you want an element to remain in a fixed position on a page until it reaches a certain point and then behave like it’s relatively positioned.).
+
+8)Explain the concept of the CSS float property and its impact on element positioning. What are some potential challenges that can arise when using the float property?
+	It is used to float the element left right or none positions.its allow to contents wrap around it.
+Although there are few challenges where sometimes the float property affects the layout of the page sometimes it affects the nearby container also by overflowing on it. It can be cleared using clear property.
+
+9)How can you combine CSS properties like positioning, float, and display to achieve complex layouts? Provide an example scenario where you would need to use multiple CSS properties together.
+
+ we can use display positioning and float to arrange the webpage layouts.
+
+example
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+	header {
+  	position: fixed;
+  	top: 20px;
+ 	left: 20px;
+ 	display: flex;
+ 	justify-content: space-between;
+ 	align-items: center;
+ 	width: 80%;
+ 	height: 50px;
+	}
+	.logo 
+	{
+	float: right;
+	color:blue;
+	padding-top:50px
+	}
+    </style>
+</head>
+<body>
+    <header>
+    	<h1>Greetings</h1>
+      	<button>Home</button>
+      	<button>About</button>
+      	<button>Settings</button>
+    </header>
+  	<div class="logo">
+      		<h2>MJN<h2>
+    	</div>
+</div>
+</body>
+</html>
+
+10) How does the cascading nature of CSS affect the application of styles to elements? Explain how inheritance and the order of style declarations influence the final appearance of an element.
+	The cascading nature of CSS means that styles are applied to elements based on a set of rules that determine which styles take precedence over others. The order of style declarations and inheritance both play a role in determining the final appearance of an element.
+	Also whene multiple same styles property given to same element CSS specificity comes into play. This helps in the execution of proper style based on the order of Style declaration. 
+	Inheritance is another important concept in CSS. When a style is applied to a parent element, it is automatically inherited by its child elements. This can be useful for applying consistent styles across multiple elements without having to specify the same styles for each individual element.

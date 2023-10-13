@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.pageno {
+  display: inline-block;
+  height: 200px;
+  width: 400px;
+}
+.pagination
+{
+    height: 100px;
+   display: flex;
+   position: relative;
+   justify-content: center;
+}
+.pageno a {
+  color: black;
+  float: left;
+  padding: 20px;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.pageno a:active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+h2{
+  background-color: aqua;
+}
+
+.pageno a:hover:not(.active,.nxpage,.prepage) 
+{
+  background-color: blue;
+  color: white;
+}
+
+
+.pageno .active {
+  background-color: green;
+  color: white;
+}
+.pageno .prepage{
+      background-color: black; 
+      color: gray;
+      border: 1px solid gray;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+.pageno .nxpage{
+    background-color: black; 
+      color: gray;
+      border: 2px solid gray;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .pageno .prepage:hover,
+    .pageno .nxpage:hover {
+        background-color: white;
+        color: black;
+        box-shadow: 0px 2px 2px 2px red;
+    }
+</style>
+</head>
+<body>
+  <h2>1.We can highlight the current page number when it is active by addidng a class to that current page number and highlighting it using CSS style sheets.</h2>
+
+  <h2>Current page is page 5</h2>
+  
+
+<p>Move the mouse over the numbers.</p>
+<div class="pagination">
+    <div class="pageno">
+        <a href="#" class="prepage">&laquo;</a>
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a  class="active" href="#">5</a>
+        <a href="#">6</a>
+        <a href="#" class="nxpage">&raquo;</a>
+      </div>
+</div>
+
+</body>
+</html>

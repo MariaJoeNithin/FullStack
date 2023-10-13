@@ -1,0 +1,46 @@
+#navbar
+{
+    display: flex;
+    box-sizing: border-box;
+    width: 50dvw;
+    flex-wrap: wrap;
+    
+}
+#navbar h2
+{
+    text-decoration: none;
+    color: gray;
+    padding: 50px;
+}
+#navbar img
+{
+    width: 100px;
+    height: 200px;
+    display:flex;
+    position: absolute;
+    top: 30px;
+    right: 0px;
+}
+#navbar.dropdown
+{
+position: relative;
+display: inline-block;
+}
+.dropdown-content
+{
+    display: none;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    border: 5px solid black;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.50);
+    padding: 0px 5px 0px 5px;
+    z-index: 1;
+  }
+  h2
+  {
+    border: 5px solid black;
+  }

@@ -1,0 +1,15 @@
+body{
+    background-color:powderblue;
+}
+.main{
+    text-align:center;
+}
+.SS{
+    color:green;
+    font-size:50px;
+    font-weight:bold;
+}
+#safari{
+    font-style:bold;
+    font-size:20px;
+}

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"rel="stylesheet"/>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <style>
+        .c-img
+        {
+            overflow: hidden;
+        }
+        .c-img img
+        {
+            transition: .5s;
+        }
+        .c-img:hover img
+        {
+            scale: 1.2;
+        }
+        .page3 .card{
+            min-width: 18rem;
+        } 
+        .btn-group-one i{
+            padding: 10px;
+            border-radius: 50%;
+        }
+        .bxl-facebook{
+            background: #3b5998;
+        }
+        .bxl-linkedin{
+            background: #3b5998;
+        }
+        .bxl-dribbble{
+            background: #b2096e;
+        }
+        
+        .bi-facebook
+        {
+            color: blue;
+        }
+        input,textarea
+        {
+            border: 1px solid rgba(0, 255, 255, 0.5);
+        }
+        i{
+            margin-right:50px !important;
+        }
+    </style>
+</head>
+<body>
+    <nav id="nav" class="navbar navbar-expand-lg navbar-light align-items-center fixed-top shadow p-3 bg-light" >
+        <div class="container-fluid">
+            <nav class="navbar navbar-light">
+                <div class="container">
+                  <a class="navbar-brand" href="#">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Xiaomi_logo.svg/1024px-Xiaomi_logo.svg.png" class="rounded-4" alt="Bootstrap" width="40" height="40">
+                  </a>
+                </div>
+              </nav>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <div class="justify-content-between container-fluid">
+                <ul class="navbar-nav me-2 mb-2 mb-lg-0 ">
+                    <li class="nav-item">
+                      <a class="nav-link active p-3" aria-current="page" href="#page1">Home
+                        <i class="bi bi-facebook"></i></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link p-3" href="#page2">Specs</a>
+                    </li>
+                    <li class="nav-item ">
+                      <a class="nav-link p-3" href="#page3">Features</a>
+                    </li>
+                    <li class="nav-item ">
+                      <a class="nav-link p-3" href="#page4">Reviews</a>
+                    </li>
+                    <li class="nav-item ">
+                      <a class="nav-link p-3" href="#page5">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                      <li class="nav-item dropdown">
+                          <a class="nav-link p-3 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Category
+                          </a>
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="https://www.mi.com/in/phone">Phone</a></li>
+                            <li><a class="dropdown-item" href="https://www.mi.com/in/smart-home">TV & Smart-home</a></li>
+                            <li><a class="dropdown-item" href="https://www.mi.com/in/smart-home">Laptop & Tablet</a></li>
+                            <li><a class="dropdown-item" href="https://www.mi.com/in/life-style">Life-style</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="https://www.mi.com/in/discover/">Discover</a></li>
+                          </ul>
+                        </li>
+                    </li>
+                  </ul>
+            </div>
+            
+            <form class="d-flex" role="search">
+                <input class="form-control " type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+          </div>
+          
+        </div>
+      </nav>
+      <div class="container p-5">  </div>
+      <div class="container page1 mt-5">
+        <div class="row container-fluid flex-lg-row-reverse align-items-center g-5 py-5 my-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+              <img src="https://gmedia.playstation.com/is/image/SIEPDC/psvr-overview-hardware-column-image-01-ps4-en-06jan20?$1600px$" class="d-block mx-lg-auto img-fluid" alt="Boat Watch" width="700" height="500" loading="lazy">
+            </div>
+            <div class="col-lg-6">
+              <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">The fully immersive PS VR headset</h1>
+              <h5 class="display-5">360-degree vision</h5>
+              <p class="lead">Watch as a living, breathing game world comes alive all around you, with a seamless field of view wherever you turn.</p>
+              <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                <button type="button" class="btn btn-primary btn-lg px-4  rounded-pill">Add To Cart</button>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="page2 container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+          <div class="col-10 col-sm-8 col-lg-6 order-2">
+            <img src="https://gmedia.playstation.com/is/image/SIEPDC/psvr-overview-hardware-column-image-01-ps4-en-06jan20?$1600px$" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+          </div>
+          <div class="col-lg-6 order-1">
+            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Responsive left-aligned hero with image</h1>
+            <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world's most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+              <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
+              <button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section id="Services ">
+        <div class="container-fluid page3">
+            <div class="container-sm ">
+                <div class="row row-cols-1 ">
+                    <div class="col" >
+                        <div id="p1h2" class="h1 text-primary">SERVICES</div>
+                    </div>
+                </div>
+                <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 gy-5">
+                    <div class="col" >
+                        <div class="card ">
+                            <div class="c-img">
+                                <img src="https://bonafidebookworm.com/wp-content/uploads/2020/12/hand-reaching-for-book-on-bookshelf-1024x683.jpg" class="card-img-top" alt="...">
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col" >
+                        <div class="card ">
+                            <div class="c-img">
+                                <img src="https://th.bing.com/th/id/OIP._WISmj9IT8lv9ULAo87CCAHaE7?pid=ImgDet&rs=1" class="card-img-top" alt="...">
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col" >
+                        <div class="card ">
+                            <div class="c-img">
+                                <img src="https://th.bing.com/th/id/OIP._WISmj9IT8lv9ULAo87CCAHaE7?pid=ImgDet&rs=1" class="card-img-top" alt="...">
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col" >
+                        <div class="card">
+                            <div class="c-img">
+                                <img src="https://bonafidebookworm.com/wp-content/uploads/2020/12/hand-reaching-for-book-on-bookshelf-1024x683.jpg" class="card-img-top" alt="...">
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col" >
+                        <div class="card" >
+                            <div class="c-img">
+                                <img src="https://th.bing.com/th/id/OIP._WISmj9IT8lv9ULAo87CCAHaE7?pid=ImgDet&rs=1" class="card-img-top" alt="...">
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col" >
+                        <div class="card">
+                            <div class="c-img">
+                                <img src="https://bonafidebookworm.com/wp-content/uploads/2020/12/hand-reaching-for-book-on-bookshelf-1024x683.jpg"" class="card-img-top" alt="...">
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+      </section>
+      
+      <section id="footer">
+        <div class="container rounded-2 px-4 py-5">
+            <div class="row row-cols-1 row-cols-lg-2 row-cols-md-2 gy-5">
+                <div class="col-12  order-md-1 p-2 order-2">
+                    <div class="row">
+                        
+<p style="font-size: 25px;">
+    Greatway Tax Consultancy <br>
+    Perks Arch, <br>
+    110 Co-Operative Colony,  <br>
+    Uppilipalayam, 
+    Tamil Nadu
+</p>
+
+                    </div>
+                    <div class="row btn-group-one mt-5 p-1 d-flex flex-row align-items-start">
+                         <div class="btn " style="width: fit-content;"><a class="text-white " href="#"><i class='bx bxl-facebook border border-2 border-light '></i></a></div>
+                         <div class="btn " style="width: fit-content;"><a class="text-white " href="#"><i class='bx bxl-dribbble border border-2 border-light' ></i></a></div>
+                         <div class="btn " style="width: fit-content;"><a class="text-white " href="#"><i class='bx bxl-instagram'></i></a></div>
+                         <div class="btn " style="width: fit-content;"><a class="text-white " target="_blank" href="#"><i class='bx bxl-linkedin border border-2 border-light' ></i></a></div>
+                    </div>
+                </div>
+                <div class="col order-md-2 order-1 p-2 shadow">
+                    <div class="row">
+                        <div id="p1h2" class="h1  text-primary">Contact </div> </div>
+                    <div class="row">
+                        <form>
+                            <div class="mb-3">
+                              <label for="name" class="form-label">Name</label>
+                              <input type="text" class="form-control" id="name" >
+                              </div>
+                            <div class="mb-3">
+                              <label for="phone" class="form-label">Contact No</label>
+                              <input type="tel" class="form-control" id="phone">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                          </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+      
+</body>
+</html>

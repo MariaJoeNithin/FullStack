@@ -1,0 +1,36 @@
+1.)Write the basic structure of the HTML template?
+ <!DOCTYPE html> defines html type
+
+<html lang="en"> basic html tag
+
+<head> data about data
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title> title of the document
+
+</head>
+<body>
+    content like h1,p,article
+</body>
+</html>
+
+2.)Name some new features which were not present in HTML but are added to HTML5?
+   Audio and Video tags are the two major addition to HTML5.
+   email attribute also new to html 5.
+3.)Explain the layout of HTML?
+ header
+ nav
+ content
+ article
+ slidebar
+ footer
+4.)Explain the difference between the "id" and "class" attributes in HTML and how they relate to CSS selectors.
+ Id is used define single element and it's a unique one.
+ class is used to define multiple element.
+
+5.)What is the "child selector" in CSS and how does it differ from the "descendant selector"?
+
+ Child Selector is used to match all the elements which are children of a specified element. It gives the relation between two elements.>
+
+  Descendant selector is used to select all the elements which are child of the element.(space)

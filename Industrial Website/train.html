@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>J_Tech-Learn</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Acme&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://static.vecteezy.com/system/resources/previews/006/230/700/original/tech-letter-j-logo-futuristic-logo-template-with-green-and-blue-gradient-color-geometric-shape-usable-for-business-and-technology-logos-vector.jpg"
+    />
+
+    <style>
+      #home,
+      #about,
+      #services,
+      #training,
+      #project,
+      #reviews,
+      #contact,
+      #trainsched {
+        /* background-color: rgba(255, 255, 255, 0) !important; */
+        /* background-image: linear-gradient(to top right,#0b0d90,#755aea,#0b0d90); */
+        min-height: 100vh;
+        background-color: rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(5px) !important;
+        -webkit-backdrop-filter: blur(5px) !important;
+      }
+      #footer {
+        /* background-image: linear-gradient(to top right,red,black,red) !important; */
+        background-color: rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(5px) !important;
+        -webkit-backdrop-filter: blur(5px) !important;
+        /* background-image: linear-gradient(to top right , blue,blueviolet ) !important; */
+      }
+      .scrollspy-example {
+        width: 100%;
+        /* background-image: linear-gradient(to top right,#0b0d90,#755aea,#0b0d90); */
+
+        background-image: url(https://www.neweggbusiness.com/smartbuyer/wp-content/uploads/iStock-171347670.jpg) !important;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.25) !important;
+
+        backdrop-filter: blur(8px) !important;
+        -webkit-backdrop-filter: blur(8px) !important;
+      }
+      #carouselExampleCaptions .carousel-inner {
+        height: 100vh !important;
+      }
+      #carouselExampleCaptions img {
+        object-fit: cover !important;
+        height: 100vh !important;
+        width: 100%;
+        min-height: 300px;
+      }
+      #carouselExampleCaptions .carousel-caption {
+        background-color: rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(5px);
+        border-radius: 5px;
+      }
+      .pg1logo {
+        background-color: rgba(0, 0, 255, 0.75);
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 20px;
+        font-weight: bolder;
+        position: absolute;
+        top: 20%;
+        right: 20%;
+        z-index: 20;
+        scale: 2;
+      }
+      #about img {
+        border-radius: 10px;
+        object-position: center;
+        object-fit: cover;
+      }
+      #about > .container {
+        background-color: rgba(0, 0, 0, 0.5);
+
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.125);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), 0 8px 60px rgba(0, 0, 0, 0.1);
+      }
+      .stdcard,
+      .precard,
+      .primecard {
+        backdrop-filter: blur(16px) saturate(180%);
+        -webkit-backdrop-filter: blur(16px) saturate(180%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white !important;
+        font-weight: bold;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.125);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), 0 8px 60px rgba(0, 0, 0, 0.1);
+      }
+      .featurette {
+        /* background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.125);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), 0 8px 60px rgba(0, 0, 0, 0.1); */
+
+        backdrop-filter: blur(16px) saturate(180%);
+        -webkit-backdrop-filter: blur(16px) saturate(180%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white !important;
+        font-weight: bold;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.125);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), 0 8px 60px rgba(0, 0, 0, 0.1);
+      }
+      #services > .container {
+        background-color: rgba(0, 0, 0, 0.5);
+
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.125);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), 0 8px 60px rgba(0, 0, 0, 0.1);
+      }
+      #training > .container {
+        background-color: rgba(0, 0, 0, 0.5);
+
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.125);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), 0 8px 60px rgba(0, 0, 0, 0.1);
+      }
+      #about .abtcnt {
+        backdrop-filter: blur(16px) saturate(180%);
+        -webkit-backdrop-filter: blur(16px) saturate(180%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white !important;
+        font-weight: bold;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.125);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), 0 8px 60px rgba(0, 0, 0, 0.1);
+      }
+      #project > .container {
+        backdrop-filter: blur(16px) saturate(180%);
+        -webkit-backdrop-filter: blur(16px) saturate(180%);
+        background-color: rgba(0, 0, 0, 0.5);
+
+        font-weight: bold;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.125);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), 0 8px 60px rgba(0, 0, 0, 0.1);
+      }
+      #about img {
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), 0 8px 60px rgba(0, 0, 0, 0.1);
+      }
+      .navbar {
+        background-image: linear-gradient(
+          to top right,
+          rgb(2, 2, 2),
+          rgb(2, 2, 2)
+        ) !important;
+        /* border: 1px solid rgba(255, 255, 255, 0.25) !important; */
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), 0 8px 60px rgba(0, 0, 0, 0.1) !important;
+      }
+      #carousel2 {
+        height: 80vh;
+      }
+      #carousel2 .card {
+        min-height: 300px;
+        height: 100%;
+        backdrop-filter: blur(16px) saturate(180%);
+        -webkit-backdrop-filter: blur(16px) saturate(180%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.125);
+        box-shadow: 0 4px 5px rgba(0, 0, 0, 0.25),
+          0 8px 10px rgba(0, 0, 0, 0.25);
+      }
+
+      .probtn {
+        backdrop-filter: blur(16px) saturate(180%);
+        -webkit-backdrop-filter: blur(16px) saturate(180%);
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.125);
+        box-shadow: 0 4px 5px rgba(0, 0, 0, 0.25),
+          0 8px 10px rgba(0, 0, 0, 0.25);
+      }
+      #carousel2 img {
+        object-fit: contain;
+        object-position: center;
+      }
+
+      #reviews > div {
+        background-color: rgba(0, 0, 0, 0.25);
+        height: 80%;
+        backdrop-filter: blur(8px);
+      }
+      .ecimg {
+        height: 200px;
+        overflow: hidden;
+        object-fit: fill;
+        object-position: center;
+      }
+      .ecimg img {
+        object-position: center !important;
+        object-fit: contain !important;
+        transition: 0.5s;
+      }
+      .ecimg:hover img {
+        scale: 1.1;
+      }
+      .srv {
+        color: white !important;
+        font-size: 20px;
+      }
+      .srv .cnts {
+        backdrop-filter: blur(16px) saturate(180%);
+        -webkit-backdrop-filter: blur(16px) saturate(180%);
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.125);
+        box-shadow: 0 4px 5px rgba(0, 0, 0, 0.25),
+          0 8px 10px rgba(0, 0, 0, 0.25);
+      }
+      #contact .pgc6 {
+        backdrop-filter: blur(16px) saturate(180%);
+        -webkit-backdrop-filter: blur(16px) saturate(180%);
+        background-color: rgba(0, 0, 0, 0.5);
+        /* border: 1px solid rgba(255, 255, 255, 0.125); */
+        box-shadow: 0 4px 5px rgba(0, 0, 0, 0.25),
+          0 8px 10px rgba(0, 0, 0, 0.25);
+      }
+      .trainrow .col,
+      .traincnt {
+        backdrop-filter: blur(16px) saturate(180%);
+        -webkit-backdrop-filter: blur(16px) saturate(180%);
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.125);
+        box-shadow: 0 4px 5px rgba(0, 0, 0, 0.25),
+          0 8px 10px rgba(0, 0, 0, 0.25);
+      }
+      input,
+      textarea {
+        background-color: rgba(0, 255, 255, 0.15) !important;
+        border: 1px solid rgba(0, 255, 255, 0.5) !important;
+      }
+      .btn-one {
+        background: #0788ff;
+      }
+      .btn-group-one i {
+        padding: 10px;
+        border-radius: 50%;
+        transition: 0.5s;
+      }
+      .bxl-facebook {
+        background: #3b5998;
+      }
+      .bxl-linkedin {
+        background: #3b5998;
+      }
+      .bxl-instagram {
+        background: #b2096e;
+      }
+      .btn-group-one i:hover {
+        transform: translateY(-5px);
+        scale: 1.1;
+        box-shadow: 0 4px 5px rgba(0, 0, 0, 0.25),
+          0 8px 10px rgba(0, 0, 0, 0.25);
+      }
+      :is(.btn-one, #btn1, #p5cd .btn, .btn-submit):hover {
+        background: black !important;
+        box-shadow: 0px 0px 5px 5px white;
+        color: white !important;
+      }
+      form label {
+        color: white !important;
+      }
+      #p5cd {
+        background-image: linear-gradient(
+          to right,
+          rgb(5, 21, 66),
+          rgb(13, 79, 126)
+        );
+      }
+      :is(form input, form textarea)::placeholder {
+        color: gray !important;
+      }
+
+      .carousel-caption {
+        animation: ent 3s ease 0s 1 normal none;
+      }
+      #footer {
+        background-color: rgba(0, 0, 0, 0.75) !important;
+      }
+      .copyright {
+        color: gray !important;
+      }
+
+      @keyframes ent {
+        0% {
+          opacity: 0;
+          transform: scale(0);
+          transform: translateY(0);
+        }
+        50% {
+          opacity: 1;
+          scale: 1.5;
+          transform: translateY(-100px);
+          background-color: rgba(0, 0, 255, 0.75);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(0);
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav
+      id="#navbar-example2"
+      class="navbar navbar-dark fw-bold navbar-expand-lg bg-body-tertiary z-5 fixed-top"
+      aria-label="Thirteenth navbar example"
+    >
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarsExample11"
+          aria-controls="navbarsExample11"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand col-lg-3 me-0" href="index.html/#home">
+          <img
+            src="https://static.vecteezy.com/system/resources/previews/006/230/700/original/tech-letter-j-logo-futuristic-logo-template-with-green-and-blue-gradient-color-geometric-shape-usable-for-business-and-technology-logos-vector.jpg"
+            class="rounded-2 border border-white"
+            alt=""
+            width="30"
+            height="30"
+          />
+        </a>
+        <div class="collapse navbar-collapse d-lg-flex" id="navbarsExample11">
+          <ul class="navbar-nav col-lg-9 justify-content-lg-center">
+            <li class="nav-item">
+              <button type="button" class="btn">
+                <a
+                  class="nav-link active fw-bold active"
+                  aria-current="page"
+                  href="index.html"
+                  >HOME</a
+                >
+              </button>
+            </li>
+            <li class="nav-item">
+              <button type="button" class="btn">
+                <a
+                  class="nav-link fw-bold"
+                  aria-current="page"
+                  href="index.html/"
+                  >ABOUT</a
+                >
+              </button>
+            </li>
+            <li class="nav-item dropdown">
+              <button type="button" class="btn">
+                <a
+                  class="nav-link fw-bold"
+                  href="index.html"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  >SERVICES</a
+                >
+              </button>
+              <button
+                type="button"
+                class="btn dropdown-toggle dropdown-toggle-split border border-0 text-white"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <span class="visually-hidden">Toggle Dropdown</span>
+              </button>
+              <ul
+                class="dropdown-menu dropdown-menu-dark bg-dark shadow border border-0"
+              >
+                <li>
+                  <a class="dropdown-item fw-bold" href="#train-page"
+                    >TRAINING</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item fw-bold" href="index.html">PROJECT</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <button type="button" class="btn">
+                <a
+                  class="nav-link fw-bold"
+                  aria-current="page"
+                  href="index.html"
+                  >REVIEW</a
+                >
+              </button>
+            </li>
+          </ul>
+          <div class="d-lg-flex col-lg-3 justify-content-lg-end">
+            <button class="btn btn-success">
+              <a
+                class="nav-link active fw-bold active"
+                aria-current="page"
+                href="#contact"
+                >Contact</a
+              >
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div
+      data-bs-spy="scroll"
+      data-bs-target="#navbar-example2"
+      data-bs-root-margin="0px 0px -40%"
+      data-bs-smooth-scroll="true"
+      class="scrollspy-example bg-body-tertiary"
+      tabindex="0"
+    >
+      <section id="train-page" class="container-fluid mx-0 px-0">
+        <section
+          class="container-fluid mt-5 pt-5 d-flex align-items-center justify-content-center p-2"
+          id="about"
+        >
+          <div class="container p-5">
+            <div
+              class="row flex-lg-row-reverse align-items-center row-cols-1 row-cols-lg-2 g-5 gx-2 py-5"
+            >
+              <div class="col">
+                <!-- <img src="https://preview.thenewsmarket.com/Previews/VDMA/StillAssets/1920x1080/617893_v2.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" > -->
+                <!-- <video autoplay controls muted src="pb.mp4" class="rounded-2 " class="d-block " alt="Bootstrap Themes" loading="lazy"></video> -->
+                <div class="ratio rounded-4 overflow-hidden ratio-16x9">
+                  <iframe
+                    width="424"
+                    height="238"
+                    src="https://www.youtube.com/embed/bbys7AvG5Eg"
+                    title="3DEXPERIENCE Works Cloud Solutions"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+              <div class="col abtcnt rounded-2 p-5">
+                <h1
+                  class="display-5 fw-bold text-body-emphasis lh-1 mb-3 text-center"
+                >
+                  <img
+                    src="https://static.vecteezy.com/system/resources/previews/006/230/700/original/tech-letter-j-logo-futuristic-logo-template-with-green-and-blue-gradient-color-geometric-shape-usable-for-business-and-technology-logos-vector.jpg"
+                    class="rounded-2"
+                    alt=""
+                    width="60"
+                    height="60"
+                  />
+                  <span class="text-white">Tech Learn</span>
+                </h1>
+                <p>
+                  &nbsp;&nbsp;&nbsp;&nbsp;Are you interested in learning 3D
+                  modeling and finite element analysis using some of the most
+                  popular and powerful software applications in the industry? If
+                  yes, then we have the perfect training program for you!
+                  <br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;We are offering training in
+                  Solidworks, Creo, and Hypermesh, which are widely used by
+                  engineers, designers, and analysts across various domains and
+                  sectors. You will learn how to create, modify, and optimize 3D
+                  models and simulations using these software tools, which have
+                  many features and capabilities to assist you in your design
+                  process.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section
+          class="container-fluid d-flex align-items-center justify-content-center p-1 p-md-5"
+          id="trainsched"
+        >
+          <div class="container-fluid srv">
+            <div class="container-fluid marketing">
+              <hr class="featurette-divider" />
+              <div class="featurette container">
+                <h2
+                  class="row text-center d-flex align-items-center justify-content-center mt-5 mx-auto featurette-heading fw-normal lh-1"
+                >
+                  SolidWorks Training
+                </h2>
+                <div
+                  class="row flex-lg-row-reverse align-items-center row-cols-1 mb-5 row-cols-lg-2 g-5 gx-2 py-5"
+                >
+                  <div class="col">
+                    <p class="lead">
+                      We offer Solidworks training that covers everything from
+                      sketching, modeling, assembly, and drawings to simulation
+                      and composer. You will learn from expert instructors who
+                      will guide you through step by step tutorials with
+                      supporting videos and quizzes.
+                      <br />
+                      Solidworks is a 3D solid modeling CAD software package
+                      that has a user-friendly interface and a large online
+                      community. You will learn how to use its powerful modeling
+                      tools, 3D mesh modeling, 3D markup, visualize, advanced
+                      mold design and many more.Whether you are a beginner or an
+                      advanced user, our Solidworks training will help you
+                      improve your skills, increase your productivity, and turn
+                      your ideas into amazing products. Don't miss this
+                      opportunity to enroll in our Solidworks training today and
+                      get ready to unleash your creativity with the world's
+                      leading CAD software.
+                    </p>
+                  </div>
+                  <div class="col">
+                    <div class="ratio rounded-4 overflow-hidden ratio-16x9">
+                      <iframe
+                        width="1280"
+                        height="720"
+                        src="https://www.youtube.com/embed/NO9I_da55Oo"
+                        title="Welcome to SOLIDWORKS"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                      ></iframe>
+                    </div>
+                    <!-- <video autoplay controls muted src="pb.mp4" class="rounded-2 " class="d-block " alt="Bootstrap Themes" loading="lazy"></video> -->
+                  </div>
+                </div>
+              </div>
+
+              <hr class="featurette-divider" />
+
+              <div class="featurette container">
+                <h2
+                  class="row text-center d-flex align-items-center justify-content-center mt-5 mx-auto featurette-heading fw-normal lh-1"
+                >
+                  Creo Training
+                </h2>
+                <div
+                  class="row px-2 align-items-center row-cols-1 mb-5 row-cols-lg-2 g-5 gx-2 py-5"
+                >
+                  <div class="col">
+                    <p class="lead">
+                      Creo is a family of 3D CAD parametric modeling apps that
+                      aids in product design for all types of manufacturers. You
+                      will learn how to use its 3D direct modeling, finite
+                      element analysis, technical illustrations and
+                      visualizations. You will also learn how to simulate and
+                      optimize products for weight, performance, cost, and
+                      sustainability, using a wide variety of materials and
+                      manufacturing processes.
+                      <br />
+                      Creo training courses are flexible, interactive, and
+                      engaging. You can choose from virtual, on-site, or
+                      self-paced options, depending on your preference and
+                      availability. You can also customize your learning path
+                      according to your interests and objectives. With our Creo
+                      training courses, you will not only learn how to use Creo,
+                      but also how to think creatively and solve problems
+                      effectively with this powerful tool. You will gain a
+                      different perspective on product design and development,
+                      and discover new ways to innovate and collaborate with
+                      Creo³. Don't miss this chance to enroll in our Creo
+                      training courses today and unleash your potential with the
+                      world's leading CAD software.
+                    </p>
+                  </div>
+                  <div class="col">
+                    <div class="ratio rounded-4 overflow-hidden ratio-16x9">
+                      <iframe
+                        width="1280"
+                        height="720"
+                        src="https://www.youtube.com/embed/NO9I_da55Oo"
+                        title="Welcome to SOLIDWORKS"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                      ></iframe>
+                    </div>
+                    <!-- <video autoplay controls muted src="pb.mp4" class="rounded-2 " class="d-block " alt="Bootstrap Themes" loading="lazy"></video> -->
+                  </div>
+                </div>
+              </div>
+
+              <hr class="featurette-divider" />
+
+              <div class="featurette container">
+                <h2
+                  class="row text-center d-flex align-items-center justify-content-center mt-5 mx-auto featurette-heading fw-normal lh-1"
+                >
+                  SolidWorks Training
+                </h2>
+                <div
+                  class="row flex-lg-row-reverse px-2 align-items-center row-cols-1 mb-5 row-cols-lg-2 g-5 gx-2 py-5"
+                >
+                  <div class="col">
+                    <p class="lead">
+                      We also offer Hypermesh training that covers everything
+                      from sketching, modeling, assembly, and drawings to
+                      simulation and composer. You will learn from expert
+                      instructors who will guide you through step by step
+                      tutorials with supporting videos and quizzes.
+                      <br />
+                      Hypermesh is a high-performance finite element
+                      pre-processor that can handle even the largest models. You
+                      will learn how to import CAD geometry, build and edit CAE
+                      models, and export an analysis run for various
+                      disciplines. You will also learn how to use its advanced
+                      geometry and meshing capabilities that provide an
+                      environment for rapid model generation.
+                    </p>
+                  </div>
+                  <div class="col">
+                    <div class="ratio rounded-4 overflow-hidden ratio-16x9">
+                      <iframe
+                        width="1280"
+                        height="720"
+                        src="https://www.youtube.com/embed/NO9I_da55Oo"
+                        title="Welcome to SOLIDWORKS"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                      ></iframe>
+                    </div>
+                    <!-- <video autoplay controls muted src="pb.mp4" class="rounded-2 " class="d-block " alt="Bootstrap Themes" loading="lazy"></video> -->
+                  </div>
+                </div>
+              </div>
+
+              <hr class="featurette-divider" />
+
+              <!-- /END THE FEATURETTES -->
+            </div>
+          </div>
+        </section>
+        <section
+          class="container-fluid d-flex flex-column align-items-center justify-content-center p-sm-5"
+          id="contact"
+        >
+          <div class="container featurette">
+            <div class="row pricing-header p-3 pb-md-4 mx-auto text-center">
+              <h1 class="display-4 fw-normal text-body-primary text-light">
+                Join Here
+              </h1>
+              <p class="fs-5 text-body-primary">
+                Join Our Classes Soon and get a better Carreer.
+              </p>
+            </div>
+            <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 d-flex justify-content-center align-items-center mb-3 text-center">
+              <div class="col">
+                <div class="card primecard mb-4 rounded-3 shadow-sm">
+                  <div class="card-header py-3">
+                    <h4 class="my-0 fw-normal">Primary</h4>
+                  </div>
+                  <div class="card-body">
+                    <h1 class="card-title pricing-card-title">Rs.5000</h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                      <li>Any 1 Software</li>
+                      <li>1 year Student License</li>
+                      <li>Email support</li>
+                      <li>3 Months course</li>
+                      <li>Help center access</li>
+                    </ul>
+                    <button
+                      type="button"
+                      class="w-100 btn btn-lg btn-outline-primary"
+                    >
+                      Grab It
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card stdcard mb-4 rounded-3 shadow-sm">
+                  <div class="card-header py-3">
+                    <h4 class="my-0 fw-normal">Standard</h4>
+                  </div>
+                  <div class="card-body">
+                    <h1 class="card-title pricing-card-title">Rs.20000</h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                      <li>Either SolidWorks or creo</li>
+                      <li>HyperWorks</li>
+                      <li>1 Year student licence for both</li>
+                      <li>Priority email support</li>
+                      <li>Help center access</li>
+                    </ul>
+                    <button type="button" class="w-100 btn btn-lg btn-primary">
+                      Get started
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div
+                  class="card precard mb-4 rounded-3 shadow-sm border-primary"
+                >
+                  <div class="card-header py-3 text-bg-primary border-primary">
+                    <h4 class="my-0 fw-normal">Premium</h4>
+                  </div>
+                  <div class="card-body">
+                    <h1 class="card-title pricing-card-title">
+                      <del>Rs.50000</del> Rs.30000
+                    </h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                      <li>All 3 software</li>
+                      <li>Student licence for all software for 1 year</li>
+                      <li>Internship for 3 months provided</li>
+                      <li>Phone and email support</li>
+                      <li>Help center access</li>
+                    </ul>
+                    <button type="button" class="w-100 btn btn-lg btn-primary">
+                      Get Yours!
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- <section
+          class="container-fluid d-flex align-items-center justify-content-center p-sm-5"
+          id="contact"
+        >
+          <div class="container pgc6 shadow rounded-3 p-5">
+            <div class="row align-items-center justify-content-center d-flex">
+              <div
+                class="col align-items-center justify-content-center d-flex flex-column order-md-1 p-2 order-2"
+              >
+                <div
+                  class="row text-wrap"
+                  style="font-size: 12px; color: aqua;"
+                >
+                  Write an E-Mail
+                </div>
+                <div class="row">
+                  <div class="h2 text-white text-wrap">
+                    <a href="#" class="text-decoration-none text-white"
+                      >jtech05@gmail.com</a
+                    >
+                  </div>
+                </div>
+                <div
+                  class="row text-wrap"
+                  style="font-size: 12px; color: aqua;"
+                >
+                  Write an message
+                </div>
+                <div class="row">
+                  <div class="h2 text-white text-wrap">
+                    <a href="#" class="text-decoration-none text-white"
+                      >+91 54464 54545</a
+                    >
+                  </div>
+                </div>
+                <div
+                  class="col btn-group-one p-3 d-flex justify-content-center"
+                >
+                  <div class="btn" style="width: fit-content;">
+                    <a class="text-white" href="#"
+                      ><i
+                        class="bx bxl-facebook border border-2 border-light rounded-2"
+                      ></i
+                    ></a>
+                  </div>
+                  <div class="btn" style="width: fit-content;">
+                    <a class="text-white" href="#"
+                      ><i
+                        class="bx bxl-instagram border border-2 border-light rounded-2"
+                      ></i
+                    ></a>
+                  </div>
+                  <div class="btn" style="width: fit-content;">
+                    <a class="text-white" target="_blank" href="#"
+                      ><i
+                        class="bx bxl-linkedin border rounded-2 border-2 border-light"
+                      ></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section> -->
+        <section class="container-fluid d-flex" id="footer">
+          <div class="container">
+            <footer
+              class="d-flex container-fluid flex-wrap py-3 my-4 border-top"
+            >
+            <div class="container pgc6 shadow rounded-3 p-5">
+              <div class="row align-items-center justify-content-center d-flex">
+                <div
+                  class="col align-items-center justify-content-center d-flex flex-column order-md-1 p-2 order-2"
+                >
+                  <div
+                    class="row text-wrap"
+                    style="font-size: 12px; color: aqua;"
+                  >
+                    Write an E-Mail
+                  </div>
+                  <div class="row">
+                    <div class="h2 text-white text-wrap">
+                      <a href="#" class="text-decoration-none text-white"
+                        >jtech05@gmail.com</a
+                      >
+                    </div>
+                  </div>
+                  <div
+                    class="row text-wrap"
+                    style="font-size: 12px; color: aqua;"
+                  >
+                    Write an message
+                  </div>
+                  <div class="row">
+                    <div class="h2 text-white text-wrap">
+                      <a href="#" class="text-decoration-none text-white"
+                        >+91 54464 54545</a
+                      >
+                    </div>
+                  </div>
+                  <div
+                    class="col btn-group-one p-3 d-flex justify-content-center"
+                  >
+                    <div class="btn" style="width: fit-content;">
+                      <a class="text-white" href="#"
+                        ><i
+                          class="bx bxl-facebook border border-2 border-light rounded-2"
+                        ></i
+                      ></a>
+                    </div>
+                    <div class="btn" style="width: fit-content;">
+                      <a class="text-white" href="#"
+                        ><i
+                          class="bx bxl-instagram border border-2 border-light rounded-2"
+                        ></i
+                      ></a>
+                    </div>
+                    <div class="btn" style="width: fit-content;">
+                      <a class="text-white" target="_blank" href="#"
+                        ><i
+                          class="bx bxl-linkedin border rounded-2 border-2 border-light"
+                        ></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+              <div
+                class="row row-cols-1 container-fluid row-cols-md-2 d-flex align-items-center justify-content-between"
+              >
+                <div
+                  class="col d-flex align-items-sm-center justify-content-center"
+                >
+                  <span class="mb-3 mb-md-0 copyright text-body-secondary"
+                    >© 2023 Company, Inc</span
+                  >
+                </div>
+                <div
+                  class="col btn-group-one p-3 d-flex justify-content-center"
+                >
+                  <div class="btn" style="width: fit-content;">
+                    <a class="text-white" href="#"
+                      ><i
+                        class="bx bxl-facebook border border-2 border-light rounded-2"
+                      ></i
+                    ></a>
+                  </div>
+                  <div class="btn" style="width: fit-content;">
+                    <a class="text-white" href="#"
+                      ><i
+                        class="bx bxl-instagram border border-2 border-light rounded-2"
+                      ></i
+                    ></a>
+                  </div>
+                  <div class="btn" style="width: fit-content;">
+                    <a class="text-white" target="_blank" href="#"
+                      ><i
+                        class="bx bxl-linkedin border rounded-2 border-2 border-light"
+                      ></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </footer>
+          </div>
+        </section>
+      </section>
+    </div>
+  </body>
+</html>

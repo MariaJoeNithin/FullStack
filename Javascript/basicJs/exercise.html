@@ -1,0 +1,81 @@
+<!-- Array Declaration , find largest array
+Spread operator .
+func call
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 2
+        // array sorting using for loop
+        function lgnum(a)
+        {
+            let temp = 0;
+            for(let i=0;i<a.length;i++)
+            {
+                for(let j=i+1;j<a.length;j++)
+                {
+                    if(a[j]>a[i])
+                    {
+                        temp = a[j];
+                        a[j] = a[i];
+                        a[i] = temp;
+                    }
+                }
+                
+            }
+            return a;
+        }
+
+        let a=[] ;
+
+        let n = prompt("Enter the number of array");
+
+        for (let i=0;i<n;i++)
+        {
+            a[i]=prompt("Enter the element ",i+1);
+        }
+        document.write("Original array : <br>")
+        for(let x of a)
+        {
+            document.write("&nbsp",x);
+        }
+
+        // let arraysrt= a.sort((c,d)=>d-c); // decending
+        // let arraysrt= a.sort((c,d)=>c-d); // ascending
+        // document.write("<br>");
+
+        // for(let x of a)
+        // {
+        //     document.write("&nbsp",x);
+        // }
+
+        document.write("<br> Descending order : ",lgnum(a));
+        document.write("<br> Largest Num : ",lgnum(a[0]));
+        document.write("<br> Second Large Num : ",lgnum(a[1]));
+
+
+        let maxnum = Math.max(...a);
+        document.write("<br>Largest value :<br>");
+        document.write(maxnum);
+
+        // 2
+
+        let name=(prompt("Enter the name "));
+        document.write("<br>The string : ",name);
+        let namesplit = name.split("");
+        let namereverse = namesplit.reverse();
+        let namejoin= namereverse.join();
+        document.write("<br>The reverse string : ",namejoin);
+
+        
+
+    </script>
+</body>
+</html>

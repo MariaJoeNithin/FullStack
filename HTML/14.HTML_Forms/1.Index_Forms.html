@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bio Data</h1>
+    <form><fieldset><legend>Job Application</legend>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="Name" value="Enter the Name"><br><br>
+        <label for="gender">Gender:</label>
+        <input type="radio" id="male" name="gen">
+        <label for="male">Male</label>&nbsp;
+        <input type="radio" id="female" name="gen">
+        <label for="radio" id="female">Female</label>&nbsp;
+        <input type="radio" id="others" name="gen">
+        <label for="others">Others</label><br><br>
+        <label for="skills">Technical Skills</label>
+        <input type="checkbox" id="C" name="skills1" value="C">
+        <label for="skills1">C</label>
+        <input type="checkbox" id="C++" name="skills2" value="C">
+        <label for="skills2">C++</label>
+        <input type="checkbox" id="Java" name="skills3" value="C">
+        <label for="skills3">JAVA</label><br><br>
+        <label for="role">Choose Designation :</label>
+        <select name="Designation" id="role">
+            <option value="Sde">Senior Design Engineer</option>
+            <option value="de">Design Engineer</option>
+            <option value="Jde">Junior Design Engineer</option>
+        </select><br><br>
+        <label for="exp">Experience : (if any)</label>
+        <input list="exp" name="exp">
+        <datalist id="exp">
+            <option value="Fresher">Fresher</option>
+            <option value="0-2 Yrs">0-2 years</option>
+            <option value="3-4 Yrs">3-4 years</option>
+        </datalist><br><br>
+        <label for="feedback">Feedback : </label><br>
+        <textarea name="comments" id="feedback" cols="30" rows="10"></textarea><br><br>
+        <input type="button" value="Submit" >
+        </fieldset>
+        
+    </form>
+
+</body>
+</html>

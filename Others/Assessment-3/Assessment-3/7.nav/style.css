@@ -1,0 +1,30 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-image:url(Calm-Mountain-Lake-Landscape-Wallpaper.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat:no-repeat;
+  height: 300px;
+}
+.navbar{
+  width:95%;
+  margin: 20px;
+  padding: 2px;
+}
+a{
+  padding: 35px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight:bold;
+  font-size: 20px;
+}
+
+a:hover{
+  color: rgb(243, 75, 8);
+  border-radius: 
+
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 20px;
+            font-size: 20px;
+            margin: 10px;
+            cursor: pointer;
+            display: inline;
+        }
+        #n1
+        {
+            font-size: 20px;
+        }
+        #n2
+        {
+            font-size: 40px;
+            background-color: blue;
+        }
+        #n3
+        {
+            font-size: 50px;
+            background-color: green;
+        }
+        #n4
+        {
+            font-size: 60px;
+            background-color: violet;
+            color: black;
+        }
+        #n1:hover
+        {
+           background-color: white;
+           color: black;
+           border: 1px solid black; 
+        }
+        #n2:hover
+        {
+            box-shadow: 5px 5px 5px 0px red;
+        }
+        #n5
+        {
+            opacity: 0;
+            cursor: not-allowed;
+        }
+        /*.navbar
+        {
+            float: right;
+            display: inline;
+        }*/
+        .navbar
+        {
+            display: block;
+            width: 300px;
+            height: 100vh;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="navbar">    
+        <button id="n1">Click Here</button>
+        <button id="n2">Click Here</button>
+        <button id="n3">Click Here</button>
+        <button id="n4">Click Here</button>
+        <button id="n5">Click Here</button>
+        <a href="#"><button id="n4">Click Here</button></a>
+    </div>
+
+</body>
+</html>

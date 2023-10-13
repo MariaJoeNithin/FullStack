@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.pageno {
+  display: inline-block;
+  width: 300px;
+}
+
+.pageno a {
+  color: black;
+  float: left;
+  padding: 20px;
+  text-decoration: none;
+  border-radius: 50%;
+  box-sizing: border-box;
+  height: 50px;
+  width: 50px;
+  animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+
+.pageno a:active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.pageno a:hover:not(.active) 
+{
+  background-color: blue;
+  color: white;
+}
+
+.pageno .active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+@media only screen and (max-width: 600px)
+{
+    .pageno
+    {
+        width: 300px;
+    }
+    .pgnoonly
+    {
+        height: 100px;
+        width:150px;
+        display:flex;
+        overflow: scroll;
+    }
+}
+
+</style>
+</head>
+<body>
+<h2>2.We can use Media Queries and adjust the display based on the available space or using flexbox and overflow property and hide the other page numbers.</h2>
+
+<h2>Current page is page 5</h2>
+
+<p>Move the mouse over the numbers.</p>
+
+<div class="pageno">
+  <a href="#">&laquo;</a>
+  <div class="pgnoonly">
+    <a href="#">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <a  class="active" href="#">5</a>
+    <a href="#">6</a>
+  </div>
+  <a href="#">&raquo;</a>
+</div>
+
+</body>
+</html>

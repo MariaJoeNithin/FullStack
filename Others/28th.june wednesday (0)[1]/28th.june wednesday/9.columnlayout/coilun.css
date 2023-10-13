@@ -1,0 +1,24 @@
+.container {
+    width: 1200px;
+    margin: auto;
+}
+h1{
+    background-color: rgb(93, 67, 33);
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.box1{
+    width: 25%;
+    height: 400px;
+    background-color: aliceblue;
+}
+.box2{
+    width: 75%;
+    height: 400px;
+    background-color: antiquewhite;
+}
+.yy{
+    background-color: aqua;
+}

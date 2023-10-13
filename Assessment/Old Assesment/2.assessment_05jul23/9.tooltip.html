@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .content
+        {
+            height: 600px;
+            width: 750px;
+            box-sizing: border-box;
+        }
+        .content img
+        {
+            position: absolute;
+            z-index: +1;
+        }
+        .content:hover img
+        {
+            z-index: -1;
+        }
+        .content .tooltip
+        {
+            display: none;
+        }
+        .tooltip
+        {
+            display: none;
+        }
+        .content:hover .tooltip
+        {
+            display: contents;
+            position: absolute;
+            height: 200px;
+            width: 750px;
+            border: 5px solid white;
+            bottom: 0;
+            right: 0;
+            margin-bottom: 5px;
+            padding: 5px;
+            z-index: +1;
+            color: white;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <img src="https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?cs=srgb&dl=pexels-pixabay-268533.jpg&fm=jpg" alt="loading..." height="400px" width="600px">
+        <span class="tooltip" >This is a tree</span>
+    </div>
+</body>
+</html>

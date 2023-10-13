@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tooltip {
+       /* inline block used to cut down block line*/
+       display: inline-block;
+       border-bottom: 1px dotted black;
+        }
+        /* compalsery space after  (parent space then dot child).tooltip .tooltipi  */
+        .tooltip .tooltipi{
+            visibility: hidden;
+            width: 120px;
+             /* background */
+            background-color: black;
+            /* white for text*/
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+        /*for hover*/          
+          position: absolute;
+            z-index: 1;
+        }
+        .tooltip:hover .tooltipi{
+            visibility:visible ;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <p>welcome <abbr title="united states">us</abbr></p>
+
+    <div class="tooltip" >us
+        <span class="tooltipi">united state</span>
+
+   <!--</div>
+    <div class="tooltip">Hover over me
+        <span class="tooltiptext">Tooltip text</span>
+      </div>--> 
+      
+</body>
+</html>

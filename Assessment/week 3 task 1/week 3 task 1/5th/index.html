@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  .pagination{
+    width: 420px;
+    padding: 20px;
+    position: relative;
+    left:20em;
+    background: #3385ff;
+    border-radius: 20px;
+    animation-name:example;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+   }
+   @keyframes example{
+    from{background:#3385ff ;}
+    to{background: rgb(102, 235, 97);}
+   }
+      
+     .pagination a:hover{
+      background:#f2f2f2 ;
+      border-radius: 50%;
+      color:  #3385ff;
+      transform: scale(1.2);
+     }  
+     .pagination a{
+      padding: 20px;
+      text-decoration: none;
+      color: #f2f2f2;
+ 
+     
+     }
+
+    </style>
+</head>
+<body>
+  
+   <div class="pagination">
+    <a href="#">&laquo;</a>
+    <a href="#">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <a href="#">5</a>
+    <a href="#">6</a>
+    <a href="#">&raquo;</a>
+</body>
+</html>

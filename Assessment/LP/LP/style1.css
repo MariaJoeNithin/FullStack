@@ -1,0 +1,33 @@
+
+/* Nav Bar */
+
+.home{
+    min-height: 100vh;
+}
+
+/********* Services ************/
+
+.card{
+overflow: hidden;
+}
+.card img {
+    height:200px;
+}
+.card img:hover{
+    transform: scale(1.1);
+    transition: .1s;
+    overflow: hidden;
+
+}
+
+/* ********* Contact ******* */
+
+form {
+   
+    box-shadow: 2px 2px 5px rgba(0,0,0,.2),-1px -1px 5px rgba(0,0,0,.05);
+    border-radius: 35px;
+}
+
+i{
+    margin-right: 50px !important;
+}

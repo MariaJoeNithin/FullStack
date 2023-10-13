@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Roboto+Slab:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *
+        {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            font-family: 'Roboto Slab', serif;
+        }
+        body
+        {
+        width: 100%;
+        height: 100vh;
+        /*background-image: url(https://c4.wallpaperflare.com/wallpaper/280/619/719/light-stains-faded-dull-wallpaper-preview.jpg);*/
+        background-image: linear-gradient( to top right,  green, blue,red);
+        background-color: rgba(255, 255, 255, 0.250);
+        backdrop-filter: blur 5px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        }
+        h1
+        {
+            height: 200px;
+            padding-top:100px ;
+            position: fixed;
+        }
+        .main
+        {
+            width: 94%;
+            margin: 60px;
+            /*padding: 80px;*/
+            padding-top: 150px;
+            /*background-color: rgba(0, 255, 238, 0.25);*/
+            backdrop-filter: blur 5px;
+            border-radius: 15px;
+            /*border: 2px solid rgba(0, 0, 255, 0.250);*/
+            /*display: flex;*/
+            /*flex-direction: row;*/
+        }
+        header
+        {   
+            position: fixed;
+            background-color: rgba(0, 0, 0, 1);
+            display: flex;
+            align-items: center;
+            width: 100%;
+            z-index: 5;
+        }
+        header img
+        {
+            margin-top: 20px;
+        }
+        header .hd
+        {
+            color: white;
+            font-size: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        nav
+        {
+            position: fixed;
+            height: 70px;
+            /*background-color: rgba(255, 255, 0, 0.524);*/
+            display: flex;
+            position: relative;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 600px;
+            margin: 10px auto;
+            border-radius: 10px;            
+        }
+        nav button
+        {
+            color: white;
+            background-color: rgba(13, 23, 163, 0.542);
+            padding: 5px;
+            height: 35px;
+            width: 100px;
+            border: 2px solid rgba(0, 0, 255, 0.250);
+            border-radius: 5px;
+        }
+        nav button:hover
+        {
+            color: white;
+            background-color: blue;
+            scale: 1.2;
+            transition: 0.3s;
+        }
+        #sch
+        {
+            width: 200px;
+            height: 30px;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.250);
+            border: 1px solid rgba(0, 0, 255, 0.250);
+        }
+        .hd button
+        {
+            background-color: rgba(255, 255, 255, 0.250);
+            border-radius: 5px;
+            border: none;
+            height: 30px;
+            width: 50px;
+            color: white;
+        }
+        header>button
+        {
+            width: 50px;
+            height: 30px;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.250);
+            border: 1px solid rgba(0, 0, 255, 0.250);
+        }
+        .maincontainer
+        {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+        .container
+        {
+            display: inline-block;
+            width: 22%;
+            min-width: 300px;
+            height: 600px;
+            margin: 20px auto;
+            /*display: flex;
+            justify-content: center;*/
+            background-color: rgba(255, 225, 0, 0.25);
+            border-radius: 20px;
+            justify-content: space-evenly;
+            transition: 0.3s;
+        }
+        .container h2
+        {
+            color: black;
+            font-size: 30px;
+        }
+        
+        div{
+            display: inline-block;
+        }
+        .pic
+        {
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .pic a
+        {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+        }
+        img
+        {
+            height: 200px;
+            width: 200px;
+            align-self: center;
+            border: 5px black;
+            margin-bottom : 30px ;
+            border-radius: 25px;
+        }
+        .content
+        {
+            text-align: center;
+            font-size: 25px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: black;
+            transition: 0.3s;
+            justify-content: center;
+        }
+        .content .items
+        {
+            height: 250px;
+            transition: 0.3s;
+        }
+        .maincontainer img:hover
+        {
+            transition: 0.3s;
+            background-color: rgba(0, 255, 64, 0.413);
+            box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.415);
+            scale: 1.2;
+            border-radius: 20px;
+            
+        }
+        .container:hover
+        {
+            transition: 0.3s;
+            box-shadow: 0 0 5px 5px rgba(222, 77, 77, 0.5);
+            border-radius: 20px;
+            /*background-color: blue;*/
+            background-image: linear-gradient(black  ,green );
+            color: white;
+            scale: 1.1;
+        }
+        .container:hover .items
+        {
+
+            color: white;
+        }
+        .container:hover .items h2
+        {
+            /*background-color: blue;*/
+            color: white;
+            transition: 0.3s;
+        }
+        .container button
+        {
+            height: 40px;
+            width: 100px;
+            border-radius: 20px;
+            border: none;
+            color: white;
+            border: 2px solid rgba(255, 255, 0, 0.500) ;
+        }
+        .container button a
+        {
+            color: white;
+            text-decoration: none;
+        }
+        .container .cart
+        {
+            background-image: linear-gradient(green,rgb(19, 187, 19)) ;
+        }
+        .container .buy
+        {
+            background-image: linear-gradient(blue, rgb(163, 135, 235)) ;
+        }
+        .add button:hover
+        {
+            background-color: black;
+            background-image: none;
+            scale: 1.2;
+            border: 1px solid yellow;
+            transition: 0.3s;
+        }
+        .hd ::placeholder
+        {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://www.itvoice.in/wp-content/uploads/2020/06/download-2-1.png" alt="" style="height: 50px;width: 70px;margin-left: 20px;">
+        <nav>
+            <!--<ul>
+                <li><a href=""><button>Home</button></a></li>
+                <li><a href=""><button>Today's Deal</button></a></li>
+                <li><a href=""><button>About</button></a></li>
+                <li><a href=""><button>Categories</button></a>  </li>    
+            </ul>-->
+            <a href=""><button>Home</button></a>
+            <a href=""><button>Today's Deal</button></a>
+            <a href=""><button>About</button></a>
+            <a href=""><button>Categories</button></a>   
+        </nav>
+        <div class="hd">
+            <input type="text" id="sch" placeholder="Search.." name="search" style="padding-left: 5px; color: white; ">
+            <button type="submit" ><i class="fa fa-search"></i></button>
+        </div>
+        
+    </header>
+    <h1>Today's Deal</h1>
+    <div class="main">
+       <div class="maincontainer">
+        <div class="container" >
+            <div class="pic">
+                <a href="../"><img src="https://www.boat-lifestyle.com/cdn/shop/products/c2386af9-4349-432f-8ba5-2b6aa06025c8_600x.png?v=1668756103" alt="loading"></a>     
+                <div class="content" >
+                    <div class="items">
+                        <h2>Airdopes 131</h2>
+                    <p><del>Rs.****</del></p>
+                    <p><ins>Rs.****</ins></p>
+                    </div>
+                    <div class="add">
+                        <button class="cart"><a href="">Add to cart</a></button>
+                        <button class="buy"><a href="">Buy </a></button>   
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">   
+            <div class="pic">
+                <a href="../"><img src="https://www.boat-lifestyle.com/cdn/shop/products/WaveFlexConnectPackaging1.2_700x.png?v=1677645513" alt="loading"></a>
+                <div class="content">
+                    <div class="items">
+                        <h2>WaveFlexConnect</h2>
+                    <p><del>Rs.****</del></p>
+                    <p><ins>Rs.****</ins></p>
+                    </div>
+                    <div class="add">
+                        <button class="cart"><a href="">Add to cart</a></button>
+                        <button class="buy"><a href="">Buy </a></button>   
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">   
+            <div class="pic">
+                <a href="../"><img src="https://www.boat-lifestyle.com/cdn/shop/products/main-image-3_e934902f-345b-4cc4-80b9-9ef3d77a1f34_600x.png?v=1661272676" alt="loading"></a>
+                <div class="content">
+                    <div class="items">
+                        <h2>Wave Call</h2>
+                    <p><del>Rs.****</del></p>
+                    <p><ins>Rs.****</ins></p>
+                    </div>
+                    <div class="add">
+                        <button class="cart"><a href="">Add to cart</a></button>
+                        <button class="buy"><a href="">Buy </a></button>   
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">      
+            <div class="pic">
+                <a href="../"><img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/products/3_743027d7-94ca-43e1-9c04-72ad6483c226_2000x.png?v=1669055392" alt="loading..."></a>
+                <div class="content">
+                    <div class="items">
+                        <h2>Airdopes 131</h2>
+                    <p><del>Rs.****</del></p>
+                    <p><ins>Rs.****</ins></p>
+                    </div>
+                    <div class="add">
+                        <button class="cart"><a href="">Add to cart</a></button>
+                        <button class="buy"><a href="">Buy </a></button>   
+                    </div>
+                </div>
+            </div>
+        </div>
+       </div> 
+    </div>
+</body>
+</html>

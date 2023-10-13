@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        *
+        {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-size: 20px;
+            font-family: 'Roboto', sans-serif;
+        }
+        body
+        {
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /*background-image: linear-gradient( to top right, blue , red);*/
+        }
+        #closeb
+        {
+            position: absolute;
+            margin: -625px 0px 0px 750px;
+            font-size: 1.3rem;
+            color: #cbcbcb;
+            box-sizing: border-box;
+        }
+        .main
+        {
+            max-width: 500px;
+            width: 100%;
+            height: 700px;
+            border-radius: 5px;
+            background-color: white;
+            margin: 0px;
+            border: 1px solid gray;
+        }
+        .btn-signin,.btn-signup
+        {
+            width: 49.5%;
+            height: 50px;
+        }
+        form
+        {
+            padding-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .ip
+        {
+            padding-left: 40px;
+            margin-top: 10px;
+            height: 40px;
+            width: 90%;
+            font-size: 15px;
+            border-radius: 5px;
+            border: 2px solid rgba(73, 73, 73, .25);
+        }
+        input
+        {
+            border: none;
+            width: 85%;
+        }
+        i
+        {
+            color: gray;
+            position: relative;
+            left: -20px;
+            padding: 2.5px;
+            font-size: 30px;
+        }
+        .btn-signin
+        {
+            border-top: 2px solid red ;
+            border-bottom: none;
+            border-left: none;
+            border-right: none;
+            background-color: white;
+        }
+        .rm1
+        {
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+        .rmc
+        {
+            display: flex;
+            align-items: left;
+            margin-left: 5px;
+        }
+        .rmf a
+        {
+            color: gray;
+            text-decoration: none;
+        }
+        .recap
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 70%; 
+            margin-top: 15px;
+            height: 80px;
+            border: 2px solid gray;
+            background-color: #cdc0c076;
+            border-radius: 5px;
+        }
+        .recap1
+        {
+            display: flex;
+            align-items: left;
+            margin-left: 5px;
+        }
+        .recap2
+        {
+            margin-top: 5px;
+            align-items: right;
+        }
+        .sn
+        {
+            background:linear-gradient(to bottom,#0eb80ecb,rgba(6, 98, 6, 0.938));
+            width: 90%;
+            height: 50px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .sn a
+        {
+            color: white;
+            text-decoration: none;
+        }
+        .oropt{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px auto;
+        }
+        .oropt hr{
+            width: 150px;
+        }
+        .otropt{
+            gap: 10px;
+            width: 95% ;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 10px;
+
+        }
+        .otropt button
+        {
+            height: 50px;
+            width: 220px;
+            align-items: center;
+            border: none;
+            border-radius: 5px;
+        }
+        .extra
+        {
+            height: 50px;
+            width: 200px;
+        }
+        .extra a
+        {
+            text-decoration: none;
+            align-items: center;
+        }
+        .extra i
+        {
+            margin-left: 20px;
+            align-items: center;
+            color: white;
+        }
+        footer
+        {
+            text-align: center;
+            margin-top: 25px;
+        }
+        footer .endcmt
+        {
+            color: green;
+        }
+        footer .endcmt2,.policy
+        {
+            font-size: 10px;
+        }
+        .endcmt2
+        {
+            color: gray;
+        }
+        .policy
+        {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="main">
+        <div >    
+            <a href="signin.html" style="text-decoration: none;"><button class="btn-signin" >Sign In</button></a>
+            <a href="signup.html" style="text-decoration: none;"><button class="btn-signup">Sign Up</button></a>
+        </div>
+        <form>
+            <div class="ip">
+                <i class='bx bxs-user-circle'></i>
+                <input type="text" name="username" id="username" placeholder="Username or email">
+            </div>
+            <div class="ip">
+                <i class='bx bxs-lock-alt'></i>     
+                <input type="password" name="password" id="password" placeholder="Password">
+            </div>
+            <div class="rm1">
+                <div class="rmc">
+                    <input type="checkbox" name="remember me" id="remember me" style="margin-left: 5px;">
+                    <label for="remember me" style="height: 10px;">&nbsp;Remember&nbsp;me </label>
+                </div>
+                <div class="rmf">
+                    <a href="#">Forgot Password</a>
+                </div>
+            </div>
+            <div class="recap">
+                <div class="recap1">
+                    <input type="checkbox" name="recaptcha" id="recaptcha" style="margin-left: 5px; height: 30px; width: 30px; border-color: gray;">
+                    <label for="recaptcha">&nbsp;&nbsp;I'm&nbsp;not&nbsp;a&nbsp;robot&nbsp;</label>
+                </div>
+                <div class="recap2">
+                    <img src="https://seeklogo.com/images/R/recaptcha-logo-F67B135544-seeklogo.com.png" alt="loading..." width="70px" height="50px" style="margin-right: 5px;" >
+                </div>
+            </div>
+            <button class="sn"><a href="#">Sign In</a></button>
+            <div class="oropt">
+                <hr> &nbsp; or &nbsp; <hr>
+            </div>
+            <div class="otropt" >
+                <div class="optgb">
+                    <button class="extra" style="text-align: left;background-color: #db4a39;"> <i class='bx bxl-google' style="font-size: 35px;border-right:1px solid red ;" ></i> <a href="#" style="color: white;">Google</a> </button>
+                </div>
+                <div class="optfb">
+                    <button class="extra" style="text-align: left;background-color: #3b5998;"> <i class='bx bxl-facebook-square' style="font-size: 35px;border-right:1px solid blue ;"></i><a href="#" style="color: white;">Facebook</a> </button>
+                </div>
+                <div class="optlb">
+                    <button class="extra" style="text-align: left;background-color: #0077b5;""> <i class='bx bxl-linkedin' style="font-size: 35px;border-right:1px solid blue ;"></i> <a href="#" style="color: white;">LinkedIn</a> </button>
+                </div>
+                <div class="optgh">
+                    <button class="extra" style="text-align: left;background-color: #909090;""> <i class='bx bxl-github' style="font-size: 35px;border-right:1px solid gray ;"></i> <a href="#" style="color: rgb(74, 67, 67);">Github</a> </button>
+                </div>
+            </div>
+        </form>
+        <footer>
+            <p class="endcmt">
+                Why Create an Account?
+            </p>
+            <p class="endcmt2">
+                By creating this account you agree to our <span class="policy">Privacy Policy</span> & <span class="policy">Cookies Policy</span>  
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

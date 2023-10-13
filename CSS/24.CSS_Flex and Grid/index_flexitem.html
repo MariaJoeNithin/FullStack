@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container
+        {
+            display: flex;
+            align-items: stretch;
+            background-color: blue;
+        }
+        .container div 
+        {
+            background-color: aqua;
+            padding: 10px;
+            margin: 10px;
+
+        }
+        #i1
+        {
+            flex-basis: 200px;
+           /* order: 1;
+            flex-shrink: 0;*/
+        }
+        /*#i2
+        {
+            order: 4;
+            flex-grow: 3;
+        }
+        #i3
+        {
+            order: 3;
+            flex-grow: 3;
+        }*/
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="i1">1</div>
+        <div id="i2">2</div>
+        <div id="i3">3</div>
+        <div id="i4">4</div>
+    </div>
+</body>
+</html>

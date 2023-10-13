@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+        body > i{
+            margin: 35px 0px 0px 990px;
+            font-size: 1.3rem;
+            color: #cbcbcb;
+        }
+        .container{
+            width: 500px;
+            height: 650px;
+            margin: -30px auto;
+            border: 1.3px solid #dddddd;
+            border-top: none;
+            border-radius: 5px;
+            scale: 0.90;
+        }
+        .sign-in-sign-up{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .sign-in-sign-up a{
+            text-decoration: none;
+            font-weight: 500;
+            color: #363636;
+        }
+        .sign-in-sign-up a .sign-in {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 250px;
+            height: 45px;
+            text-align: center;
+            line-height: 45px;
+            border-top: #05c105 3px solid ;
+            border-radius: 5px;
+        }
+        .sign-in-sign-up a .sign-up{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 250px;
+            height: 45px;
+            text-align: center;
+            background: #f0f0f0;
+            line-height: 45px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            color: #757575;
+            font-weight: 500;
+           
+        }
+        .user-name{
+            width: 450px;
+            height: 45px;
+            border: 1px solid rgba(0, 0, 0, 0.26);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px auto;
+            border-radius: 5px;
+        }
+        .user-name i{
+            color: rgb(112, 112, 112);
+            font-size: 2rem;
+        }
+        
+        .user-name input{
+            font-size: 1rem;
+            height: 45px;
+            width: 400px;
+            padding-inline-start: 10px;
+            background: transparent;
+            border: none;
+            outline: none;
+
+        }
+        
+        .user-password{
+            width: 450px;
+            height: 45px;
+            border: 1px solid rgba(0, 0, 0, 0.26);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: -10px auto;
+            border-radius: 5px;
+        }
+        .user-password i{
+            color: rgb(112, 112, 112);
+            font-size: 2rem;
+        }
+        
+        .user-password input{
+            font-size: 1rem;
+            height: 45px;
+            width: 400px;
+            padding-inline-start: 10px;
+            background: transparent;
+            border: none;
+            outline: none;
+        }
+        .user-password input::placeholder{
+            color: #cbcbcb;
+        }
+        
+        .user-name input::placeholder{
+            color: #cbcbcb;
+        }
+        .password-content{
+            width: 420px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 30px auto;
+            border-radius: 5px;
+        }
+        .password-content a{
+            text-decoration: none;
+            color: #757575;
+        }
+        .password-content .pwd-check-content input{
+            width: 17px;
+            height: 17px;
+            transform: translateY(2px);
+        }
+        .im-not-robot{
+            width: 340px;
+            height: 70px;
+            margin: -20px auto;
+            background: rgba(227, 227, 227, 0.712);
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px 10px 20px;
+        }
+        .reCAPTCHA{
+            width: 60px;
+            height: 60px;
+        }
+        .reCAPTCHA img{
+            width: 100%;
+            height: 100%;
+        }
+        .im-not-robot .pwd-check-content input{
+            width: 30px;
+            height: 30px;
+        }
+        .im-not-robot .pwd-check-content span{
+            position: relative;
+            top: -10px;
+            left: 10px;
+        }
+        .container .sign-in-button{
+            width: 400px;
+            height: 45px;
+            margin: 40px auto;
+            background:linear-gradient(to bottom,#05c105a2,rgba(2, 94, 2, 0.944));
+            border: none;
+            border-radius: 5px;
+        }
+        .container .sign-in-button a{
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 45px;
+        }
+        .option-login{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: -20px auto;
+        }
+        .option-login hr{
+            width: 200px;
+        }
+        .another-access{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            width: 450px;
+            margin: 30px 35px;
+
+        }
+        .another-access-button{
+            width: 210px;
+            height: 45px;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+        }
+        .another-access-button p{
+            color: white;
+            width: 80%;
+            text-indent: 40px;
+        }
+        .another-access-button i{
+            width:40px ;
+            height: 100%;
+            text-align: center;
+            line-height: 45px;
+            font-size: 1.4rem;
+            border-right: 2px solid rgba(0, 0, 0, 0.097);
+        }
+        .google-button{
+            background: #db4a39;
+        }
+        .facebook-button{
+            background: #3b5998;
+        }
+        .linked-in-button{
+            background: #0A66C2;
+        }
+        .github-button{
+            background: #c8c8c8;
+        }
+        .last-content-one{
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+        .last-content-two{
+            text-align: center;
+            font-size: .8rem;
+            padding-top: 15px;
+        }
+        .green-word{
+            color: #12a112;
+        }
+    </style>
+</head>
+<body>
+    <i class='bx bx-window-close'></i>
+
+    <form class="container" action="" method="post">
+        <div class="sign-in-sign-up">
+            <a href="Question no1 signin.html"><div class="sign-in"> Sign In</div></a>
+            <a href="Question no1 signup.html"><div class="sign-up">Sign Up</div></a>
+        </div>
+        <div class="user-name">
+            <i class='bx bxs-user-circle'></i>
+            <input type="email" placeholder="Username or email">
+        </div>
+        <div class="user-password">
+            <i class='bx bxs-lock-alt' ></i>
+            <input type="password" placeholder="Password">
+        </div>
+        <div class="password-content">
+            <div class="pwd-check-content">
+                <input type="checkbox" id="remember">&nbsp;<span>Remember me</span>
+            </div>
+            <a href="#">Forgot password</a>
+        </div>
+        <div class="im-not-robot">
+            <div class="pwd-check-content">
+                <input type="checkbox" id="remember">&nbsp;<span>I'm not a robot</span>
+            </div>
+            <div class="reCAPTCHA">
+                <img src="recaptcha-removebg-preview.png" alt="">
+                
+            </div>
+        </div>
+        <div class="sign-in-button">
+           <a href="#">Sign In</a> 
+        </div>
+        <div class="option-login">
+            <hr> &nbsp; or &nbsp; <hr>
+        </div>
+        <div class="another-access">
+            <div class="another-access-button google-button">
+                <i class='bx bxl-google' ></i>
+                <p>Google</p>
+
+            </div>
+            <div class="another-access-button facebook-button">
+                <i class='bx bxl-facebook-square' ></i>
+                <p>Facebook</p>
+
+            </div>
+            <div class="another-access-button linked-in-button">
+                <i class='bx bxl-linkedin' ></i>
+                <p>LinkedIn</p>
+
+            </div>
+           
+            <div class="another-access-button github-button">
+                <i class='bx bxl-github' ></i>
+                <p>Github</p>
+            </div>
+        </div>
+        <p class="last-content-one green-word">
+            Why Create an Account?
+        </p>
+        <p class="last-content-two">
+            By Create this account you agree to our <span class="green-word">Privacy Policy</span> & <span class="green-word">
+                Cookies Policy
+            </span>  
+        </p>
+    </form>
+
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Survey Form</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <style>
+        body{
+  background-color:#f37d9d;
+}
+
+
+#survey-form{
+  background-color:#cecaca;
+  font-family:Quicksand;
+  max-width:100%;
+  margin:auto;
+align-content: center;
+  padding:0;
+  border-radius:1px;
+}
+form
+{
+  width: 500px;
+}
+
+p{
+    width: 400px;
+    margin: 70px auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 2px;
+    background:#09a19c;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+}
+span
+{
+    width:20px;
+    height:20px;
+    border-radius: 50%;
+    background:#108682;
+  }
+.last{
+    background: #82c0be;
+}
+
+body {
+  background: #e37195;
+  
+}
+
+input[type=radio] {
+  border: 1px solid #f06363;
+  padding: 0.5em;
+  -webkit-appearance: none;
+}
+
+input[type=radio]:checked {
+  background: url(data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==) no-repeat center center;
+  background-size: 9px 9px;
+}
+
+input[type=radio]:focus {
+  outline-color: palevioletred;
+}
+#dropdown{
+  font-family:Quicksand;
+  height:20px;
+  width: 400px;
+  border: 1px solid #c0c0c0;
+  border-radius: 1px;
+}
+.back{
+    background-color: rgb(3, 80, 67);
+    color: aliceblue;
+    margin-left: 350px;
+}
+.next{
+    background-color: rgb(3, 80, 67);
+    color: aliceblue;
+}
+    </style>
+  </head>
+  <body>
+
+<form id="survey-form">
+    <p>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span class="last"></span>
+    </p>
+    <div class="form-group">
+        <h3>How did you reach us ?</h3>
+    
+<ul style="list-style: none" class="right">
+    <li><label for="options"><input type="radio" name="options" value=""/> Social Media</label></li>
+    <li><label for="options"><input type="radio" name="options" value=""/> Radio</label></li>
+    <li><label for="options"><input type="radio" name="options" value=""/> Friend</label></li>
+    <li><label for="options"><input type="radio" name="options" value=""/> Advertisement</label></li>
+</ul>
+      </div>
+
+      <div>
+        <h3>Would you recommend our company?</h3>
+      </div>
+      <input type="radio" name="options" value=""/> yes </label>
+      <input type="radio" name="options" value=""/> No</label>
+      <input type="radio" name="options" value=""/> Maybe</label>
+      <div class="sub-group">
+        <label class="left" for="dropdown">One thing you like about us </label>
+        <br>
+  
+        <select class="bottom-ropdown" id="dropdown" name="dropdown">
+          <option selected disabled>student</option>
+      
+        </select>
+      </div>
+      <button class="back">back</button>
+      <button class="next">next</button>
+
+
+
+    
+</form>
+</div>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+  margin: 0;
+  padding: 0;
+}
+
+.pagination-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 400px;  
+}
+
+.item {
+  width: 100px; 
+  height: 100px; 
+  margin: 10px;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.pagination-counter {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 18px;
+}
+body {
+  counter-reset: pageCounter;
+}
+
+.item {
+  counter-increment: pageCounter;
+}
+
+.total-pages::before {
+  content: counter(pageCounter);
+}
+
+    </style>
+</head>
+<body>
+  <div class="pagination-container">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div >To display the total number of pages dynamically in a pagination system using CSS ,CSS counters can be used. CSS counters allow you to increment and display values dynamically. <br>
+        counter-reset - Creates or resets a counter <br>
+        counter-increment - Increments a counter value <br>
+        content - Inserts generated content <br>
+        counter() or counters() function - Adds the value of a counter to an element</div>
+  </div>
+  <div class="pagination-counter">
+    Page <span class="page-number">1</span> / <span class="total-pages"></span>
+  </div>
+</body>
+</html>

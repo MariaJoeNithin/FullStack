@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //group of characters 
+        //stings are surrounded by ethir "" or '' or ``
+
+        let str = "Maria Joe Nithin ";
+        console.log(str);
+        console.log(str[8]);
+
+        console.log(`My name is ${str}`);
+        console.log(`batch
+        1.OFSD
+        2.FSD`);
+        console.log("batch \n1.OFSD \n2.FSD");
+
+        //Accessing strings
+        let str2 = `Welcome`;
+        console.log(str2[0]);
+        console.log(str2[1]);
+        console.log(str2[2]);
+        console.log(str2[3]);
+        console.log(str2[4]);
+        console.log(str2[5]);
+        console.log(str2[6]);
+
+        console.log(str2.at(-3));
+        console.log(str2.charAt(-3));
+
+        for(x of str2)
+        console.log(x);
+
+        //string length
+        console.log(str2.length);
+
+        //String are immutable
+        str2[0]="w"
+        console.log(str2);
+
+        //String methods
+        let s1="apple"
+        let s2="APPLE"
+        console.log(s1==s2);
+
+        //change the case
+        //1.toUpperCase
+        //2.toLowerCase
+        console.log(s1.toUpperCase());
+        console.log(s2.toLowerCase());
+
+        //Searches in String
+        let sr="welcome to all"
+        //1.indexOf
+        console.log(sr.indexOf("to"));
+        console.log(sr.indexOf('o',2));
+        //2.includes
+        console.log(sr.includes("all"));
+        //3.startswith
+        console.log(sr.startsWith("welcome"))
+        //4.Endswith
+        console.log(sr.endsWith("all"))
+     
+        //Getting a string
+
+        //1.slice
+        let mail="mjnithin05@gmail.com"
+        let j = mail.indexOf("@");
+        console.log(mail.slice(0,j));
+        console.log(mail.slice(-6));
+
+        //2.substring
+
+        console.log(mail.substring(9,5))
+        //3.substr
+        console.log(mail.substr(0,j));
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+1)How can you create a clickable email address that opens the user's default email client when clicked?
+
+By using below link
+<p><a href="mailto:arivumamu@gmail.com?cc=@xyz.com&bcc=bcc@com&subject=Test&body=Demo mail">mail</a></p>
+
+2)What is the purpose of the alt attribute in the <img> tag, and why is it important for accessibility?
+
+      The required alt attribute specifies an alternate text for an image, if the image cannot be displayed. 
+         The alt attribute provides alternative information for an image if a user for some reason cannot view it.
+
+3)Describe the difference between the <strong> tag and the <em> tag in HTML and when to use each.
+
+        <strong> is a tag you'd put around a sentence or phrase to indicate that "this is more important than the  surrounding text".
+            <em> is generally used to indicate the stress of a word within a sentence.
+           The content inside is typically displayed in italic.
+
+4)What are semantic HTML elements, and why are they important for web development?
+
+A semantic element clearly describes its meaning to both the browser and the developer.
+      Examples of non-semantic elements:<mark> div and span</mark> - Tells nothing about its content. <br>
+            
+            Examples of semantic elements <form>, <table>, and <article> - Clearly defines its content.
+
+5)Explain the difference between the <script> tag placed in the <head> section and the <script> tag placed before the closing </body> tag
+
+
+For scripts that are critical to the page contents and should be loaded first such as analytics, API, or authentication-type of scripts, it is recommended to place them in the head section of the HTML page. And other script tags should be placed at the bottom of the page before the closing </body> tag.

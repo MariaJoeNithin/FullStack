@@ -1,0 +1,1 @@
+We can use range or transition to make a progress pagination bar in CSS . For further usage we need Java Script for it to function.

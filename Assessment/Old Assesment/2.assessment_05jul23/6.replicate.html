@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100dvh; 
+        }
+        .container{
+            background: skyblue;
+            height: 350px;
+            width: 350px;
+            border-radius: 25px;
+            border: 2px solid blue;
+            display: flex;
+            flex-direction: column;
+            padding: 20px 15px 20px 15px;
+        }
+        .input{
+            height: 35px;
+            width: 85%;
+            border: 2px solid blue;
+            outline: none;
+            border-radius: 8px;
+            padding: 0 0 0px 50px;
+            text-align: left;
+            margin-top: 5px;
+        }
+        .content{
+            display: flex;
+            flex-direction: column;
+        }
+        i{
+            position: relative;
+            top: -35px;
+            left: 10px;
+            font-size: 35px;
+            border-left: none;
+            width: 37px;
+            border-right: 2px solid blue;
+        }
+        input[type=submit] {
+            box-sizing: border-box;
+            color: white;
+            background-color: blue;
+            text-decoration: none;
+            border-radius: 10px;
+            padding-left: 10px;
+            width: 350px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="container">
+          <div class="content">
+            <input type="text" class="input" id="name" placeholder=" Name">
+            <i class='bx bxs-user' style='color:#4863ad' ></i>
+        </div>  
+        <div class="content">
+            <input type="text" class="input" id="text" placeholder=" Email id">
+            <i class='bx bxs-envelope' style='color:#4863ad' ></i>
+        </div >  
+        <div class="content">
+            <input type="number" class="input" id="phone" placeholder=" Phone">
+            <i class='bx bxs-phone' style='color:#4863ad' ></i>
+        </div>  
+        <div class="content">
+            <input type="password" class="input" id="psw" placeholder=" Set password">
+            <i class='bx bxs-lock-alt' style='color:#4863ad' ></i>
+        </div>  
+        <div class="content">
+        <input type="submit" value="Register" class="input">
+        </div>
+    </div>
+</body>
+</html>

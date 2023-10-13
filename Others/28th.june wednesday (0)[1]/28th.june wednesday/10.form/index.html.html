@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="arivu.css">
+    <title>Document</title>
+    
+        
+
+</head>
+
+<body>
+    
+    <h1>Welcome to the BRIKSHA HOTELS</h1>
+    <h2>Fill the following Form to Book the Room</h2>
+    <form > 
+        <fieldset><legend>Reservation Form</legend>
+    
+   <label for="chkin">Check-in Date</label>
+   <input type="date" name="chkin" id="chkin"><br>
+
+   <label for="chkout">Check-Out Date</label>
+   <input type="date" name="chkout" id="chkout"><br>
+   <p><mark>Total Number of Peoples</mark></p>
+   <label for="Adualts">Adualts</label>
+   <input type="number" name="Adualts" id="Adualts" min="1" max="5">
+   
+   <label for="childs">Childrens</label>
+   <input type="number" name="childs" id="childs" min="1" max="5"><br><br>
+
+   <label for="Roomtype">Roomtype</label>
+   <input list="Roomtype" name="Roomtype">
+
+   <datalist id="Roomtype">
+    <option value="Single">Single</option>
+    <option value="Double">Double</option>
+    <option value="Suite">Suite</option>
+   </datalist><br><br>
+   <label for="comments">Special Requests</label>
+   <textarea name="comments" id="comments"  cols="20" rows="5"></textarea><br><br>
+
+   <input type="button" value="SUBMIT">
+
+
+
+    </fieldset>
+    </form>
+</body>
+</html>

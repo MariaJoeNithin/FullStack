@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeOf</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+    
+    <script>
+        // let a=10,b=20;
+        // string(a);
+        // console.log(typeof a);
+
+        let val=true;
+        console.log(typeof val);
+
+        val=String(val);
+        console.log(typeof val);
+
+        //implicit conversion
+        let a="6";
+        let b="12";
+
+        document.write(b/a)
+        document.write("<br> a ",typeof a)
+        c=b/a;
+        document.write("<br> c ",typeof c )
+
+        a = Number(a)
+        document.write("<br> a ",typeof a)
+
+        b= Number("hello everyone")
+        document.write("<br> b ", b)
+        console.log(" b ", b)
+        
+        b="Hello"
+        b=Boolean(b)
+        document.write("<br> b ", b)
+        console.log(" b ", b)
+        
+        b=""
+        b=Boolean(b)
+        document.write("<br> b ", b)
+        console.log(" b ", b)
+
+        //numeric coversion rules:
+        // value             becomes
+        //undefined          NaN
+        //NULL               0
+        //true or fale       1 and 0
+        //string             whitespaces()
+
+    </script>
+</body>
+</html>

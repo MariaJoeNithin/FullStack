@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+        img
+        { 
+            height: 75px;
+            width: 130px;
+            padding: 5px;
+        }
+        img[class="crd3"]
+        {
+            height: 30px;
+            width: 90px;
+            padding: 5px;
+        }
+        img[class="crd1"]
+        {
+            background-color: darkblue;
+            height: 50px;
+            width: 90px;
+            padding: 5px;
+            border-radius: 10px;
+        }
+        body
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container
+        {
+            margin-top: 50px;
+            height: 800px;
+            width: 800px;
+        }
+        .rad
+        {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+        }
+        #rad
+        {
+            height: 25px;
+            width: 50px;
+        }
+        h2
+        {
+            font-size: 20px;
+        }
+        h3
+        {
+            font-size: 15px;
+            color: gray;
+        }
+        .card1 .rad
+        {
+            background-color: rgba(0, 255, 200, 0.564);
+            border: none;
+            border-bottom: 1px solid rgb(72, 111, 227);
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            height: 75px;
+        }
+        .card2,.card3
+        {
+            display: flex;
+            border: 1px solid rgba(128, 128, 128, 0.578);
+            height: 75px;
+            align-items: center;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .card1
+        {
+            border: 1px solid rgb(72, 111, 227);
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        .frm
+        {
+            width: 100%;
+            height: auto;display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+        form
+        {
+            padding: 20px;
+        }
+        .logo1 img
+        {
+           margin-left: 10px; 
+        }
+        .card2 .details
+        {
+            width: 550px;
+        }
+        .card3 .details
+        {
+            width: 580px;
+        }
+        .firstip
+        {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .firstip input
+        {
+            justify-content: center;
+            width: 100%;
+            margin: 0px auto;
+            height: 40px;
+            font-size: 20px;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid gray;
+        }
+        .firstip label
+        {   
+            padding-left: 10px;
+            padding-bottom: 5px;
+            width: 95%;
+            margin: 0px auto;
+            margin-top: 20px;
+        }
+        
+        .secondip
+        {   
+            margin: 0px auto;
+            margin-top: 20px;
+            width: 100%;
+            display: flex;
+            flex: row;
+        }
+        .secondip input
+        {
+            justify-content: center;
+            width: 95%;
+            margin: 0px auto;
+            height: 40px;
+            font-size: 20px;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid gray;
+        }
+        .secondip label
+        {   
+            margin: 0px auto;
+            margin-top: 20px;
+            width: 200px;
+            padding-left: 10px;
+            padding-bottom: 5px;
+        }
+        .secondip .cv input
+        {
+            justify-content: center;
+            width: 80px;
+            margin: 0px auto;
+            height: 40px;
+            font-size: 20px;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid gray;
+        }
+        .thirdip
+        {   
+            margin: 0px auto;
+            margin-top: 20px;
+            width: 100%;
+            display: flex;
+            flex: row;
+        }
+        .btn
+        {   
+            margin: 0px auto;
+            margin-top: 20px;
+            width: 100%;
+            text-align: center;
+            height: 70px;
+            color: white;
+            background-color: rgb(26, 176, 26);
+            font-size: 20px;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card1">
+            <div class="rad">
+                <input type="radio" id="rad" name="rad" checked> 
+                <div class="details" style="width: 400px;">
+                    <h2>Credit and Debit cards</h2>
+                    <h3>Transactions fee may apply</h3>
+                </div>
+                <div class="logo1">
+                    <img class="crd1" src="https://logos-world.net/wp-content/uploads/2020/04/Visa-Emblem.jpg" alt="">
+                    <img class="crd1" src="https://purepng.com/public/uploads/large/purepng.com-mastercard-logologobrand-logoiconslogos-251519938372dnf77.png" alt="">
+                    <img class="crd1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Maestro_logo.png/640px-Maestro_logo.png" alt="">   
+               </div>
+            </div>
+            <div class="frm">
+                <form>
+                    <div class="firstip">
+                        <label for="name">Card Holder Name</label>
+                        <input type="text" name="name" id="name">
+                        <label for="num">Card Number</label>
+                        <input type="text" name="num" id="num" placeholder="1111-2222-3333-4444" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}">
+                    </div>
+                    <div class="secondip">
+                        <div class="date">
+                            <label for="Edate">End Date</label>
+                            <input type="month" name="edate" id="edate">
+                        </div>
+                        <div class="cv" style="margin-right: 20px;">
+                            <label for="cvv">CVV</label><br>
+                            <input type="number" name="cvv" id="cvv">
+                        </div>
+                        <div class="info">
+                            <br>
+                            <i class='bx bx-info-circle' style=" font-size: 20px;color: gray;"></i>
+                            <span>3 digits</span>
+                        </div>
+                    </div>
+                    <div class="thirdip">
+                        <input type="checkbox" name="ck" id="ck" style="margin-right: 20px;">
+                        <label for="ck">I have read and accept the terms of use,rules of flight and privacy policy</label>
+                    </div>
+                    <button type="submit" class="btn">Pay Now <span style="font-size: 15px;">&gt;&gt;</span></button>
+                </form>
+            </div>
+        </div>
+        <div class="card2">
+            <div class="rad">
+                <input type="radio" id="rad" name="rad" > 
+                <div class="details">
+                    <h2>Online banking and Direct debit</h2>
+                    <h3>Free of charge</h3>
+                </div>
+                <div>
+                    <img class="crd2" src="https://vikwp.com/images/plugins/sofort.png" alt="">
+               </div>
+            </div>
+        </div>
+        <div class="card3">
+            <div class="rad">
+                <input type="radio" id="rad" name="rad" > 
+                <div class="details">
+                    <h2>Pay with Paypal</h2>
+                    <h3>Transactions fee may apply</h3>
+                </div>
+                <div>
+                    <img class="crd3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/PayPal_logo.svg/2560px-PayPal_logo.svg.png" alt="">
+               </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
