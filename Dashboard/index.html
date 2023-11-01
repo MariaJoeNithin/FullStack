@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnIt-Student_Dashboard</title>
+    <link rel="shortcut icon" href="./LearnitLogo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.main_box{
+    z-index: 10;
+  position: relative;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+
+}
+.main_box .sidebar_menu{
+  position: fixed;
+  height: 100vh;
+  width: 280px;
+  left: -280px;
+  background: rgba(0, 0, 0, 0.95);
+  box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+  transition: all 0.3s linear;
+  list-style: none;
+  z-index: 10;
+}
+.sidebar_menu .logo{
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.5);
+}
+.sidebar_menu .logo a{
+  color: #fff;
+  font-size: 25px;
+  font-weight: 500;
+  position: absolute;
+  left: 50px;
+  line-height: 60px;
+  text-decoration: none;
+}
+.sidebar_menu .menu{
+  position: absolute;
+  top: 80px;
+  width:100%;
+}
+.sidebar_menu .menu li{
+  margin-top: 5px;
+  padding: 14px 20px;
+}
+.sidebar_menu .menu i{
+  color: #fff;
+  font-size: 20px;
+  padding-right: 8px;
+}
+.sidebar_menu .menu a{
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+}
+.sidebar_menu .menu li:hover{
+  border-left: 1px solid #fff;
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+}
+.sidebar_menu .social_media{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+  list-style: none;
+  cursor: pointer;
+}
+.sidebar_menu .social_media i{
+  text-decoration: none;
+  padding: 0 5px;
+  color: #fff;
+  opacity: 0.6;
+  font-size: 20px;
+}
+.sidebar_menu .social_media i:hover{
+  opacity: 1;
+  transition: all 0.2s linear;
+  transform: scale(1.01);
+}
+#check{
+  display: none;
+}
+.main_box .btn_one i{
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  position: fixed;
+  top: 17px;
+  /* transform: translateY(-30px); */
+  left: 16px;
+  cursor: pointer;
+  opacity: 1;
+  transition: all 0.3s linear;  
+  z-index: 16;
+}
+ .sidebar_menu .btn_two i{
+  font-size: 25px;
+  line-height: 60px;
+  position: absolute;
+  left: 240px;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+.btn_one i:hover{
+  font-size: 29px;
+}
+.btn_two i:hover{
+  font-size: 24px;
+}
+#check{
+    position: absolute;
+    top: 0;
+    transform: translateY(-20px);
+}
+#check:checked ~ .sidebar_menu{
+  left: 0;
+}
+#check:checked ~ .btn_one i{
+  opacity: 0;
+}
+#check:checked ~ .sidebar_menu .btn_two i{
+  opacity: 1;
+}
+.title{
+            width: 100%;
+            height: 70px;
+            background: black;
+            line-height: 55px;
+            text-align: center;
+            color: white;
+            font-weight: 600;
+            font-size: 1.5rem;
+            /* box-shadow: 0px 0px 10px 10px black; */
+            position: sticky;
+            top: 0px;
+            z-index: 11;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+}
+.title img , .logo1{
+    height: 75px;
+}
+.container
+{
+    padding: 20px;
+}
+.navlist
+{
+    list-style: none;
+}
+.card
+    {
+      height: 250px;
+      width: 250px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 20px;
+      box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.4);
+      /* z-index: -1; */
+      
+    }
+    .card a
+    {
+      text-decoration: none !important;
+      color: black;
+    }
+    .ovr
+    {
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+        padding: 25px;
+      z-index: -2;
+    }
+    .heading
+    {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 0;
+      left: 0;
+      background-color: black;
+      color: white;
+      opacity: 1;
+      transition: 0.15s;
+    }
+    .card:hover .heading
+    {
+      opacity: 0 !important;
+    }
+    .content
+    {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(255, 255, 255, 0.5);
+      height: 100%;
+      width: 100%;
+    }
+    .join
+    {
+      width: 120px;
+      background-color: blue;
+      color: white;
+      border-radius: 20px;
+      border: 0;
+      outline: none;
+    }
+    .container
+    {
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+    }
+    .cnt 
+    {
+        height: 100dvh;
+        width: 70dvw;
+        min-height: 850px;
+        min-width: 1200px;
+        min-width: 250px;
+        box-shadow: 2px 2px 15px 5px rgba(0, 0, 0, 0.5);
+        background-color: rgba(255, 255, 255, 0.25);
+        border-radius: 25px;
+        padding: 25px;
+    }
+    .amt
+    {
+        width: 30dvw;
+        height: 100dvh;
+        box-shadow: 2px 2px 15px 5px rgba(0, 0, 0, 0.5);
+        background-color: rgba(255, 255, 255, 0.25);
+        min-height: 850px;
+
+        border-radius: 25px;
+        padding: 25px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+    .crack
+    {
+        display: inline-block;
+        height: 25px;
+        width: 25px;
+        background-color: red;
+        border-radius: 50%;
+        animation: sc 1s linear 0s infinite normal forwards;
+    }
+    .an1
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        font-size: 20px;
+    }
+    .new
+    {
+        color: blue ;
+
+    }
+    @keyframes sc {
+        0%
+        {
+scale: 1;
+        }
+        50%
+        {
+scale: 0.7;
+        }
+        100%
+        {
+scale: 1;
+        }
+    }
+    footer .container{
+            
+            background-color: black;
+            margin: auto;
+        }
+        footer .row{
+            display: flex;
+            /* flex-wrap: wrap; */
+            justify-content: space-evenly;
+            align-items: start;
+            width: 100%;
+        }
+        footer ul{
+            list-style: none;
+        }
+        .footer{
+            background-color: #24262b;
+            margin: 70px 0;
+        }
+        .footer-col{
+            width: 20%;
+            padding:0 15px;
+
+        }
+        .footer-col h4{
+            font-size: 18px;
+            color: #ffffff;
+            text-transform: capitalize;
+            margin-bottom: 35px;
+            font-weight: 500;
+            position: relative;
+
+
+        }
+        .footer-col h4::before{
+            content:'';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            background-color: #e91e63;
+            height: 2px;
+            box-sizing: border-box;
+            width: 50px;
+
+        }
+        .footer-col ul li:not(:last-child){
+            margin-bottom: 10px;
+        }
+        .footer-col ul li a{
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #bbbbbb;
+            display: block;
+            transition: all 0.3s ease;
+        }
+        .footer-col ul li a:hover{
+            color: #ffffff;
+            padding-left: 8px;
+        }
+        .footer-col.social-links a{
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            background-color:rgba(255,255,255,0.2);
+            margin: 0 10px 10px 0;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            color:#ffffff;
+            transition: all 0.5s ease;
+        }
+        .footer-col.social-links a:hover{
+            color: #24262b;
+            background-color: #ffffff;
+
+        }
+        @media(max-width:767px){
+            .footer-col{
+                width:50%;
+                margin-bottom: 30px;
+
+            }
+        }
+        @media(max-width:574px){
+            .footer-col{
+                width:100px;  
+            }
+        }
+    </style>
+   </head>
+<body>
+  <div class="main_box">
+    <div class="title"><img src="./LearnitLogo.png" alt=""></div>
+    <input type="checkbox" id="check">
+    <div class="btn_one">
+      <label for="check">
+        <i class="fas fa-bars"></i>
+      </label>
+    </div>
+    
+    
+    <div class="sidebar_menu">
+      <div class="logo">
+        <a href="#"><img src="./LearnitLogo.png" class="logo1" alt=""></a>
+          </div>
+        <div class="btn_two">
+          <label for="check">
+            <i class="fas fa-times"></i>
+          </label>
+        </div>
+      <div class="menu">
+        <ul class="navlist">
+            <li class="log">
+                <li class="Login">
+                    <a href="./student portal login page/student portal login page/index.html">Login</a>
+                  </li>
+                  <li class="Sign-In">
+                    <a href="#">Sign-In</a>
+                  </li>
+            </li>
+            
+          <li><i class='bx bxs-home'></i>
+            <a href="#">Dashboard</a>
+          </li>
+          <li>
+            <i class='bx bxs-book' style='color:#ffffff' ></i>
+            <a href="./Deadline/hack/course details.html">Courses</a>
+          </li>
+          <li>
+            <i class='bx bxs-graduation' style='color:#ffffff' ></i>
+            <a href="">Progress</a>
+          </li>
+          <li>
+            <i class="fas fa-calendar-week"></i>
+            <a href="./hackaton-one/hackation-one/index.html">Announcement</a>
+          </li>
+          <li>
+            <i class='bx bx-user'></i>
+            <a href="#">Profile</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+    
+    <div class="container">
+        <div class="cnt">
+            <h1>Hello Student ! Continue your Progress .</h1>
+            <h1>Dashboard</h1>
+            <h2>Courses Enrolled</h2>
+            <div class="ovr">
+                <div class="card">
+                  <a href="">
+                    <div class="heading">
+                      <h1>FrontEnd</h1>
+                    </div>
+                    <div class="content">
+                      <h4 style="color: red;">Front End Course</h4>
+        
+                      <p>HTML Progress : 100%</p>
+                      <p>CSS Progress : 100%</p>
+                      <p>Bootstrap Progress : 100%</p>
+                      <p>JS Progress : 25%</p>
+                      <button class="join">Know More</button>
+                    </div>
+                  </a>
+                </div>
+                <div class="card">
+                  <a href="">
+                    <div class="heading">
+                      <h1>Backend</h1>
+                    </div>
+                    <div class="content">
+                        <h4 style="color: red;">Back End Course</h4>
+        
+                      <p>MongoDB Progress : 0%</p>
+                      <p>MYSQL Progress : 0%</p>
+                      <p>NodeJS Progress : 0%</p>
+                      <button class="join">Know More</button>
+                    </div>
+                  </a>
+                </div>
+            </div>
+            <h2>Assignment</h2>
+            <div class="ovr">
+                <div class="card">
+                  <a href="">
+                    <div class="heading">
+                      <h1>FrontEnd</h1>
+                    </div>
+                    <div class="content">
+                      <h4 style="color: red;">Front End Course</h4>
+        
+                      <p>HTML Progress : 100%</p>
+                      <p>CSS Progress : 100%</p>
+                      <p>Bootstrap Progress : 100%</p>
+                      <p>JS Progress : 25%</p>
+                      <button class="join">Know More</button>
+                    </div>
+                  </a>
+                </div>
+                <div class="card">
+                  <a href="">
+                    <div class="heading">
+                      <h1>Backend</h1>
+                    </div>
+                    <div class="content">
+                        <h4 style="color: red;">Back End Course</h4>
+        
+                      <p>MongoDB Progress : 0%</p>
+                      <p>MYSQL Progress : 0%</p>
+                      <p>NodeJS Progress : 0%</p>
+                      <button class="join">Know More</button>
+                    </div>
+                  </a>
+                </div>
+            </div>
+          </div>
+          <div class="amt">
+<h1>Announcements</h1>
+<p class="an1 new"> <span class="crack"></span>New Python Course Available<span class="crack"></span></p>
+<p class="an1"> <span class="crack"></span>New Course at low prices<span class="crack"></span></p>
+<p class="an1"> <span class="crack"></span>New JAVA Course Added<span class="crack"></span></p>
+<p class="an1"> <span class="crack"></span>Become a FSD in 2 months at $50000<span class="crack"></span></p>
+<p class="an1"> <span class="crack"></span>New Python Course Available<span class="crack"></span></p>
+          </div>
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>Quick link</h4>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Get Started</a></li>
+                            <li><a href="#">Video</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Status</h4>
+                        <ul>
+                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="#">Course</a></li>
+                            <li><a href="#">Progress</a></li>
+                            <li><a href="#">Announcement</a></li>
+                            <li><a href="#">Profile</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li><a href="#">Email</a></li>
+                            <li><a href="#">Address</a></li>
+                            <li><a href="#">Contact No</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Help</a></li>
+                        </ul>
+                    </div>
+                        <div class="footer-col">
+                            <h4>Follow Us</h4>
+                            <div class="social-links">
+                                <ul>
+                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+    
+                            </div>
+                        
+                                
+                </div>
+            </div>
+        </footer>
+  
+  </body>
+
+</html>

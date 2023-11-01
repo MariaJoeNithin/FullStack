@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Event </title>
+</head>
+<body>
+    <h2>Change Event</h2>
+    <form action="#">
+        <p><input type="text" name="username" id="username"></p>
+        <p id="result"></p>
+        
+        <p><label for="food">Food : </label>
+        <input type="radio" name="food" id="idly" value="Idly">Idly
+        <input type="radio" name="food" id="dosa" value="Dosa">Dosa
+        <input type="radio" name="food" id="poori" value="Poori">Poori
+        <input type="radio" name="food" id="roast" value="Roast">Roast
+    </p>
+    <p><input type="submit" id="submitbtn" value="submit"></p>
+    <p id="ck"></p>
+    </form>
+
+    <script>
+        const username = document.querySelector("#username");
+        const result = document.querySelector("#result");
+        const chk = document.querySelector("#ck");
+        const subbtn = document.querySelector("#submitbtn")
+        username.addEventListener("change",() => {
+            console.log(username.value);
+            result.textContent=username.value;
+            
+        })
+
+        const food = document.querySelectorAll("[name='food']")
+
+        // subbtn.addEventListener("click",(e) => {
+        //     e.preventDefault();
+
+        //     let fd = "";
+
+        //     for (const x of food) {
+        //     if (x.checked)
+        //     {
+        //         console.log(x.value);
+        //         fd= x.value;
+        //     }
+        //     // if (fd==="")
+        //     // {
+        //     //     chk.textContent="User Not Selected any";
+
+        //     // }
+        //     // else
+        //     // {
+        //     //     chk.textContent="User Selected : "+fd;
+        //     // }
+
+        //     chk.textContent = fd ? `User Selected : ${fd}` : "User Not Selected any";
+        // }
+        // })
+
+        subbtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            const foods = document.querySelectorAll("[name='food']:checked");
+            console.log(foods);
+        console.log(foods);
+        chk.textContent = foods[0]?.value
+          ? `User selected: ${foods[0]?.value}`
+          : "User not selected any option.";
+        })
+        
+    </script>
+</body>
+</html>

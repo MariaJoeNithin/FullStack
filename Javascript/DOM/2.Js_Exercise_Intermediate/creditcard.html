@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+    <style>
+        *
+        {
+            font-family: 'Space Mono', monospace;
+            box-sizing: border-box; 
+        }
+        body
+        {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to right top, #a2beeb, #8ecfee, #8edde5, #a4e7d5, #c7eec7);
+        }
+        .flip-card 
+        {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        #card
+        {
+            width: 320px;
+            height: 190px;
+            perspective: 1000px;
+            flex-direction: column;
+        }
+        
+        .cardcnt .flip-card {
+            transform: rotateY(180deg);
+        }
+        .cardcnt #backside {
+            z-index: 1000;
+        }
+
+        #frontside
+        {
+            width: 320px;
+            height: 190px;
+            padding: 18px;
+            position: relative;
+            /* background-color: black; */
+            background-image: linear-gradient(to top right,black,gray,black);
+            
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            border-radius: 15px;
+            z-index: 5;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            color: white ;
+            text-shadow: 0px 0px 2px black;
+        }
+        #backside
+        {
+            
+            background-image: linear-gradient(to top right,black,gray,black);
+            
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            border-radius: 15px;
+            width: 320px;
+            height: 190px;
+            top: 0;
+            left: 0;
+            padding-top: 23px;
+            position: absolute;
+            background-color: blue;
+            transform: rotateY(180deg);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;  
+        }
+        #acntNo 
+        {
+            font-size: 20px;
+            width: 284px;
+            height: 29px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+        .card-label
+        {
+            font-size: 10px;
+            padding-left: 10px;
+            text-align: start;
+            letter-spacing: 2px;
+        }
+        label
+        {
+            font-size: 10px;
+            text-align: start;
+            letter-spacing: 2px;
+        }
+        .card-text
+        {
+            font-size: 16px;
+            padding-left: 10px;
+            text-align: start;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .card-img
+        {
+            height: 40px;
+            width: 40px;
+            margin-top: 20px;
+        }
+        .card-img img
+        {
+            height: 40px;
+            width: 40px;
+        }
+        
+        #box
+        {
+            width: 320px;
+            height: 38px;
+            background-color: black;
+        }
+        #backcontent 
+        {
+            margin-top: 20px;
+            display: flex;
+            padding-top: 15px 15px;
+            position: relative;
+        }
+        #secret 
+        {
+            position: absolute;
+            background-color: aqua;
+            height: 40px;
+            top: -6px;
+            left: 20px;
+            width: 70% !important;
+        }
+        #cvvNo
+        {
+            text-align: end;
+            margin-right: 20px;
+            margin-left: 50px;
+            background-color: white;
+        }
+        #form
+        {
+            padding: 18px;
+            margin-top: 10px;
+            width: 320px;
+            margin: 0;
+        }
+        #holderName,#acntInput
+        {
+            height:46px ;
+            margin-left: 10px;
+            margin-top: 5px;
+            width: 95%;
+        }
+        #expcvc
+        {
+            display: flex;
+        }
+        #expireDate , #cvc
+        {
+            width: 100%;
+            height: 46px;
+            padding: 18px;
+            margin-top: 5px;
+        }
+        input{
+            border-radius: 10px;
+            border: none;
+        }
+    </style>
+</head>
+<body >
+    <div class="container-fluid d-flex flex-column justify-content-center  align-items-center" id="content">
+        <div class="container d-flex p-0 justify-content-center align-items-center" id="card">
+            <div class="flip-card">
+            <div class="container " id="frontside">
+                <div class="row card-img" >
+                    <div class="col"><img src="https://o.remove.bg/downloads/99ce59d4-41b9-4b57-826e-5c98f3735826/chip-removebg-preview.png" alt=""></div>
+                </div>
+                <div class="row">
+                    <div class="col mx-auto" id="acntNo">**** **** **** ****</div>
+                </div>
+                <div class="row">
+                    <div class="col-8">
+                        <h3 class="card-label">CARD HOLDER</h3>
+                        <p class="card-text" id="card-name">YOUR NAME HERE</p>
+                    </div>
+                    <div class="col-4">
+                        <h3 class="card-label">EXPIRES</h3>
+                        <p class="card-text" id="card-expiry">**/**</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container" id="backside">
+                <div class="row " id="box"></div>
+                <div class="row" id="backcontent">
+                    <div class="col rounded-1" id="secret"></div>
+                    <div class="col rounded-1" id="cvvNo">***</div>
+                </div>
+            </div>
+            </div>
+        </div>
+    
+        <form action="#" class="container-fluid m-0 mt-4" id="form">
+            <div class="row">
+                <label>Card holder :</label>
+                <input id="holderName" placeholder="Card holder name" type="text">
+            </div>
+            <div class="row mt-3">
+                <label>Card number :</label>
+                <input id="acntInput" maxlength="19" minlength="19" placeholder="Card number" pattern="1111 1111 1111 1111" type="text">
+            </div>
+            <div class="row row-cols-2 mt-3" id="expcvc">
+                <div class="col" id="expireInput">
+                    <label>Expires :</label>
+                    <input id="expireDate" max="1299" maxlength="5" minlength="5" pattern="12/12" placeholder="Expires" type="text">
+                </div>
+                <div class="col" id="cvvInput">
+                    <label>CVC :</label>
+                    <input id="cvc" max="999" maxlength="4" min="100" minlength="4" pattern="1111" placeholder="CVC" type="text">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const cardAcnt = document.querySelector("#acntNo");
+        const cardAcntName = document.querySelector("#card-name");
+        const cardAcntExpiry = document.querySelector("#card-expiry");
+        const cardAcntCvv=document.querySelector("#cvvNo");
+        const inputAcntName=document.querySelector("#holderName");
+        const inputAcntNo=document.querySelector("#acntInput");
+        const inputAcntExpiry=document.querySelector("#expireDate");
+        const inputAcntCvv=document.querySelector("#cvc");
+        const cardclass=document.querySelector("#card");
+        let oldcardAcnt = cardAcnt.textContent;
+        let oldcardAcntName = cardAcntName.textContent;
+        let oldcardAcntExpiry = cardAcntExpiry.textContent;
+        let oldcardAcntCvv = cardAcntCvv.textContent;
+        // console.log(oldcardAcnt)
+        // console.log(oldcardAcntName)
+        // console.log(oldcardAcntExpiry)
+        // console.log(oldcardAcntCvv)
+        inputAcntName.addEventListener("input" , function()
+        {
+            cardAcntName.textContent=inputAcntName.value ;
+            if(cardclass.classList.contains("cardcnt"))
+            {
+                cardclass.classList.remove("cardcnt");
+            }
+        })
+        inputAcntNo.addEventListener("input" , function()
+        {
+            cardAcnt.textContent=inputAcntNo.value ;
+            if(cardclass.classList.contains("cardcnt"))
+            {
+                cardclass.classList.remove("cardcnt");
+            }
+        })
+        inputAcntExpiry.addEventListener("input" , function()
+        {
+            cardAcntExpiry.textContent=inputAcntExpiry.value ;
+            if(cardclass.classList.contains("cardcnt"))
+            {
+                cardclass.classList.remove("cardcnt");
+            }
+        })
+        inputAcntCvv.addEventListener("input" , function()
+        {
+            cardclass.classList.add("cardcnt");
+            cardAcntCvv.textContent=inputAcntCvv.value ;
+        })
+    </script>
+
+</body>
+</html>

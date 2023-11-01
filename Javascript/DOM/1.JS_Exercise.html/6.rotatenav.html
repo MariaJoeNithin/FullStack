@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RotateNav</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        body 
+        {
+            position: relative;
+            font-family: sans-serif;
+            overflow-x: hidden;
+            background-color: #333;
+            color: #222;
+            padding: 0;
+            margin: 0;
+        }
+        .cnt 
+        {
+            background-color: white;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transform-origin: top left;
+            transition: transform 0.5s linear;
+
+        }
+        
+        .nav-list
+        {
+            background-color: orange;
+            z-index: 5;
+            height: 200px;
+            width: 200px;
+            display: inline-block;
+            color: black;
+            border-radius: 50%;
+            position: relative;
+            transition: transform 0.5s linear;
+        }
+        .nav
+        {
+            position: fixed;
+            top: -100px;
+            left: -100px;
+        } 
+        .nav-list button 
+        {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            height: 100px;
+            font-size: 26px;
+            width: 40px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+        .nav-list #opennav 
+        {
+            left: 60%;
+        }
+        .nav-list #closenav
+        {
+            top: 70%;
+            left: 60%;
+            transform: rotate(90deg);
+            transform-origin: top left;
+        } 
+        .show-nav.cnt
+        {
+            transform: rotate(-25deg);
+            transform-origin: top left;
+
+        }
+        .show-nav .nav-list
+        {
+            transform: rotate(-70deg);
+        }
+        #navcnt 
+        {
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            bottom: 25px;
+            left: 0;
+            opacity: 0;
+            
+        }
+        #navcnt button
+        {
+            outline: none;
+            border: none;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            background: none;
+            transition: 0.5s linear;
+            color: #dedede;
+        }
+        .show-nav#navcnt 
+        {
+            opacity: 1;
+            padding: 10px;
+            transition: 0.5s linear;
+
+        }
+        .show-nav#navcnt .btn1
+        {
+            margin-left: 10px;
+        }
+        .show-nav#navcnt .btn2
+        {
+            margin-left: 50px;
+        }
+        .show-nav#navcnt .btn3
+        {
+            margin-left: 100px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="nav" id="nav">
+        <div class="nav-list">
+            <button id="opennav" title="openNav"><i class='bx bx-menu'></i></button> 
+            <button id="closenav" title="closeNav"><i class='bx bx-x'></i></button>
+        </div>
+    </div>
+    <div class="container-fluid cnt d-flex p-5 " id="cnt">
+        <div class="container d-flex flex-column gap-3 p-5">
+            <h1>2023 Transfer Window</h1>
+            <p>
+              The 2023 English football summer transfer window runs from 14 June to
+              1 September 2023. Players without a club may be signed at any time,
+              clubs may sign players on loan dependent on their league's
+              regulations, and clubs may sign a goalkeeper on an emergency loan if
+              they have no registered senior goalkeeper available.
+            </p>
+            <h2>Best signings</h2>
+            <img src="https://images2.minutemediacdn.com/image/fetch/https%3A%2F%2Ftherealchamps.com%2Fwp-content%2Fuploads%2Fgetty-images%2F2017%2F07%2F1610621082-scaled.jpeg" class="img-fluid">
+            <h4>Jude Bellingam</h4>
+            <p>
+              Known for his complete skillset, as well as his maturity and
+              leadership qualities, Bellingham had become the youngest ever
+              Bundesliga captain during his time at Borussia Dortmund, leading out
+              the German side while he was still just 19 years old.
+            </p>
+        </div>   
+    </div>
+    <div class="navcnt" id="navcnt">
+        <a href="#"><button class="btn1">Home</button></a>
+        <a href="#"><button class="btn2">About</button></a>
+        <a href="#"><button class="btn3">Contact</button></a>
+    </div>
+
+     
+    <script>
+        const container = document.querySelector("#cnt");
+        const nav = document.querySelector("#nav");
+        const openNav = document.querySelector("#opennav");
+        const closeNav = document.querySelector("#closenav");
+        const navlist = document.querySelector("#navcnt"); 
+        openNav.addEventListener("click",function()
+        {
+            container.classList.add("show-nav");
+            nav.classList.add("show-nav");
+            navlist.classList.add("show-nav");
+        })
+        closeNav.addEventListener("click",function()
+        {
+            container.classList.remove("show-nav");
+            nav.classList.remove("show-nav");
+            navlist.classList.remove("show-nav");
+        })
+    </script>
+
+</body>
+</html>

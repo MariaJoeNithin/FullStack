@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RotateNav</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        *
+        {
+            padding: 0;
+            margin: 0;
+        }
+        #cnt 
+        {
+            position: relative;
+            overflow: hidden;
+            display: flex;
+        }
+        .cnt1,.cnt2
+        {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items:center ;
+            justify-content: start;
+            color: white;
+            transition: 1s;
+        }
+        h1
+        {
+            /* font-size: 4rem !important; */
+            padding: 45px;
+            margin-top: 200px;
+        }
+        .cnt1 
+        {
+            background-color: rgba(0, 0, 255, 0.5);
+            backdrop-filter: blur(1px);
+        }
+        .cnt2
+        {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        #pg1:hover
+        {
+            width: 120vw;
+        }
+        #pg2:hover
+        {
+            width: 120vw;
+        }
+        @media (max-width:1200px) {
+            #pg1:hover
+        {
+            width: 70vw;
+        }
+        #pg2:hover
+        {
+            width: 70vw;
+        } 
+        }
+        @media (max-width:800px) {
+            #pg1,#pg2
+        {
+            background-position: left;
+            background-repeat: no-repeat;
+            background-size: fill ;
+        }
+        }
+        #pg1
+        {
+            background-image: url("https://wallpapers.com/images/featured/ps5-2va2br9eeb2j1tnl.jpg");
+        }
+        #pg2
+        {
+            background-image: url("https://i.ytimg.com/vi/0tUqIHwHDEc/maxresdefault.jpg");
+        }
+        #pg1,#pg2
+        {
+            background-position: left;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            transition: 1s;
+            width: 50vw;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid p-0" id="cnt">
+        <div class="container-fluid p-0" id="pg1">
+            <div class="cnt1 p-0 m-0">
+            <h1 class="h1 text-center">PlayStation 5</h1> 
+            <button class="btn btn-outline-light rounded-0 fw-bold py-2 px-5">BUY NOW</button>
+        </div>
+    </div>
+    <div class="container-fluid p-0" id="pg2">
+        <div class="cnt2 p-0 m-0">
+            <h1 class="h1 text-center">Xbox Series X</h1> 
+            <button class="btn btn-outline-light rounded-0 fw-bold py-2 px-5">BUY NOW</button>
+        </div>
+    </div>
+</body>
+</html>

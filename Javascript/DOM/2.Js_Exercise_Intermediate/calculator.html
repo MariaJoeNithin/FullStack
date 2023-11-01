@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Calculator</title>
+  <!-- Add Bootstrap CDN link to use Bootstrap styles and components -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Use Bootstrap grid system to create a layout for the calculator -->
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-6 col-lg-4">
+        <!-- Use Bootstrap card component to style the calculator -->
+        <div class="card">
+          <div class="card-body">
+            <!-- Create an input element to display the result -->
+            <input type="text" id="display" class="form-control" value="0" disabled>
+            <!-- Create a div to hold the buttons -->
+            <div class="buttons mt-3">
+              <!-- Use Bootstrap button component to style the buttons -->
+              <!-- Use onclick attribute to call a function when the button is clicked -->
+              <button class="btn btn-secondary" onclick="clearDisplay()">C</button>
+              <button class="btn btn-secondary" onclick="appendValue('+')">+</button>
+              <button class="btn btn-secondary" onclick="appendValue('-')">-</button>
+              <button class="btn btn-secondary" onclick="appendValue('*')">*</button>
+              <button class="btn btn-secondary" onclick="appendValue('7')">7</button>
+              <button class="btn btn-secondary" onclick="appendValue('8')">8</button>
+              <button class="btn btn-secondary" onclick="appendValue('9')">9</button>
+              <button class="btn btn-secondary" onclick="appendValue('/')">/</button>
+              <button class="btn btn-secondary" onclick="appendValue('4')">4</button>
+              <button class="btn btn-secondary" onclick="appendValue('5')">5</button>
+              <button class="btn btn-secondary" onclick="appendValue('6')">6</button>
+              <button class="btn btn-primary" onclick="calculate()">=</button>
+              <button class="btn btn-secondary" onclick="appendValue('1')">1</button>
+              <button class="btn btn-secondary" onclick="appendValue('2')">2</button>
+              <button class="btn btn-secondary" onclick="appendValue('3')">3</button>
+              <button class="btn btn-secondary" onclick="appendValue('.')">.</button>
+              <button class="btn btn-secondary" onclick="appendValue('0')">0</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Bootstrap CDN link to use Bootstrap JavaScript features -->
+  <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- Add your own JavaScript code for the calculator logic -->
+  <script >
+    // Get the display element by its id
+var display = document.getElementById("display");
+
+// This function clears the display value
+function clearDisplay() {
+  display.value = "0";
+}
+
+// This function appends a value to the display value
+function appendValue(value) {
+  // If the display value is 0, replace it with the value
+  if (display.value == "0") {
+    display.value = value;
+  } else {
+    // Otherwise, append the value to the display value
+    display.value += value;
+  }
+}
+
+// This function evaluates the display value and shows the result
+function calculate() {
+  try {
+    // Use the eval function to evaluate the display value
+    var result = eval(display.value);
+    // If the result is not a number, show an error message
+    if (isNaN(result)) {
+      display.value = "Error";
+    } else {
+      // Otherwise, show the result
+      display.value = result;
+    }
+  } catch (error) {
+    // If there is an error in the expression, show an error message
+    display.value = "Error";
+  }
+}
+
+
+  </script>
+
+</body>
+</html>
+

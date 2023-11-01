@@ -44,3 +44,13 @@ for(let x of ele.attributes)
 {
     console.log(`${x.name} = ${x.value}`);
 }
+
+
+
+// Attribute 
+// Add = getAttribute("key")
+// Set = setAttribute("key","value")
+// check = hasAttribute("key")
+// remove = removeAttribute("key")
+
+

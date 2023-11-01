@@ -4,131 +4,89 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+ 
   <style>
+    body
+    {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100dvh;
+    }
+    .card1
+    {
+      height: 250px;
+      width: 250px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 20px;
+      box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.4);
+      
+    }
+    .card1 a
+    {
+      text-decoration: none !important;
+    }
+    .heading
+    {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 0;
+      left: 0;
+      background-color: blue;
+      color: white;
+      opacity: 1;
+      transition: 0.15s;
+    }
+    .heading:hover
+    {
+      opacity: 0;
+    }
+    .content
+    {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(255, 255, 255, 0.25);
+      height: 100%;
+      width: 100%;
 
-#wrapD3Cube {
-    width: 100dvw;
-    height: 100dvh;
-    background-color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#D3Cube {
-    width: 500px;
-    height: 500px;
-    top: 50px;
-    transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    -webkit-transform-style: preserve-3d;
-    transform: rotateX(-22deg) rotateY(-38deg) rotateZ(0deg);
-    -moz-transform: rotateX(-22deg) rotateY(-38deg) rotateZ(0deg);
-    -webkit-transform: rotateX(-22deg) rotateY(-38deg) rotateZ(0deg);
-    margin: auto;
-    position: relative;
-    -moz-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    -webkit-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
-    font-size: 100px;
-    animation: rt90 5s linear 0s infinite normal forwards;
-}
-#D3Cube > div {
-    position: absolute;
-    -webkit-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
-    width: 500px;
-    height: 500px;
-    float: left;
-    overflow: hidden;
-    /* opacity: 0.85; */
-}
-#side1 {
-    transform: rotatex(90deg) translateX(0px) translateY(0px) translateZ(250px);
-    -moz-transform: rotatex(90deg) translateX(0px) translateY(0px) translateZ(250px);
-    -webkit-transform: rotatex(90deg) translateX(0px) translateY(0px) translateZ(250px);
-    /* background-color: #FFF; */
-}
-#side2 {
-    transform: rotateY(-90deg) translateX(0px) translateY(0px) translateZ(250px);
-    -moz-transform: rotateY(-90deg) translateX(0px) translateY(0px) translateZ(250px);
-    -webkit-transform: rotateY(-90deg) translateX(0px) translateY(0px) translateZ(250px);
-    /* background-color: #ffaf1c; */
-}
-#side3 {
-    transform: translateX(0px) translateY(0px) translateZ(250px);
-    -moz-transform: translateX(0px) translateY(0px) translateZ(250px);
-    -webkit-transform: translateX(0px) translateY(0px) translateZ(250px);
-    /* background-color: #58d568; */
-}
-#side4 {
-    transform: rotateY(90deg) translateX(0px) translateY(0px) translateZ(250px);
-    -moz-transform: rotateY(90deg) translateX(0px) translateY(0px) translateZ(250px);
-    -webkit-transform: rotateY(90deg) translateX(0px) translateY(0px) translateZ(250px);
-    /* background-color: #ed3030; */
-}
-#side5 {
-    transform: rotateY(180deg) translateX(0px) translateY(0px) translateZ(250px);
-    -moz-transform: rotateY(180deg) translateX(0px) translateY(0px) translateZ(250px);
-    -webkit-transform: rotateY(180deg) translateX(0px) translateY(0px) translateZ(250px);
-    /* background-color: #1c5ffe; */
-}
-#side6 {
-    transform: rotateX(-90deg) translateX(0px) translateY(0px) translateZ(250px);
-    -moz-transform: rotateX(-90deg) translateX(0px) translateY(0px) translateZ(250px);
-    -webkit-transform: rotateX(-90deg) translateX(0px) translateY(0px) translateZ(250px);
-    /* background-color: #f2f215; */
-}
-.slide
-{
-}
-img{
-  height: 500px;
-  width: 500px;
-
-}
-@keyframes rt90 {
-  0% {
-    -webkit-transform: rotateX(0);
-            transform: rotateX(0);
-  }
-  20% {
-    -webkit-transform: rotateY(0);
-            transform: rotateY(0);
-  }
-  40% {
-    -webkit-transform: rotateY(90deg);
-            transform: rotateY(90deg);
-  }
-  60% {
-    -webkit-transform: rotateX(90deg);
-            transform: rotateX(90deg);
-  }
-  80% {
-    -webkit-transform: rotateY(-90deg);
-            transform: rotateY(-90deg);
-  }
-  100% {
-    -webkit-transform: rotateX(-90deg);
-            transform: rotateX(-90deg);
-  }
-}
-
+    }
+    button
+    {
+      width: 120px;
+      background-color: blue;
+      color: white;
+      border-radius: 20px;
+    }
+    .sidenav
+    {
+      background-color: blue;
+    }
   </style>
 </head>
 
 <body>
-  <div id="wrapD3Cube">
-    <div id="D3Cube">
-        <div id="side1" class="slide"><img src="https://www.sony.com/image/bc6d25fa6371c2899ce704a2bed7614c?fmt=png-alpha&wid=960" alt=""></div>
-        <div id="side2" class="slide"><img src="https://4kwallpapers.com/images/walls/thumbs_2t/12363.jpg" alt=""></div>
-        <div id="side3" class="slide"><img src="https://i.pinimg.com/originals/81/1a/3b/811a3b5e0eb3df1635bfb8081436114e.jpg" alt=""></div>
-        <div id="side4" class="slide"><img src="https://cdn.wallpapersafari.com/70/43/Pu3aLo.jpg" alt=""></div>
-        <div id="side5" class="slide"><img src="https://www.pixground.com/wp-content/uploads/2023/05/Yoriichi-Tsugikuni-Demon-Slayer-4K-Anime-Wallpaper-jpg.webp" alt=""></div>
-        <div id="side6" class="slide"><img src="https://images4.alphacoders.com/640/640956.jpg" alt=""></div>
-    </div>
-</div>
+<div class="ovr">
+  <div class="card1">
+    <a href="https://wallpapers.com/images/featured/4k-oaax18kaapkokaro.jpg">
+      <div class="heading">
+        <h1>FullStack</h1>
+      </div>
+      <div class="content">
+        <p>This Is A full Stack Course</p><button>Join</button>
+      </div>
+    </div></a>
+  </div>
+
 </body>
 </html>
+
+
+
+

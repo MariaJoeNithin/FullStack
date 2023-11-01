@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .sucess{
+            border: green;
+        }
+        .danger{
+            border: red;
+        }
+    </style>
+</head>
+<body>
+    <h2 id="head">Handling Form Elements</h2>
+    <form action="#" id="userForm">
+        <p>
+            <input type="text" name="username" placeholder="Enter Name">
+        </p>
+        <p>
+            <input type="email" name="email" id="" placeholder="Enter Email">
+        </p>
+        <p>
+            <input type="password" name="password" id=""  placeholder="Enter password">
+        </p>
+       <input type="submit" value="submit" id="submitbtn">
+       <input type="reset" value="clear">
+    </form>
+ <hr>
+ <button id="add-btn">ADD</button>
+ <button id="remove-btn">REMOVE</button>
+    <script>
+        // Accessing form
+        // 1.document.forms => HTML Collection of forms
+        // 2.document.querSelector("#formID") => Form section
+        // form.elements[index / name / id]
+
+        // button => click
+        // formID => submit
+
+        // Handling form using "click' event
+
+        const userform=document.querySelector("#userForm");
+        console.log(userform);
+
+        const username = userForm.elements[0];
+        console.log(username);
+
+        const email = userForm.elements[1];
+        const password = userForm.elements[2];
+        const submitbtn = userForm.elements[3];
+        console.log(submitbtn);
+
+       
+
+        // subbtn.addEventListener("click", function (){
+        //     window.alert("The Form is Submitted");
+        // })
+        
+        submitbtn.addEventListener("click", function (e)
+            {
+                e.preventDefault();
+                console.log(username.value);
+                console.log(email.value);
+                console.log(password.value);
+
+            if((username.value==="")||(email.value==="")||(password.value===""))
+            {
+                alert("All fields are mandatory");
+            }
+            else
+            {
+                const userInfo = {
+                    username : username.value,
+                    email : email.value,
+                    password : pass.value,
+                }
+                console.log(userInfo);
+                subbtn.addEventListener("click", function (){
+                window.alert("The Form is Submitted");
+                })
+            }                
+    });
+
+//    function displayMessage(event){
+//     alert("Element h2 clicked");
+//     console.log(event.target.className)
+//    }
+
+// const h2 = document.getElementById("head");
+// console.log(h2)
+// h2.onclick = function (event){
+//     console.log(event);
+//     console.log(this.id);
+// };
+
+const addbtn =document.querySelector("#add-btn");
+const removebtn =document.querySelector("#remove-btn");
+
+addbtn.addEventListener("click", addEvent);
+function addEvent (){
+    console.log("Event Added")
+}
+removebtn.addEventListener("click", function () {
+    addbtn.removeEventListener("click", addEvent);
+});
+
+</script>
+</body>
+</html>

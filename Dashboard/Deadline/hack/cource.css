@@ -1,0 +1,464 @@
+body{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.container a{
+    text-decoration: none;
+}
+.container-1{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 100px;
+
+}
+.container-1 a{
+    text-decoration: none;
+}
+.box{
+    width: 220px;
+    height: 200px;
+    background-color: black;
+   
+    margin-top: 100px;
+    border-radius: 5px;  
+}
+
+.box h2{
+    color: darkred;
+    font-size: 20px;
+    padding-top: 15px;
+    
+    padding-left: 30px;
+}
+.read{
+    display: none;
+}
+.box p{
+    display: none;
+}
+.box:hover h2{
+    display: none;
+}
+.box:hover i{
+    display: none;
+}
+.box:hover .read{
+    display: block;
+    margin-left: 60px;
+    color: white;
+    font-weight: bold;
+}
+.box:hover p{
+    display: block;
+    color: white;
+    padding: 10px 10px ;
+}
+.box-1{
+    width: 220px;
+    height: 200px;
+    background-color: black;
+    margin-top: 100px;
+    margin-left: 50px;
+    border-radius: 5px;
+
+}
+.read-1{
+    display: none;
+}
+.box-1 p{
+    display: none;
+}
+.box-1:hover h2{
+    display: none;
+}
+.box-1:hover i{
+    display: none;
+}
+.box-1:hover .read-1{
+    display: block;
+    color: white;
+    margin-top: -10px;
+    margin-left: 60px;
+    font-weight: bold;
+}
+.box-1:hover p{
+    display: block;
+    color: white;
+    padding: 10px 10px ;
+}
+
+.box-1 h2{
+    color: darkred;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 20px;
+}
+.box-2{
+    width: 220px;
+    height: 200px;
+    background-color: black;
+    margin-top: 100px;
+    margin-left: 50px;
+    border-radius: 5px;
+      
+}
+.read-2{
+    display: none;
+}
+.box-2 p{
+    display: none;
+}
+.box-2:hover h2{
+    display: none;
+}
+.box-2:hover i{
+    display: none;
+}
+.box-2:hover .read-2{
+    display: block;
+    color: white;
+    margin-top: -10px;
+    margin-left: 60px;
+    font-weight: bold;
+}
+.box-2:hover p{
+    display: block;
+    color: white;
+    padding: 10px 10px ;
+}
+.box-2 h2{
+    color: darkred;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 25px;
+}
+.box-3{
+    width: 220px;
+    height: 200px;
+    background-color: black;
+    margin-top: 100px;
+    margin-left: 50px;
+    border-radius: 5px;
+
+}
+.read-3{
+    display: none;
+}
+.box-3 p{
+    display: none;
+}
+.box-3:hover h2{
+    display: none;
+}
+.box-3:hover i{
+    display: none;
+}
+.box-3:hover .read-3{
+    display: block;
+    color: white;
+    margin-top: -15px;
+    margin-left: 60px;
+    font-weight: bold;
+}
+.box-3:hover p{
+    display: block;
+    color: white;
+    padding: 10px 10px ;
+}
+
+
+.box-3 h2{
+    color: darkred;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 20px;
+}
+.box-4{
+    width: 220px;
+    height: 200px;
+    background-color: black;
+    margin-top: 100px;
+    margin-left: 350px;
+    border-radius: 5px;
+
+    
+}
+.read-4{
+    display: none;
+}
+.box-4 p{
+    display: none;
+}
+.box-4:hover h2{
+    display: none;
+}
+.box-4:hover i{
+    display: none;
+}
+.box-4:hover .read-4{
+    display: block;
+    color: white;
+    margin-top: -10px;
+    margin-left: 60px;
+    font-weight: bold;
+
+}
+.box-4:hover p{
+    display: block;
+    color: white;
+    padding: 10px 10px ;
+}
+
+
+.box-4 h2{
+    color: darkred;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 25px;
+}
+.box-5{
+    width: 220px;
+    height: 200px;
+    background-color: black;
+    margin-top: 100px;
+    margin-left: 50px;
+    border-radius: 5px;
+    
+}
+.read-5{
+    display: none;
+}
+.box-5 p{
+    display: none;
+}
+.box-5:hover h2{
+    display: none;
+}
+.box-5:hover i{
+    display: none;
+}
+.box-5:hover .read-5{
+    display: block;
+    color: white;
+    margin-top: -10px;
+    margin-left: 60px;
+    font-weight: bold;
+}
+.box-5:hover p{
+    display: block;
+    color: white;
+    padding: 10px 10px ;
+}
+
+.box-5 h2{
+    color: darkred;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 25px;
+}
+.box-6{
+    width: 220px;
+    height: 200px;
+    background-color: black;
+    margin-top: 100px;
+    margin-left: 50px;
+    border-radius: 5px;
+
+}
+.read-6{
+    display: none;
+}
+.box-6 p{
+    display: none;
+}
+.box-6:hover h2{
+    display: none;
+}
+.box-6:hover i{
+    display: none;
+}
+.box-6:hover .read-6{
+    display: block;
+    color: white;
+    margin-top: -10px;
+    margin-left: 60px;
+    font-weight: bold;
+}
+.box-6:hover p{
+    display: block;
+    color: white;
+    padding: 10px 10px ;
+}
+
+
+.box-6 h2{
+    color: darkred;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 25px;
+}
+.box-7{
+    width: 220px;
+    height: 200px;
+    background-color: black;
+    margin-top: 100px;
+    margin-left: 50px;
+    border-radius: 5px;
+
+}
+.read-7{
+    display: none;
+}
+.box-7 p{
+    display: none;
+}
+.box-7:hover h2{
+    display: none;
+}
+.box-7:hover i{
+    display: none;
+}
+.box-7:hover .read-7{
+    display: block;
+    color: white;
+    margin-top: -10px;
+    margin-left: 60px;
+    font-weight: bold;
+}
+.box-7:hover p{
+    display: block;
+    color: white;
+    padding: 10px 10px ;
+}
+
+.box-7 h2{
+    color: darkred;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 25px;
+}
+.image-container{
+    
+    flex-wrap: wrap;
+    margin-top: 50px;
+
+}
+.image-container img{
+    border-radius: 5px;
+    position: relative;
+}
+.div-sty{
+    width: 290px; 
+    height: 80px;
+    border: 1px solid black; 
+    background-color:black;
+    color: darkred;
+    text-align: center;
+    border-radius: 5px;
+     margin-left: 25px; 
+    
+
+}
+.div-sty h2{
+    font-size: 18px;
+    padding-top: 15px;
+}
+.div-sty-1{
+    width: 290px; 
+    height: 80px;
+    border: 1px solid black; 
+    background-color:black;
+    color: darkred;
+    text-align: center;
+    border-radius: 5px;
+     margin-top: 50px;
+     margin-left: 15px;
+
+    margin-bottom: 30px;
+
+}
+.div-sty-1 h2{
+    font-size: 18px;
+    padding-top: 15px;
+}
+
+.div-sty-3{
+    width: 290px; 
+    height: 80px;
+    border: 1px solid black; 
+    background-color:black;
+    color: darkred;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 30px;
+     margin-left: 30px; 
+    margin-bottom: 30px;
+
+}
+.div-sty-3 h2{
+    font-size: 18px;
+    padding-top: 15px;
+}
+
+.div-sty-2{
+    width: 290px; 
+    height: 80px;
+    border: 1px solid black; 
+    background-color:black;
+    color: darkred;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+     margin-left: 20px; 
+}
+.div-sty-2 h2{
+    font-size: 18px;
+    padding-top: 15px;
+}
+
+
+.re 
+{
+    background-color: rgb(6, 6, 48) ;
+    color: black;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    border-radius: 10px;
+}
+.item{
+    display: flex;
+    /* margin-left: 100px; */
+    /* margin-right: 100px; */
+    flex-wrap: wrap;
+    margin-top: -800px;
+    position: absolute;
+}
+.a{
+    display: flex;
+    margin-left: 330px;
+    margin-top: 60px;
+
+}
+.b{
+    display: flex;
+    margin-left: 550px;
+}
+.c{
+    display: flex;
+    margin-left: 340px;
+}
+.d{
+    display: flex;
+    margin-left: 520px;
+}
+

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .para{
+            border: 2px solid green;
+           background-color: aqua;
+           padding: 20px;
+           margin: 0 auto;
+           border-radius: 20px;
+
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="head demo style">DOM-Style</h2>
+<p id="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, rem?</p>
+<button id="add">ADD</button>
+<button id="remove">Remove</button>
+<button id="Toggle">Toggle</button>
+    <script>
+        // DOM-Style
+        const h2 = document.querySelector("h2");
+        console.log(h2.style.color);
+        // h2.style.color =" green";
+        // h2.style.border ="2px solid green";
+        // h2.style.padding =" 20px"
+        console.log(h2.className);
+        console.log(h2.classList);
+
+        // ClassList
+        // Add()
+        // Remove()
+        // toggle()
+        // contains()
+        // replace()
+
+        const para =document.querySelector("#para");
+        console.log(para);
+        // para.classList.add("para");
+        // para.classList.remove("para");
+      
+
+
+        const addbtn=document.querySelector("#add");
+        const removebtn=document.querySelector("#remove");
+        const Togglebtn=document.querySelector("#Toggle");
+
+        addbtn.addEventListener("click", function(){
+            para.classList.add("para", "head");
+            // document.querySelector("p").style.display ="none";
+            // para.classList.toggle("hide");
+        })
+
+        removebtn.addEventListener("click", function (){
+            para.classList.remove("para");
+        })
+
+        Togglebtn.addEventListener("click", function(){
+            // para.classList.toggle("para");
+            para.classList.toggle("hide");
+        })
+
+        console.log(para.classList.contains("head"));
+
+
+    </script>
+</body>
+</html>

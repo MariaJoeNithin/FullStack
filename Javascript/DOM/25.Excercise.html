@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        .hidden
+        {
+            height: 100vh;
+            min-height: 500px;
+            width: 250px;
+            visibility: visible !important;
+	        animation: scale-up-hor-left 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        }
+         .menu
+        {
+            visibility: hidden;
+        } 
+
+
+@keyframes scale-up-hor-left {
+    0%{
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+
+
+        nav ul
+        {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            list-style: none;
+            width: 250px;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            display: inline-block;
+            padding-top: 25px;
+            font-size: 25px;
+            border-radius: 25px;
+            background-color: blue;
+            width: 100;
+            padding: 10px;
+        }
+        a:hover .icon
+        {
+            animation: rot 0.25s linear 0s 1 normal forwards ;
+            display: inline-block;
+            height: fit-content;
+            width: fit-content;
+        }
+        @keyframes rot {
+            0%
+            {
+                transform: rotate(0deg);
+            }
+            100%
+            {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="tog">
+        <i class="bi bi-list"></i>Menu 
+    </button>
+
+    <nav class="menu">
+        <ul>
+            <a href=""><li> <span class="icon"> <i class="bi bi-house-door-fill"></i></span> Home</li></a>
+            <a href=""><li> <span class="icon"> <i class="bi bi-arrow-bar-right"></i></span> About</li></a>
+            <a href=""><li> <span class="icon"> <i class="bi bi-x-diamond-fill"></i></span> Services</li></a>
+            <a href=""><li> <span class="icon"> <i class="bi bi-person-fill"></i></span> Contact</li></a>
+        </ul>
+    </nav>
+
+    <script>
+
+        const tog = document.querySelector(".tog");
+        const lst = document.querySelector(".menu");
+
+        tog.addEventListener("click", function(){
+            lst.classList.toggle("hidden");
+        })
+    </script>
+</body>
+</html>

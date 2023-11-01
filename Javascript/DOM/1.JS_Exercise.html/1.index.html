@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epic Mix Playlist</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        *
+        {
+            color: white;
+        }
+
+        .titlehead
+        {
+            position: relative;
+            font-size: 48px;
+        }
+        body
+        {
+            background-color: #532A7F;
+        }
+        .page-1
+        {
+            min-height: 100vh;
+            width: 100%;    
+            max-width: 800px;
+            min-width: 250px;
+            overflow-y: hidden;
+        }
+        .def
+        {
+            max-height: 100vh;
+        }
+        .playlist
+        {
+            width: 100%;
+            visibility: hidden;
+            max-height: 0px;
+
+        }
+        .col 
+        {
+            display: flex;
+            font-size: 20px;
+            align-items: center;
+
+        }
+        .lst
+        {
+            background-color: #9634ff;
+            padding: 10px;
+        }
+        .playlist-show
+        {
+            visibility: visible;
+            max-height: 100%;
+            overflow: hidden;
+        }
+        .btn
+        {
+            font-size: 1.5em;
+            padding: 24px;
+            margin-top: 48px;
+            width: 25%;
+            min-width: 200px;
+        }
+        .btn #text
+        {
+            color: #532A7F;
+        }
+        .btn:hover
+        {
+            background-color: black !important;
+        }
+        .btn:hover #text
+        {
+            color: white;
+        }
+    </style>
+</head>
+<body >
+    
+    <div class="container def page-1 d-flex flex-column align-items-center py-5 " id="pg1">
+        <h1 class="p-5 titlehead mt-5"><i class="bi bi-disc-fill"></i> &nbsp;Epic Mix</h1>
+        <h6>12 GREAT SONGS!</h6>
+        <div id="playlist" class="row row-cols-1 playlist gap-y-2 border border-3 row-gap-5 p-3 justify-content-between row-cols-md-2 mt-5">
+            <div class="col-md-6 col gap-2  ">
+                <div class="lst">#1</div><div>Time To Pretend</div>
+            </div>
+            <div class="col-md-6 col gap-2 ">
+                <div class="lst">#2</div><div>O-o-oh Child</div>
+            </div>
+            <div class="col-md-6 col gap-2  ">
+                <div class="lst">#3</div><div>Wish You Were Here</div>
+            </div>
+            <div class="col-md-6 col gap-2 ">
+                <div class="lst">#4</div><div>Heroes</div>
+            </div>
+            <div class="col-md-6 col gap-2  ">
+                <div class="lst">#5</div><div>I Put a Spell on You</div>
+            </div>
+            <div class="col-md-6 col gap-2 ">
+                <div class="lst">#6</div><div>Call Me</div>
+            </div>
+            <div class="col-md-6 col gap-2  ">
+                <div class="lst">#7</div><div>Paper Planes</div>
+            </div>
+            <div class="col-md-6 col gap-2 ">
+                <div class="lst">#8</div><div>Jolene</div>
+            </div>
+            <div class="col-md-6 col gap-2  ">
+                <div class="lst">#9</div><div>You Don't Own Me</div>
+            </div>
+            <div class="col-md-6 col gap-2 ">
+                <div class="lst">#10</div><div>Fast Car</div>
+            </div>
+            <div class="col-md-6 col gap-2  ">
+                <div class="lst">#11</div><div>Run the World (Girls)</div>
+            </div>
+            <div class="col-md-6 col gap-2 ">
+                <div class="lst">#12</div><div>Superstition</div>
+            </div>
+        </div>
+        <div class="pb-5 ">
+            <button class="btn bg-white rounded-0" id="shwbtn"><span id="text">Show Me !</span></button>
+        </div>
+    </div>
+
+    <script>
+        const shwplay = document.getElementById("shwbtn");
+        console.log(shwplay);
+        const playlist = document.getElementById("playlist");
+        console.log(playlist);
+        const text = document.getElementById("text");
+        console.log(text);
+        const pg1 = document.getElementById("pg1");
+
+
+
+
+        shwplay.addEventListener("click",function(){
+            playlist.classList.toggle("playlist-show");
+            pg1.classList.toggle("def");
+            if (text.textContent == "Show Me !") 
+            {
+                text.textContent = "Hide Me !";
+            } 
+            else 
+            {
+                text.textContent = "Show Me !";
+            }
+        });
+        
+    </script>
+
+</body>
+</html>

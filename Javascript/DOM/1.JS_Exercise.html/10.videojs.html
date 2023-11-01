@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        *
+        {
+            padding: 0;
+            margin: 0;
+        }
+        #vdocnt
+        {
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            background-color: black;
+        }
+        #vdo
+        {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        .btn1
+        {
+            position: absolute;
+            bottom: 200px;
+            left: 100px;
+            display: flex;
+            flex-direction: row;
+            gap: 0;
+            border-radius: 15px;
+            background-color: blue;
+            overflow: hidden;
+            border: 5px solid black;
+        }
+        button
+        {
+            width: 100px;
+            outline: none !important;
+            color: white !important;
+            transition: 1s;
+        }
+        #btnclose
+        {
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100px;
+            position: absolute;
+            background-color: black;
+            transition: 0.5s;
+            border-radius: 10px;
+        }
+        h1 
+        {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            color: white !important;
+            transform: translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.25);
+            height: 100vh;
+            width: 100vw;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid m-0 p-0" id="vdocnt">
+        <video id="vdo" class="video m-0 p-0">
+            <source src="./SAO - unlasting.webm" type="video/webm">
+            Your browser does not support HTML5 video.
+          </video>
+          <h1 class="display-1 fw-bold text-center">Video Project</h1>
+          <div class="btn1">
+            <button type="button" class="btn rounded-0" id="psebtn">Pause</button>
+            <button type="button" class="btn rounded-0" id="plybtn">Play</button>
+            <div id="btnclose"></div>
+          </div>
+    </div>
+    <script>
+        const vdocnt = document.getElementById("vdo");
+        const psebtn = document.getElementById("psebtn")
+        const plybtn = document.getElementById("plybtn")
+        const closebtn = document.getElementById("btnclose")
+        console.log(vdocnt);
+        console.log(psebtn);
+        console.log(plybtn);
+        psebtn.addEventListener("click", function() {
+            vdocnt.pause();
+            closebtn.style.transform = "translate(0px, 0px)";
+        });
+        plybtn.addEventListener("click", function() {
+            vdocnt.play();
+            closebtn.style.transform = "translate(100px, 0px)";
+        });
+
+    </script>
+</body>
+</html>

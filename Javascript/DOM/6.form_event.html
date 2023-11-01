@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .input-none
+        {
+            border: 2px solid red;
+            
+        }
+        .input-pre
+        {
+            border: 2px solid green;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Handling Form</h1>
+    <form action="#" id="userform">
+        <p>
+            <input type="text" name="user" id="user" placeholder="Enter The Name">
+        </p>
+        <p>
+            <input type="email" name="mail" id="mail" placeholder="Enter The E-Mail">
+        </p>
+        <p>
+            <input type="password" name="pass" id="pass" placeholder="Enter The password">
+        </p>
+        <p><input type="submit" name="submitbtn" value="Submit" id="submitbtn" >
+        <input type="reset" name="clearbtn" value="clear" id="clearbtn"></p>
+    </form>
+
+    <script>
+
+
+        // Acessing form 
+        // let userForm = document.forms >> Returns HTMLCollection of form 
+        // document.querySelector >> document.querySelector(formid);
+        // userForm.elements >> access all elements
+        // userForm.elements[index/name/id] >> access elements
+
+        // button >> click 
+        // formId >> submit 
+
+        // handling form using click event
+
+
+
+        const userform = document.getElementById("userform");
+        
+        console.log(userform);
+        // const username = userform.elements[0];
+        // console.log(username);
+        // const email = userform.elements[1];
+        // const pass = userform.elements[2];
+        // const subbtn = userform.elements[3];
+
+        const username = document.getElementById("user");
+        const email = document.getElementById("mail");
+        const pass = document.getElementById("pass");
+        const subbtn = document.getElementById("submitbtn");
+
+
+        // subbtn.addEventListener("click", function (){
+        //     window.alert("The Form is Submitted");
+        // })
+
+
+
+        // userform.addEventListener("submit", function (e){}) only ehen whole form is called submit event used instead of click event
+
+
+
+        subbtn.addEventListener("click", function (e)
+            {
+                e.preventDefault();
+                console.log(username.value);
+                console.log(email.value);
+                console.log(pass.value);
+
+            if((username.value==="")||(email.value==="")||(pass.value===""))
+            {
+                alert("All fields are mandatory");
+                if(username.value==="")
+                {
+                    username.classList.add("input-none");
+                }
+                else
+                {
+                    username.classList.add("input-pre");
+                }
+
+                
+
+                if(email.value==="")
+                {
+                    email.classList.add("input-none");
+                }
+                else
+                {
+                    email.classList.add("input-pre");
+                }
+                
+
+                if(pass.value==="")
+                {
+                    pass.classList.add("input-none");
+                }
+                else
+                {
+                    pass.classList.add("input-pre");
+                }
+                
+            }
+            else
+            {
+                username.classList.add("input-pre");
+
+                email.classList.add("input-pre");
+
+                pass.classList.add("input-pre");
+
+
+                const userInfo = {
+                    username : username.value,
+                    email : email.value,
+                    password : pass.value,
+                }
+                console.log(userInfo);
+                subbtn.addEventListener("click", function (){
+                window.alert("The Form is Submitted");
+                })
+
+            }
+                
+            
+    });
+
+
+    </script>
+
+</body>
+</html>
