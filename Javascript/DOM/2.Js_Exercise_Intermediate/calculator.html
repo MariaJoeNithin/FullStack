@@ -2,94 +2,253 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Simple Calculator</title>
-  <!-- Add Bootstrap CDN link to use Bootstrap styles and components -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <style>
+    *
+    {
+      font-family: monospace;
+    }
+    .container-fluid
+    {
+      height: 100vh;
+      background-color: brown;
+    }
+    .calculator
+    {
+      min-width: 280px;
+      max-width: 350px; 
+      border-radius: 25px;
+      background-image: linear-gradient( gray,black);
+      /* background-image: linear-gradient( blue,white ); */
+      background-color: white;
+      padding: 0;
+      overflow: hidden;
+      margin: 0;
+      box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.75);
+    }
+    .calculator button
+    {
+      height: 50px;
+      width: 50px;
+      margin: 5px;
+      background-color: rgba(0, 0, 0, 0.75) ;
+      border: none;
+      font-size: 20px;
+      border-radius: 15px;
+      box-shadow: inset 0px 0px 10px black,0px 0px 15px gray;
+      color: white;
+    }
+    #numbutton
+    {
+      width: 240px;
+    }
+    .calculator button:hover
+    {
+      background-image: linear-gradient(black,rgba(0, 0, 0, 0.25));
+      box-shadow: inset 0px 0px 5px white,0px 0px 5px white;
+      color: white !important;
+    }
+    .calculator input
+    {
+      background-color: rgba(0, 0, 0, 0.75);
+      color: white;
+      border: none;
+      outline: none;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 10px;
+      height: 80px;
+      width: 100%;
+      font-size: 25px;
+      text-align: right;
+      max-width: 225px;
+    }
+
+    .del
+    {
+      width: 100%;
+      display: flex;
+      /* border: 1px solid red; */
+      padding: 5px;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 0 !important;
+    }    
+    .col
+    {
+      margin: 0px !important;
+      padding: 0px !important;      
+      width: 45% !important;
+      /* border: 1px solid red; */
+    }
+    .col button
+    {
+      width: 100% !important;
+      margin: 0px !important;
+
+    }
+    #delbtn
+    {
+      background-color: rgba(255, 0, 0, 0.75) ;
+    }
+    #resetbtn
+    {
+      background-color: rgba(255, 0, 0, 0.75) ;
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <!-- Use Bootstrap grid system to create a layout for the calculator -->
-    <div class="row justify-content-center mt-5">
-      <div class="col-md-6 col-lg-4">
-        <!-- Use Bootstrap card component to style the calculator -->
-        <div class="card">
-          <div class="card-body">
-            <!-- Create an input element to display the result -->
-            <input type="text" id="display" class="form-control" value="0" disabled>
-            <!-- Create a div to hold the buttons -->
-            <div class="buttons mt-3">
-              <!-- Use Bootstrap button component to style the buttons -->
-              <!-- Use onclick attribute to call a function when the button is clicked -->
-              <button class="btn btn-secondary" onclick="clearDisplay()">C</button>
-              <button class="btn btn-secondary" onclick="appendValue('+')">+</button>
-              <button class="btn btn-secondary" onclick="appendValue('-')">-</button>
-              <button class="btn btn-secondary" onclick="appendValue('*')">*</button>
-              <button class="btn btn-secondary" onclick="appendValue('7')">7</button>
-              <button class="btn btn-secondary" onclick="appendValue('8')">8</button>
-              <button class="btn btn-secondary" onclick="appendValue('9')">9</button>
-              <button class="btn btn-secondary" onclick="appendValue('/')">/</button>
-              <button class="btn btn-secondary" onclick="appendValue('4')">4</button>
-              <button class="btn btn-secondary" onclick="appendValue('5')">5</button>
-              <button class="btn btn-secondary" onclick="appendValue('6')">6</button>
-              <button class="btn btn-primary" onclick="calculate()">=</button>
-              <button class="btn btn-secondary" onclick="appendValue('1')">1</button>
-              <button class="btn btn-secondary" onclick="appendValue('2')">2</button>
-              <button class="btn btn-secondary" onclick="appendValue('3')">3</button>
-              <button class="btn btn-secondary" onclick="appendValue('.')">.</button>
-              <button class="btn btn-secondary" onclick="appendValue('0')">0</button>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.5.0/math.min.js"></script>
+
+  <div class="container-fluid p-0 d-flex justify-content-center align-items-center">
+    <div class="calculator ">
+      <form action="#" class="container p-4 d-flex flex-column">
+        <div id="result" class="container d-flex justify-content-center align-items-center flex-column">
+          <input type="text" id="num" placeholder="0">
+        </div>
+        
+        <div class="container d-flex justify-content-center align-items-center flex-column p-0" id="numbutton">
+          <div class="row">
+            <button class="btn numbtn" >1</button>
+            <button class="btn numbtn" >2</button>
+            <button class="btn numbtn" >3</button>
+            <button class="btn numbtn" >-</button>
+          </div>
+          <div class="row">
+            <button class="btn numbtn" >4</button>
+            <button class="btn numbtn" >5</button>
+            <button class="btn numbtn" >6</button>
+            <button class="btn numbtn" >+</button>
+          </div>
+          <div class="row">
+            <button class="btn numbtn" >7</button>
+            <button class="btn numbtn" >8</button>
+            <button class="btn numbtn" >9</button>
+            <button class="btn numbtn" >*</button>
+          </div>
+          <div class="row">
+            <button class="btn numbtn" >0</button>
+            <button class="btn numbtn" >00</button>
+            <button class="btn numbtn" id="percent" >%</button>
+            <button class="btn numbtn" >/</button>
+          </div>
+          <div class="row">
+            <button class="btn" type="reset" id="resetbtn">C</button>
+            <button class="btn numbtn" >.</button>
+            <button class="btn numbtn" >&#40;</button>
+            <button class="btn numbtn" >&#41;</button>
+          </div>
+          <div class="row row-cols-2 del ">
+            <div class="col">
+              <button class="btn" id="delbtn">del</button>
+            </div>
+            <div class="col ">
+              <button class="btn" id="submitbtn">=</button>
             </div>
           </div>
         </div>
-      </div>
+       
+        
+         </form>
     </div>
   </div>
 
-  <!-- Add Bootstrap CDN link to use Bootstrap JavaScript features -->
-  <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-  <!-- Add your own JavaScript code for the calculator logic -->
-  <script >
-    // Get the display element by its id
-var display = document.getElementById("display");
+  
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.5.0/math.min.js"></script> -->
+  <script>
+    let num = document.querySelector("#num");
+    let result = document.querySelector('#result');
+    num.focus();
+    let numbtn = document.querySelectorAll(".numbtn")
+    let submitbtn = document.querySelector("#submitbtn");
+    let resetbtn = document.querySelector("#resetbtn");
+    delbtn=document.querySelector("#delbtn");
+    percent = document.querySelector('#percent')
 
-// This function clears the display value
-function clearDisplay() {
-  display.value = "0";
-}
-
-// This function appends a value to the display value
-function appendValue(value) {
-  // If the display value is 0, replace it with the value
-  if (display.value == "0") {
-    display.value = value;
-  } else {
-    // Otherwise, append the value to the display value
-    display.value += value;
-  }
-}
-
-// This function evaluates the display value and shows the result
-function calculate() {
-  try {
-    // Use the eval function to evaluate the display value
-    var result = eval(display.value);
-    // If the result is not a number, show an error message
-    if (isNaN(result)) {
-      display.value = "Error";
-    } else {
-      // Otherwise, show the result
-      display.value = result;
+    document.body.addEventListener("keyup",function(ekey){
+      ekey.preventDefault();
+      console.log(ekey);
+      if(ekey.key==="Enter")
+      {
+        if(num.value=="0")
+        {
+          
+      num.value="";
+      num.focus();
+        }
+        let x = num.value;
+        
+      try {
+        let y = math.evaluate(x);
+        num.value=y;
+      } catch (error) {
+        num.value = "Invalid expression";
+      }
+      }
+      if(ekey.key==="Escape")
+      {
+        
+      num.value="";
+      num.focus();
     }
-  } catch (error) {
-    // If there is an error in the expression, show an error message
-    display.value = "Error";
-  }
-}
+      
+    })
 
+    for (let numbtns of numbtn) {
+      numbtns.addEventListener("click",function(){
+        console.log(numbtns.textContent);
+        let value = numbtns.textContent;
+        num.value += value;
+      })
+    }
 
+    submitbtn.addEventListener("click",function()
+    {
+      let x = num.value;
+      try {
+        let y = math.evaluate(x);
+        num.value=y;
+      } catch (error) {
+        num.value = "Invalid expression";
+      }
+
+    num.focus();
+    })
+
+    percent.addEventListener("click",function()
+    {
+      let x = (num.value);
+      try {
+        let y = math.evaluate(x);
+        num.value=y/100;
+      } catch (error) {
+        num.value = "Invalid expression";
+      }
+
+    num.focus();
+    })
+
+    resetbtn.addEventListener("click",function()
+    {
+      num.textContent="";
+      num.focus();
+    })
+
+    console.log(document.querySelector("#num"))
+
+    delbtn.addEventListener("click",function()
+    { 
+      num.value = num.value.slice(0,-1);
+    })
+    
   </script>
-
 </body>
 </html>
-

@@ -3,86 +3,169 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Calculator</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
  
   <style>
-    body
-    {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100dvh;
-    }
-    .card1
-    {
-      height: 250px;
-      width: 250px;
-      position: relative;
-      overflow: hidden;
-      border-radius: 20px;
-      box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.4);
-      
-    }
-    .card1 a
-    {
-      text-decoration: none !important;
-    }
-    .heading
-    {
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      top: 0;
-      left: 0;
-      background-color: blue;
-      color: white;
-      opacity: 1;
-      transition: 0.15s;
-    }
-    .heading:hover
-    {
-      opacity: 0;
-    }
-    .content
-    {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background-color: rgba(255, 255, 255, 0.25);
-      height: 100%;
-      width: 100%;
+/*Calculator Body*/
+.calc-body {
+  width: 275px;
+  margin: auto;
+  min-height: 400px;
+  box-shadow: 0 8px 50px -7px black;
+  background: #3A4655;
+}
+/*Calculator Display Screen*/
+.calc-screen {
+  padding: 1rem;
+  height: 100px;
+}
+#calc-operation {
+  font-size: 1.3rem;
+  text-align: right;
+  color: #727B86;
+  padding-bottom: .5rem;
+}
+#calc-typed {
+  font-size: 2rem;
+  text-align: right;
+  color: #fff;
+}
+/*Calculator Buttons*/
+.calc-button-row {
+  display: table;
+}
+.calc-button-row button {
+  display: table-cell;
+  width: 25%;
+  background: #425062;
+  color: #fff;
+  height: 65px;
+  font-size: 1.3rem;
+  border: none;
+  border-color:#3C4857;
+  border-width: 1px 1px 0px 0;
+  border-style: solid;
+}
+.calc-button-row button.ac {
+  color: #ff7665;
+}
+.calc-button-row button.opt {
+  color: #ffbc56;
+}
+/*The border has been managed in every fourth button so that the design will not distract.*/
+.calc-button-row button:nth-child(4n) {
+  border-right: none;
+}
+.calc-button-row button:active {
+  position: relative;
+  top: 1px;
+}
+.calc-button-row button:hover {
+ background: #3e4b5c; 
+}
 
-    }
-    button
-    {
-      width: 120px;
-      background-color: blue;
-      color: white;
-      border-radius: 20px;
-    }
-    .sidenav
-    {
-      background-color: blue;
-    }
   </style>
 </head>
 
 <body>
-<div class="ovr">
-  <div class="card1">
-    <a href="https://wallpapers.com/images/featured/4k-oaax18kaapkokaro.jpg">
-      <div class="heading">
-        <h1>FullStack</h1>
-      </div>
-      <div class="content">
-        <p>This Is A full Stack Course</p><button>Join</button>
-      </div>
-    </div></a>
+  <!-- Calculator Body -->
+<div class="calc-body container rounded-4 shadow p-0 overflow-hidden">
+  <!-- Calculator Display Screen -->
+  <div class="calc-screen">
+    <div id="calc-operation">1234 + 567 + </div>
+    <div id="calc-typed">890</div>
   </div>
+  <!-- Calculator Buttons -->
+  <div class="calc-button-row">
+    <button class="ac">AC</button>
+    <button class="opt">&#43;&#47;&#8722;</button>
+    <button class="opt">&#37;</button>
+    <button class="opt">&#247;</button>
+    <button>7</button>
+    <button>8</button>
+    <button>9</button>
+    <button class="opt">&#215;</button>
+    <button>4</button>
+    <button>5</button>
+    <button>6</button>
+    <button class="opt">&#8722;</button>
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <button class="opt">&#43;</button>
+    <button>0</button>
+    <button>.</button>
+    <button>del</button>
+    <button class="opt">&#61;</button>
+  </div>
+</div>
+
+<script>
+  // Get all the buttons
+var buttons = document.querySelectorAll(".calc-button-row button");
+// Get the operation and typed elements
+var operation = document.getElementById("calc-operation");
+var typed = document.getElementById("calc-typed");
+// Initialize a variable to store the result
+var result = null;
+
+// Loop through all the buttons and add click event listeners
+for (var i = 0; i < buttons.length; i++) {
+   buttons[i].addEventListener("click", function() {
+      // Get the value of the clicked button
+      var value = this.innerHTML;
+
+      // If the value is AC, clear everything
+      if (value == "AC") {
+         operation.innerHTML = "";
+         typed.innerHTML = "";
+         result = null;
+      }
+      // If the value is DEL, delete the last character
+      else if (value == "del") {
+         typed.innerHTML = typed.innerHTML.slice(0, -1);
+      }
+      // If the value is =, evaluate the expression and display the result
+      else if (value == "=") {
+         // Get the expression from the operation and typed elements
+         var expression = operation.innerHTML + typed.innerHTML;
+         // Try to evaluate the expression using eval
+         try {
+            result = eval(expression);
+            // If the result is not a number, show an error message
+            if (isNaN(result)) {
+               typed.innerHTML = "Error";
+            }
+            // Otherwise, show the result and clear the operation
+            else {
+               typed.innerHTML = result;
+               operation.innerHTML = "";
+            }
+         }
+         // If there is an error in eval, show an error message
+         catch (e) {
+            typed.innerHTML = "Error";
+         }
+      }
+      // If the value is an operator, append it to the operation and clear the typed
+      else if (value == "+" || value == "-" || value == "*" || value == "/") {
+         operation.innerHTML += typed.innerHTML + " " + value + " ";
+         typed.innerHTML = "";
+      }
+      // Otherwise, append the value to the typed element
+      else {
+         typed.innerHTML += value;
+      }
+   });
+}
+
+</script>
 
 </body>
 </html>
