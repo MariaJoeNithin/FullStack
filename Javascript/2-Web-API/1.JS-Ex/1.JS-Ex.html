@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  </head>
+  
+  <body>
+    <div class="container-fluid px-5 ">
+      <h3 class="text-center p-5">JavaScript CRUD Operations Using LocalStorage</h3>
+      <div id="liveAlertPlaceholder"></div>
+      <div class="row row-cols-1 row-cols-md-2 px-3">
+        <div class="col ">
+          <div id="insertdata" class="container shadow rounded-3 p-4 mb-3">
+            <h5>Insert/ Update Data</h5>
+            <br>
+            <p>Enter a key and a value to add and/ or update records</p>
+            <br>
+            <form class="row row-cols-2">
+              <div class="mb-3">
+                <input type="text" class="form-control" id="enterkey" placeholder="Enter Key">
+              </div>
+              <div class="mb-3">
+                <input type="text" class="form-control" id="entervalue" placeholder="Enter Value">
+              </div>
+            </form>
+            <button type="button" id="insertbtn" class="btn btn-primary"><b>INSERT DATA</b></button>
+          </div>
+
+          <div id="readdata" class="container shadow rounded-3 p-4 my-3">
+            <h5>Read Data</h5>
+            <br>
+            <p>Enter a key and a value for the record</p>
+            <br>
+            <form class="row row-cols-2">
+              <div class="mb-3">
+                <input type="text" class="form-control" id="readkey" placeholder="Enter Key">
+              </div>
+              <div class="mb-3">
+                <button type="button" id="readbtn" class="btn btn-primary"><b>READ DATA</b></button>
+              </div>
+            </form>
+            <div id="availdata"></div>
+          </div>
+
+          <div id="deletedata" class="container shadow rounded-3 p-4 my-3">
+            <h5>Delete Data</h5>
+            <br>
+            <p>Enter a key to delete the record associated with that key</p>
+            <br>
+            <form class="row row-cols-2">
+              <div class="mb-3">
+                <input type="text" class="form-control" id="deletekey" placeholder="Enter Key">
+              </div>
+              <div class="mb-3">
+                <button type="button" id="deletebtn" class="btn btn-primary"><b>DELETE DATA</b></button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+
+        <div class="col ">
+          <div id="localdata" class="container shadow rounded-3 p-4 mb-3">
+            <h5>Local Storage</h5>
+            <br>
+            <p id="localtextcnt">Add some key - value records using INSERT box</p>
+            <br>
+            <div class="container" id="localdatavalue">
+
+            </div>
+            <form class="row">
+              <div class="col">
+                <button type="button" id="deleteallbtn" class="btn btn-danger my-3"><b>DELETE ALL</b></button>
+              </div>
+            </form>
+          </div>      
+        </div>
+
+      </div>
+    </div>
+
+    <script>
+      const entkey=document.querySelector("#enterkey");
+      const entvalue=document.querySelector("#entervalue");
+      const insertbtn=document.querySelector("#insertbtn");
+      const readkey=document.querySelector("#readkey");
+      const readbtn=document.querySelector("#readbtn");
+      const deletekey=document.querySelector("#deletekey");
+      const deletebtn=document.querySelector("#deletebtn");
+      const localdatavalue=document.querySelector("#localdatavalue");
+      const localtextcnt=document.querySelector("#localtextcnt");
+      const deleteallbtn=document.querySelector("#deleteallbtn");
+      const availdata=document.querySelector("#availdata");
+      localview();
+
+      const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+
+      const appendAlert = (message, type) => 
+      {
+        const wrapper = document.createElement('div')
+        wrapper.innerHTML = [
+          `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+          `   <div>${message}</div>`,
+          '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+          '</div>'
+        ].join('')
+          
+        alertPlaceholder.append(wrapper)
+      }
+
+
+      insertbtn.addEventListener("click",function(e)
+      {
+        e.preventDefault();
+        if(entkey.value===""||entvalue.value==="")
+        {
+          appendAlert('Enter both value in Insert/Update field, Both are Mandotory!', 'primary')
+        }
+        else if(localStorage.getItem(entkey.value))
+        {
+          console.log(entkey.value);
+          let keyinput=entkey.value;
+          let valinput=entvalue.value;
+          localStorage.setItem(keyinput,valinput);
+          window.location.reload()
+          // appendAlert(`The Value of key ${entkey.value} is updated !`, 'dark')
+          window.alert(`The Value of key ${entkey.value} is updated !`)
+        }
+        else
+        {
+          let keyinput=entkey.value;
+          let valinput=entvalue.value;
+          localStorage.setItem(keyinput,valinput);
+          window.location.reload();
+          // appendAlert(`The key  ${entkey.value} and Value ${entvalue.value} is inserted !`, 'dark')
+          window.alert(`The key  ${entkey.value} and Value ${entvalue.value} is inserted !`)
+        }
+      });
+
+
+
+      readbtn.addEventListener("click",function(e)
+      {
+        e.preventDefault();
+        if(readkey.value==="")
+        {
+          appendAlert('Enter value in Read field, The Field Is Empty!', 'secondary')
+        }
+        
+        else
+        {
+          if(localStorage.getItem(readkey.value))
+          {
+            console.log(readkey.value)
+            let keyinput=localStorage.getItem(readkey.value);
+            availdata.innerHTML+=`<div>The Value of ${readkey.value} is ${keyinput}</div>`;
+          }
+          else
+          {
+            console.log(readkey.value)
+            let keyinput=localStorage.getItem(readkey.value);
+            availdata.innerHTML+=`<div>The Value of ${readkey.value} is ${keyinput}</div>`;
+          }
+        }
+
+      });
+
+
+      deletebtn.addEventListener("click",function(e)
+      {
+        e.preventDefault();
+        if(deletekey.value==="")
+        {
+          appendAlert('Enter value in Delete field, The Field Is Empty!', 'success')
+        }
+        else
+        {
+          // console.log(localStorage.key(deletekey.value));
+          if(deletekey.value === localStorage.key(deletekey.value)){
+              localStorage.removeItem(deletekey.value);
+              window.location.reload()
+              // appendAlert(`The value of ${deletekey.value} has been removed`, 'success')
+              window.alert(`The value of ${deletekey.value} has been removed`)
+          }
+          else{
+              window.location.reload()
+              // appendAlert(`The value of ${deletekey.value} has been removed`, 'success')
+              window.alert(`The value of ${deletekey.value} is not present`)
+          }
+        }
+      });
+
+      deleteallbtn.addEventListener("click",function(){
+        localStorage.clear();
+        window.location.reload();
+        // appendAlert(`All The keys have been removed`, 'success')
+        window.alert(`All The keys have been removed`);
+      })
+
+      function localview(){
+        for (i = 0; i < localStorage.length; i++) {
+            const key = localStorage.key(i);
+            const value = localStorage.getItem(key);
+            localdatavalue.innerHTML += `<hr>Key is: ${key} <br><br>
+            Value is: ${value}<br>`;
+        }
+        if (localStorage.length != 0){
+          deleteallbtn.style.display = "block";
+          localtextcnt.innerHTML = `Records available in LocalStorage`;
+        }
+
+        if ( localStorage.length == 0) {
+          deleteallbtn.style.display = "none";
+          localtextcnt.innerHTML = `Add some key - value records using INSERT box`;
+        }
+      }
+
+
+
+    </script>
+</body>
+</html>
