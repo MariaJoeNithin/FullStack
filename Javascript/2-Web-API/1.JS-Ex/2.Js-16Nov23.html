@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        #pg1
+        {
+            background-color: #1d1f22d7;
+            height: 100vh;
+        }
+        .leader_head
+        {
+            display: flex;
+            justify-content: space-between;
+        }
+        #rfrbtn
+        {
+            height: 45px;
+            background-color: #0dcaf0;
+        }
+        #rfrbtn:hover
+        {
+            background-color: rgba(13, 202, 240, 0.75);
+        }
+        .ranking
+        {
+            color: white;
+            padding: 10px;
+        }
+        .ranking:nth-child(even)
+        {
+            background-color: white;
+            color: black;
+        }
+    </style>
+  </head>
+  
+  <body>
+    <div class="container-fluid p-0" id="pg1">
+        <div class="container-fluid text-bg-dark p-3"><h1>LeaderBoard</h1></div>
+        <div class="container-fluid p-5">
+            <div class="row row-cols-md-2 row-cols-1 g-5 ">
+                <div class="cols">
+                    <div class="leader_head my-2">
+                        <h1 class="text-white">Recent Scores</h1>
+                        <button class="btn text-dark" id="rfrbtn">Refresh</button>
+                    </div>
+                    <div id="leaderbd" class="border border-dark border-3">
+                        <h3 id="emptylead" class="text-danger text-center ">Leaderboard is Empty...</h3>
+                    </div>
+                </div>
+                <div class="cols">
+                    <div class="leader_head my-2">
+                        <h1 class="text-white">Add Your Scores</h1>
+                    </div> 
+                    <form action="#">
+                        <div class="mb-3">
+                          <input type="text" class="form-control" placeholder="Your Name" id="name">
+                        </div>
+                        <div class="mb-3">
+                          <input type="number" class="form-control" placeholder="Your Score" id="score">
+                        </div>
+                        <div class="mb-3 d-flex justify-content-end">
+                          <input type="submit" class="btn btn-primary" placeholder="Submit" id="sbtbtn">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const rfrbtn = document.querySelector("#rfrbtn");
+        const leaderbd = document.querySelector("#leaderbd");
+        const emptylead = document.querySelector("#emptylead");
+        const name = document.querySelector("#name");
+        const score = document.querySelector("#score");
+        const sbtbtn = document.querySelector("#sbtbtn");
+        let ranknew = [];
+
+        let scorevalue = [];
+
+        function sortdata() {
+            leaderbd.innerHTML = "";
+            scorevalue.sort((a, b) => b.score - a.score);
+            scorevalue.forEach((score, index) => {
+                let scorerank = score.score;
+                let scorename = score.name;
+                leaderbd.innerHTML += `<div class="ranking">${scorename} : ${scorerank}</div>`;
+            });
+        }
+
+        sbtbtn.addEventListener("click", function (e) {
+            e.preventDefault();
+            if (name.value === "" || score.value === "") {
+                alert("Enter Value");
+            } else {
+                scorevalue.push({ name: name.value, score: score.value });
+                sortdata(scorevalue);
+                ranknew=scorevalue;
+            }
+        });
+
+
+        rfrbtn.addEventListener("click", function (e) {
+          e.preventDefault();
+          leaderbd.innerHTML = `<h3 id="emptylead" class="text-danger text-center">
+          Leaderboard is Empty...
+          </h3>`;
+        });
+
+    </script>
+
+</body>
+</html>
