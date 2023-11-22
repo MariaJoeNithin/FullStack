@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Single Product Page" />
+    <title>Movies Api</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+      #products-container
+      {
+        display: flex;
+        padding: 50px;
+        flex-wrap: wrap;
+        gap: 20px;
+        align-items: center;
+        justify-content: space-evenly;
+        background: radial-gradient(#00002b,#000  );
+        min-height: 100vh;
+      }
+      .product_items
+      {
+        max-width: 300px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        position: relative;
+        overflow: hidden;
+        background-color: rgba(0, 0, 0, 0.95);
+        color: white;
+        transition: 0.3s;
+      }
+      .product_details
+      {
+        max-height: 280px ;
+      }
+      .product_overview
+      {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        /* transform: translateY(100%); */
+        /* padding: 5px; */
+        background-color: rgba(0, 0, 0, 0.975);
+        color: white;
+        max-height: 100% ;
+        transform: translateY(100%);
+        transition: transform 0.3s ease-in;
+      }
+
+      .product_items:hover .product_overview
+      {
+        display: block;
+        transform: translateY(0%);
+      }
+      .product_items:hover img
+      {
+        filter: blur(8px);
+        scale: 1.2;
+      }
+      .product_items:hover
+      {
+        filter: brightness(1.25);
+      }
+      .movieimage img 
+      {
+        width: 100%;
+        transition: 0.3s;
+      }
+      .product-rating
+      {
+        max-height: 25px;
+        max-width: fit-content;
+      }
+      .mveov
+      {
+        background-color: rgba(12, 0, 175, 0.591);
+      }
+    </style>
+</head>
+<body>
+    <div class="container-fluid p-0">
+        <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+            <div class="container-fluid">
+              <a class="navbar-brand">Movie Api</a>
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" id="search" placeholder="Search" aria-label="Search">
+                <!-- <button class="btn btn-outline-success" type="submit" id="search-btn">Search</button> -->
+              </form>
+            </div>
+          </nav>
+        <div id="products-container" class="container-fluid">
+    
+        </div>
+    </div>
+
+
+
+    <script>
+        const searchVal = document.querySelector("#search")
+        // const searchBtn = document.querySelector("#search-btn")
+        let copyArr=[];
+        let newArr=[];
+        let baseUrl = "https://api.themoviedb.org/3/";
+        let apiKey = "api_key=fe100bbca655353018637c478236eb4b";
+        let apiUrl = baseUrl+"discover/movie?"+apiKey;
+        let searchUrl=baseUrl+"search/movie?"+apiKey+'&query="';
+        console.log(searchUrl)
+        const productsContainer = document.querySelector("#products-container");
+
+
+                //  https://api.themoviedb.org/3/movie/550?api_key=fe100bbca655353018637c478236eb4b
+
+        fetchurl(apiUrl)
+
+        function fetchurl(gvnurl)
+        {
+            fetch(gvnurl)
+            .then((res) => (res.json()))
+            .then((data)=>(copyArr=(data.results),generateui(data.results)))
+            .catch((error)=>(console.log(error)));
+        }
+
+
+          
+        //   fetch("https://api.themoviedb.org/3/search/movie?api_key=fe100bbca655353018637c478236eb4b")
+        //         .then((res) => (res.json()))
+        //         .then((data)=>(copyArr=(data.results),generateui(data.results)))
+        //         .catch((error)=>(console.log(error)));
+
+          
+
+      
+          function generateui(newArr)
+            {
+              const productsContainer = document.querySelector("#products-container");
+            //   console.log(newArr)
+              const productsArr = newArr.map((product) => {
+                return `
+                      <div class="product-${product.id} product_items shadow rounded-4">
+                          <p class="movieimage pb-3">
+                              <img src="https://image.tmdb.org/t/p/w500${product.poster_path}" class="img-fluid rounded-3" alt="product-${product.id}" />    
+                          </p>
+                          <div class="product_details px-3 pb-4">
+                              <div class="row row-cols-2">
+                                <div class="col-10">${product.title}</div>
+                                <p class="col-2 product-rating rounded" style="background-color:${getcolor(product.vote_average)};" >${product.vote_average}</p>
+                              </div>
+                          </div>
+                        <div class="product_overview rounded-5 p-2">
+                            <h3 class="mveov rounded-5 p-3 text-center">Movie Overview</h3> 
+                            <p>${product.overview}</p>
+                        </div>
+                      </div>
+                      `;
+              });
+              // console.log(productsArr.join(" "));
+              productsContainer.innerHTML = productsArr.join("");
+            }
+
+            function getcolor(vote) 
+            {
+              if(vote>= 8){
+                  return'green'
+              }else if(vote <=5){
+                  return'yellow'
+              }else{
+                  return'red'
+              }
+            }
+
+
+
+            searchVal.addEventListener("input", (e) => {
+                e.preventDefault();
+
+                const searchTerm = searchVal.value;
+                console.log(searchTerm)
+
+                if (searchTerm && searchTerm!==""){
+                    fetchurl(searchUrl+searchTerm)
+                }else{
+                    fetchurl(API_URL);
+                }
+
+            });
+
+
+    </script>
+  </body>
+</html>
