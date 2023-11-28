@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="Description" content="Single Product Page" />
     <title>Single Product Page</title>
+    <style>
+
+    </style>
   </head>
   <body>
     <h2>Single Product Page</h2>
+    
     <div id="product-container"></div>
 
     <script>
@@ -21,13 +25,13 @@
         const productContainer = document.querySelector("#product-container");
         const productDiv = `
                 <div class="product-${findProduct.id}">
-                    <h2>Product Number: ${findProduct.id}</h2>
+                    // <h2>Product Number: ${findProduct.id}</h2>
                     <h2>${findProduct.title}</h2>
                     <p>${findProduct.description}</p>
                     <p>
                         <img src=${findProduct.image} alt=product-${findProduct.id} height="150px" width="150px" />    
                     </p>
-                    <a href="./intro.html">Back to home page</a> 
+                    <a href='/1-JavaScript/3-Async/intro.html'>Back to home page</a> 
                     <hr />
                 </div>
         `;
