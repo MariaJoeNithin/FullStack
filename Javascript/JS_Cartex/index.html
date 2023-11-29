@@ -36,7 +36,8 @@
         display: flex;
         flex-direction: column;
         /* background-color: rgba(255, 255, 255, 1); */
-        background: linear-gradient(lightgreen,white,white,lightgreen);
+        background: linear-gradient(rgba(255, 255, 255, 0.5),white,white,white,rgba(255, 255, 255, 0.5));
+        backdrop-filter: blur(8px);
         color: black;
         max-height: 450px;
         min-height: 450px;
@@ -124,64 +125,82 @@
       .buttons .btn {
         width: 150px;
       }
+      a{
+        color: #000;
+        text-decoration: none;
+      }
     </style>
   </head>
   <body>
-<div class="container-fluid p-0 homepage">
-  <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="container-fluid">
-        <a class="navbar-brand  me-3" href="#"> <img src="https://i.pinimg.com/736x/85/c8/3d/85c83d242b73d3c52b8c4c2e7df27db7.jpg" class="img-fluid rounded mx-2" alt="" style="max-width: 50px;height:auto;"><em>Shopping Spree</em> </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-            <li class="nav-item">
-              <a class="nav-link navhome active" aria-current="page" href="#"><i class="bi bi-house-door-fill"></i>Home</a>
-            </li>
-            <li class="nav-item">
-              <button class="nav-link position-relative " id="cartbtn" href="#">
-                <i class="bi bi-cart"></i>
-                Cart   
-                <span id="cartitem" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                0
-                <span class="visually-hidden">Cart Items</span>
-              </span></button>
-            </li>
-          </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" id="search" placeholder="Search..." aria-label="Search">
-            <button class="btn" id="search-btn" type="submit" value="Search" >Search</button>
-          </form>
+    <div class="container-fluid p-0 homepage">
+      <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+          <div class="container-fluid">
+            <a class="navbar-brand  me-3" href="#"> <img src="https://i.pinimg.com/736x/85/c8/3d/85c83d242b73d3c52b8c4c2e7df27db7.jpg" class="img-fluid rounded mx-2" alt="" style="max-width: 50px;height:auto;"><em>Shopping Spree</em> </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                <li class="nav-item">
+                  <a class="nav-link navhome active" aria-current="page" href="#"><i class="bi bi-house-door-fill"></i>Home</a>
+                </li>
+                <li class="nav-item">
+                  <a  href="./CartEx.html"><button class="nav-link position-relative " id="cartbtn">
+                    <i class="bi bi-cart"></i>
+                    Cart   
+                    <span id="cartitem" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    0
+                    <span class="visually-hidden">Cart Items</span>
+                  </span></button></a>
+                </li>
+              </ul>
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" id="search" placeholder="Search..." aria-label="Search">
+                <button class="btn" id="search-btn" type="submit" value="Search" >Search</button>
+              </form>
+            </div>
+          </div>
+        </nav>
+      
+        <div id="pro-container" >
+          <div id="products-container">
+          
+          </div>
         </div>
-      </div>
-    </nav>
-
-    <div id="pro-container" >
-      <div id="products-container">
-
-      </div>
     </div>
-</div>
 
     <script>
       let copyArr = [];
 
       const fetchProducts = async (url) => {
-        try {
+        try 
+        {
           const res = await fetch(url);
           const data = await res.json();
-          copyArr = data;
+          copyArr = data.products;
           console.log(data);
-        generateui(data);
-          
+          generateui(data.products);
+
+          if(localStorage.getItem("products"))
+            {
+              // console.log(localStorage.getItem("products"))
+              console.log("product is availabale")
+            } else{
+              console.log(localStorage.getItem("products"))
+              localStorage.setItem("products", JSON.stringify(data.products));
+            }
+
         } catch (error) {
           console.log(error);
         }
       };
 
       
-      fetchProducts("https://fakestoreapi.com/products");
+      window.onload = fetchProducts("https://dummyjson.com/products");
+      
+      // fetchProducts("https://fakestoreapi.com/products");
+      
+      // fetchProducts("https://dummyjson.com/products/category/smartphones");
 
 
       function generateui(newArr)
@@ -190,11 +209,11 @@
         const productsArr = newArr.map((product) => {
           return `
                 <div id="product-${product.id}" class="product_items shadow p-4 rounded">
-                    <div class="product-title mb-2">
+                  <a href='./product_id.html?id=${product.id}'><div class="product-title mb-2">
                         <h3 class="titletext ">${product.title}</h3>
                         </div>
                         
-                        <p class="productprice">$${(product.price)}</p>
+                        <p class="productprice">Rs.${(product.price)}</p>
 
                         <!--
                         <div class="product_details">
@@ -204,13 +223,13 @@
                       </div>
                       -->
                     <p class="d-flex justify-content-center align-item-center">
-                        <img src=${product.image} alt=product-${product.id} height="150px" width="150px" />    
+                        <img src=${product.images[0]} alt=product-${product.id} height="150px" width="auto" />    
                     </p>
-                    <p class="d-flex buttons justify-content-center align-item-center gap-5">
-                      <a href='./product_id.html?id=${product.id}' class ="btn btn-primary my-2">More Info...</a>
+                  </a>
 
-                      <button class ="btn btn-success cart my-2">Add To Cart</button>   
-                    </p>
+                  <p class="d-flex buttons justify-content-center align-items-center gap-5">
+                        <button class ="btn btn-success cart my-2" onclick='addToCart(${product.id})'>Add To Cart</button>   
+                  </p>
                 </div>
                 `;
         });
@@ -253,8 +272,39 @@
         generateui(newArr);
       });
 
-      
 
+
+      function addToCart(id) {
+        let cartStorage = JSON.parse(localStorage.getItem("cart")) || [];
+        //   console.log(cartStorage);
+        let findProduct = JSON.parse(localStorage.getItem("products")).find(
+          (product) => product.id === id
+        );
+        console.log(findProduct);
+
+        let findIndex = cartStorage.findIndex((product) => product.id === id);
+        console.log(findIndex);
+        if (findIndex == -1) {
+          cartStorage.push({
+            id: findProduct.id,
+            title: findProduct.title,
+            image: findProduct.images[0],
+            price: findProduct.price,
+            quantity: 1,
+          });
+          localStorage.setItem("cart", JSON.stringify(cartStorage));
+        } else {
+          let updateProduct = cartStorage[findIndex];
+          let productToUpdate = {
+            ...updateProduct,
+            quantity: updateProduct.quantity + 1,
+          };
+          console.log(productToUpdate);
+          cartStorage.splice(findIndex, 1, productToUpdate);
+          localStorage.setItem("cart", JSON.stringify(cartStorage));
+        }
+      }
+      
     </script>
   </body>
 </ht
