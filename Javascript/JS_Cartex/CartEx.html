@@ -170,7 +170,7 @@
 
     <div id="pro-container" >
         <div id="cart-items" class="text-white"></div>
-      <p><a class ="btn btn-success my-2" href="./index.html">Back to home page</a></p>
+      <p class="d-flex justify-content-center align-item-center"><a class ="btn btn-success my-2" href="./index.html">Back to home page</a></p>
     </div>
 
 
@@ -180,11 +180,14 @@
       let defarray = [];
 
 
-      document.addEventListener("DOMContentLoaded", () => {
+      // document.addEventListener("DOMContentLoaded", () => {
         const displayProducts = () => {
-          
+          console.log("disp")
           let cartContainer = document.querySelector("#cart-items");
           let cartProducts = JSON.parse(localStorage.getItem("cart"));
+          
+        // let cartStorage = JSON.parse(localStorage.getItem("cart")) || [];
+          
           console.log(cartProducts);
 
 
@@ -205,9 +208,11 @@
           });
         };
 
-        window.onload = displayProducts;
+        window.onload = displayProducts();
+        
+      // displayProducts()
 
-    });
+    // });
 
     function updateCart(id,upd) {
         let cartStorage = JSON.parse(localStorage.getItem("cart")) || [];
@@ -216,18 +221,15 @@
           (product) => product.id === id
         );
         console.log(findProduct);
-
-        console.log(findProduct.quantity)
         
-          if(findProduct.quantity<=0)
-          {
-            removeCart(id)
-          }
-          else{
+
             let findIndex = cartStorage.findIndex((product) => product.id === id);
           console.log(findIndex);
 
+
           let updateProduct = cartStorage[findIndex];
+
+          console.log(updateProduct.quantity)
 
           let productToUpdate = {
             ...updateProduct,
@@ -238,21 +240,21 @@
           cartStorage.splice(findIndex, 1, productToUpdate);
           localStorage.setItem("cart", JSON.stringify(cartStorage));
 
-
-        window.location.reload() ;
-
+          if(updateProduct.quantity == 0)
+          {
+            removeCart(id)
           }
-
-
-        }
+        window.location.reload()
+      // displayProducts()
+      }
 
         function removeCart(id)
         {
-        let cartStorage = JSON.parse(localStorage.getItem("cart")) || [];
-        let updateCart = cartStorage.filter((product) => product.id !== id);
-        localStorage.setItem("cart" , JSON.stringify(updateCart));
-
-        window.location.reload()
+          let cartStorage = JSON.parse(localStorage.getItem("cart")) || [];
+          let updateCart = cartStorage.filter((product) => product.id !== id);
+          localStorage.setItem("cart" , JSON.stringify(updateCart));
+          displayProducts();
+          window.location.reload()
         }
 
 
