@@ -107,66 +107,79 @@
 </div>
 
 <script>
-  // Get all the buttons
-var buttons = document.querySelectorAll(".calc-button-row button");
-// Get the operation and typed elements
-var operation = document.getElementById("calc-operation");
-var typed = document.getElementById("calc-typed");
-// Initialize a variable to store the result
-var result = null;
-
-// Loop through all the buttons and add click event listeners
-for (var i = 0; i < buttons.length; i++) {
-   buttons[i].addEventListener("click", function() {
-      // Get the value of the clicked button
-      var value = this.innerHTML;
-
-      // If the value is AC, clear everything
-      if (value == "AC") {
-         operation.innerHTML = "";
-         typed.innerHTML = "";
-         result = null;
-      }
-      // If the value is DEL, delete the last character
-      else if (value == "del") {
-         typed.innerHTML = typed.innerHTML.slice(0, -1);
-      }
-      // If the value is =, evaluate the expression and display the result
-      else if (value == "=") {
-         // Get the expression from the operation and typed elements
-         var expression = operation.innerHTML + typed.innerHTML;
-         // Try to evaluate the expression using eval
-         try {
-            result = eval(expression);
-            // If the result is not a number, show an error message
-            if (isNaN(result)) {
-               typed.innerHTML = "Error";
-            }
-            // Otherwise, show the result and clear the operation
-            else {
-               typed.innerHTML = result;
-               operation.innerHTML = "";
-            }
-         }
-         // If there is an error in eval, show an error message
-         catch (e) {
-            typed.innerHTML = "Error";
-         }
-      }
-      // If the value is an operator, append it to the operation and clear the typed
-      else if (value == "+" || value == "-" || value == "*" || value == "/") {
-         operation.innerHTML += typed.innerHTML + " " + value + " ";
-         typed.innerHTML = "";
-      }
-      // Otherwise, append the value to the typed element
-      else {
-         typed.innerHTML += value;
-      }
-   });
+function getData() {
+  const dataJSON = localStorage.getItem('nestedData');
+  return dataJSON ? JSON.parse(dataJSON) : {};
 }
 
-</script>
+function saveData(data) {
+  const dataJSON = JSON.stringify(data);
+  localStorage.setItem('nestedData', dataJSON);
+}
 
+// Function to add a new key and nested object using dot notation
+function addNestedObject(key, nestedObject) {
+  const data = getData();
+  const keys = key.split('.');
+  console.log(keys)
+
+  let currentLevel = data;
+  console.log(currentLevel)
+  for (let i = 0; i < keys.length - 1; i++) {
+    const currentKey = keys[i];
+  console.log(currentKey)
+
+
+    // Check if the current key exists in the nested object
+    if (currentLevel.hasOwnProperty(currentKey)) {
+      // Move to the next level
+      currentLevel = currentLevel[currentKey];
+    } else {
+      console.error(`Key "${currentKey}" not found in nested data.`);
+      return;
+    }
+  }
+
+  // Check if the last key points to an object or is undefined
+  const lastKey = keys[keys.length - 1];
+  if (currentLevel.hasOwnProperty(lastKey) && typeof currentLevel[lastKey] === 'object') {
+    console.error(`Key "${lastKey}" already exists as an object in nested data.`);
+  } else {
+    // Add the new key and nested object
+    currentLevel[lastKey] = nestedObject;
+
+    // Save the updated data back to local storage
+    saveData(data);
+  }
+}
+
+// Example usage:
+const nestedObject = {
+  key1: 'value1',
+  key2: {
+    subkey1: 'subvalue1',
+    subkey2: [10, 20, 30]
+  },
+  key3: [1, 2, 3]
+};
+
+// Save nested object to local storage
+saveData(nestedObject);
+
+// Display the original data
+console.log('Original Data:', getData());
+
+// Add a new key and nested object to 'key2'
+const newNestedObject = {
+  newSubkey: 'newSubvalue',
+  anotherSubkey: 'anotherSubvalue'
+};
+addNestedObject('key2.newKey', newNestedObject);
+
+// Display the updated data
+console.log('Updated Data:', getData());
+
+</script>
 </body>
 </html>
 

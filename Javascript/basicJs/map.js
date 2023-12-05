@@ -4,6 +4,7 @@ ns.set("count",253);
 console.log(ns.get("name"));
 ns.set("group","A");
 console.log(ns.get("group"));
+console.log(ns)
 for(let x of ns)
 {
     console.log(x);
