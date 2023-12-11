@@ -4,10 +4,13 @@ let id = UrlId.get("id");
 
 let existingData = JSON.parse(localStorage.getItem(id)) || { userData: {} };
 let findData = existingData.userData || {};
+console.log(findData.value)
+
 
 let content = document.querySelector("#content");
 let tabledata = document.querySelector("#tablecontent");
 let addEmp = document.querySelector("#addEmp");
+
 
 
 logout.addEventListener("click", (e) => {
@@ -17,11 +20,13 @@ logout.addEventListener("click", (e) => {
   });
 
 function updateEmployeeList(userData) {
+    
     tabledata.innerHTML=""
     let i=0;
     Object.values(userData).forEach((user) => {
         tabledata.innerHTML += `
-            <div class="employee-item row row-cols-7">
+        <div class="head1">
+            <div class="employee-item row row-cols-7 d-flex align-items-center py-2">
                 <div class="col No">${++i}</div>
                 <div class="col fname">${user.firstname}</div>
                 <div class="col lname">${user.lastname}</div>
@@ -33,6 +38,7 @@ function updateEmployeeList(userData) {
                     <button class="btn btn-danger" onclick="deleteUserData(${user.userId})">Delete</button>
                 </div>
             </div>
+        </div>
         `;
     });
 }
