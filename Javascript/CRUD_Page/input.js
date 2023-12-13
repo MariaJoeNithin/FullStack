@@ -20,9 +20,10 @@ if (userId !== null) {
   addEmpHead.innerText = "Update Employee Page";
   subbtn.innerText = "Update";
   updateUser(findData);
-} else {
-  newuser();
 }
+// else {
+//   // newuser();
+// }
 
 cancel.addEventListener("click", function () {
   window.location.href = `./crud_page.html?id=${paramId}`;
