@@ -1,0 +1,43 @@
+* {
+  scroll-padding-top: 100px;
+  scroll-behavior: smooth;
+}
+#smedia i {
+  color: gray;
+  font-size: 30px;
+  transition: 0.5s;
+}
+#smedia i:hover {
+  color: black;
+}
+#home {
+  background-color: #d1fae5;
+}
+#home img {
+  max-height: 500px;
+}
+.navbar-brand {
+  font-size: 40px !important;
+  font-weight: bold;
+}
+#skills {
+  background-color: #f8fafc;
+  font-size: 16px;
+}
+#skills i {
+  font-size: 100px;
+  color: #10b981;
+  transition: 0.5s;
+}
+#skills i:hover {
+  color: black;
+}
+#projects .card {
+  transition: 0.5s;
+}
+#projects .card:hover {
+  box-shadow: 0px 0px 15px 5px gray !important;
+}
+#projects{
+    min-height: 100vh;
+}

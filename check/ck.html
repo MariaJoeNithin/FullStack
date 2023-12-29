@@ -1,188 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculator</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
- 
-  <style>
-/*Calculator Body*/
-.calc-body {
-  width: 275px;
-  margin: auto;
-  min-height: 400px;
-  box-shadow: 0 8px 50px -7px black;
-  background: #3A4655;
-}
-/*Calculator Display Screen*/
-.calc-screen {
-  padding: 1rem;
-  height: 100px;
-}
-#calc-operation {
-  font-size: 1.3rem;
-  text-align: right;
-  color: #727B86;
-  padding-bottom: .5rem;
-}
-#calc-typed {
-  font-size: 2rem;
-  text-align: right;
-  color: #fff;
-}
-/*Calculator Buttons*/
-.calc-button-row {
-  display: table;
-}
-.calc-button-row button {
-  display: table-cell;
-  width: 25%;
-  background: #425062;
-  color: #fff;
-  height: 65px;
-  font-size: 1.3rem;
-  border: none;
-  border-color:#3C4857;
-  border-width: 1px 1px 0px 0;
-  border-style: solid;
-}
-.calc-button-row button.ac {
-  color: #ff7665;
-}
-.calc-button-row button.opt {
-  color: #ffbc56;
-}
-/*The border has been managed in every fourth button so that the design will not distract.*/
-.calc-button-row button:nth-child(4n) {
-  border-right: none;
-}
-.calc-button-row button:active {
-  position: relative;
-  top: 1px;
-}
-.calc-button-row button:hover {
- background: #3e4b5c; 
-}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <style></style>
+  </head>
 
-  </style>
-</head>
+  <body>
+    <div>
+      <h1>Todo List</h1>
+      <input type="text" name="todo" id="todo" placeholder="Enter a New Task" />
+      <button id="taskAdd" type="submit">Add</button>
+      <ul id="taskList"></ul>
+    </div>
+    <script>
+      const todoInput = document.querySelector("#todo");
+      const todolist = document.querySelector("#taskList");
+      todoInput.addEventListener("change", (e) => {
+        e.preventDefault();
+        if (todoInput.value) {
+          let newItem = document.createElement("li");
+          newItem.className =
+            "list-group-item d-flex justify-content-between align-items-start p-2";
+          // create text node for the task description
+          let descNode = document.createTextNode(`${todoInput.value}`);
+          // create button to remove item from list
+          let btnEle = document.createElement("button");
+          btnEle.classList.add("btn", "close", "float-end", "btn-danger");
+          btnEle.setAttribute("onclick", "removeTask(this)");
+          btnEle.innerHTML = "X";
+          newItem.appendChild(descNode);
+          newItem.appendChild(document.createElement("br"));
+          newItem.appendChild(btnEle);
+          todolist.append(newItem);
+          todoInput.value = "";
+        } else {
+          alert("Please enter a valid input!");
+        }
+      });
 
-<body>
-  <!-- Calculator Body -->
-<div class="calc-body container rounded-4 shadow p-0 overflow-hidden">
-  <!-- Calculator Display Screen -->
-  <div class="calc-screen">
-    <div id="calc-operation">1234 + 567 + </div>
-    <div id="calc-typed">890</div>
-  </div>
-  <!-- Calculator Buttons -->
-  <div class="calc-button-row">
-    <button class="ac">AC</button>
-    <button class="opt">&#43;&#47;&#8722;</button>
-    <button class="opt">&#37;</button>
-    <button class="opt">&#247;</button>
-    <button>7</button>
-    <button>8</button>
-    <button>9</button>
-    <button class="opt">&#215;</button>
-    <button>4</button>
-    <button>5</button>
-    <button>6</button>
-    <button class="opt">&#8722;</button>
-    <button>1</button>
-    <button>2</button>
-    <button>3</button>
-    <button class="opt">&#43;</button>
-    <button>0</button>
-    <button>.</button>
-    <button>del</button>
-    <button class="opt">&#61;</button>
-  </div>
-</div>
-
-<script>
-function getData() {
-  const dataJSON = localStorage.getItem('nestedData');
-  return dataJSON ? JSON.parse(dataJSON) : {};
-}
-
-function saveData(data) {
-  const dataJSON = JSON.stringify(data);
-  localStorage.setItem('nestedData', dataJSON);
-}
-
-// Function to add a new key and nested object using dot notation
-function addNestedObject(key, nestedObject) {
-  const data = getData();
-  const keys = key.split('.');
-  console.log(keys)
-
-  let currentLevel = data;
-  console.log(currentLevel)
-  for (let i = 0; i < keys.length - 1; i++) {
-    const currentKey = keys[i];
-  console.log(currentKey)
-
-
-    // Check if the current key exists in the nested object
-    if (currentLevel.hasOwnProperty(currentKey)) {
-      // Move to the next level
-      currentLevel = currentLevel[currentKey];
-    } else {
-      console.error(`Key "${currentKey}" not found in nested data.`);
-      return;
-    }
-  }
-
-  // Check if the last key points to an object or is undefined
-  const lastKey = keys[keys.length - 1];
-  if (currentLevel.hasOwnProperty(lastKey) && typeof currentLevel[lastKey] === 'object') {
-    console.error(`Key "${lastKey}" already exists as an object in nested data.`);
-  } else {
-    // Add the new key and nested object
-    currentLevel[lastKey] = nestedObject;
-
-    // Save the updated data back to local storage
-    saveData(data);
-  }
-}
-
-// Example usage:
-const nestedObject = {
-  key1: 'value1',
-  key2: {
-    subkey1: 'subvalue1',
-    subkey2: [10, 20, 30]
-  },
-  key3: [1, 2, 3]
-};
-
-// Save nested object to local storage
-saveData(nestedObject);
-
-// Display the original data
-console.log('Original Data:', getData());
-
-// Add a new key and nested object to 'key2'
-const newNestedObject = {
-  newSubkey: 'newSubvalue',
-  anotherSubkey: 'anotherSubvalue'
-};
-addNestedObject('key2.newKey', newNestedObject);
-
-// Display the updated data
-console.log('Updated Data:', getData());
-
-</script>
-</body>
+      function removeTask(element) {
+        element.parentNode.remove();
+      }
+    </script>
+  </body>
 </html>
-
-
-
-

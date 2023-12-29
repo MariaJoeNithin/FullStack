@@ -11,7 +11,14 @@ import ReactDOM from "react-dom/client";
 // import Counting from "./useEffect";
 // import ColorChanger from "./useColor";
 // import Component1 from "./useContext";
-import Component1 from "./useContext2";
+// import Component1 from "./useContext2";
+// import AutoFocusInput from "./uref";
+// import App from "./uref2";
+// import InputLengthCounter from "./uref3";
+import Reduce from "./usereducer";
+import Callback from "./usecallback";
+import Memo from "./usememo";
+import ToggleComponent from "./customHook";
 
 // function Batch() {
 //   return (
@@ -55,6 +62,13 @@ root.render(
     {/* <Count/> */}
     {/* <Counting /> */}
     {/* <ColorChanger /> */}
-    <Component1 />
+    {/* <Component1 /> */}
+    {/* <AutoFocusInput /> */}
+    {/* <App /> */}
+    {/* <InputLengthCounter /> */}
+    <Reduce />
+    <Callback />
+    <Memo />
+    <ToggleComponent />
   </>
 );

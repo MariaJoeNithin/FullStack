@@ -1,0 +1,20 @@
+#bdayCard {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bcard {
+  width: 650px;
+}
+.bdayRow {
+  transition: 0.5s;
+}
+.bdayRow:hover {
+  background-color: aqua;
+  border-radius: 20px;
+}
+.bcard img {
+  object-fit: cover;
+  object-position: center;
+}
