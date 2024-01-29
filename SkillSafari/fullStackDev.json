@@ -1,0 +1,104 @@
+{
+  "Section1": {
+    "Title": "Full Stack Developer Course",
+    "Description": "Enroll now & Get trained in skills that are essential to secure your dream job in our full-stack developer course. The course offers 100% Assured Placement, In leading tech companies with a salary No less than 4 LPA. Feel free to get in touch with us for more details",
+    "BatchStart": { "Next Batch Starts": "Coming Soon" }
+  },
+  "Section2": {
+    "Title": "Full Stack Developer Course highlights",
+    "subHeading": {
+      "imgCaption": [
+        "100% Placement Guarantee",
+        "7 Months Live Course",
+        "1 - 1 Mentorship support",
+        "Learn & Earn Community access",
+        "Outcome Based Learning",
+        "Insights from Industry Experts",
+        "Project based learning",
+        "Recruitment Training"
+      ],
+      "images": [
+        "https://res.cloudinary.com/skill-safari/image/upload/v1651854406/website/sales_icons/icon_1_aeldi0.png",
+        "https://res.cloudinary.com/skill-safari/image/upload/v1651854405/website/sales_icons/icon_2_leji5r.png",
+        "https://res.cloudinary.com/skill-safari/image/upload/v1651854405/website/sales_icons/icon_3_k8akza.png"
+      ]
+    }
+  },
+  "Alchemyst Advantage": {
+    "Title": "What's unique about our Full stack developer Course?",
+    "subTopic": {
+      "images": [],
+      "subTitle": ["Get a Quality Training", "What's really in it for you?"],
+      "Text": [
+        "Get best-in-class quality training from leading professionals working in India working with real-time projects.",
+        "We help students with determination and help them to acquire full-stack developer skills to secure their dream job."
+      ]
+    }
+  },
+  "How Skill Safari work": {
+    "Title": "How does Skill Safari's Full Stack Developer Program work? ",
+    "images": []
+  },
+  "Outcome Based Learning": {
+    "title": "Outcome Based Learning",
+    "text": "We at Skill Safari religiously believe in the principles of outcome-based learning.",
+    "images": []
+  },
+  "Course Curriculum": {
+    "Title": "Full Stack Developer Course Curriculum",
+    "WeekSchedule": [
+      {
+        "Week 1-5": {
+          "ModuleTitle": "Web Fundamentals",
+          "Description": "Introduction to Web, Developer Tools, Fundamentals of Web Development using HTML, CSS. Version Control using Git & GitHub"
+        },
+        "Week 6-10": {
+          "ModuleTitle": "Programming with JavaScript",
+          "Description": "Introduction to Programming, Functions and OOP Programming, Data Structures and Algorithms with JavaScript"
+        },
+        "Week 11-15": {
+          "ModuleTitle": "JavaScript on the Browser",
+          "Description": "Advanced JavaScript, Advanced CSS Working with DOM API & Local Storage"
+        },
+        "Week 16-20": {
+          "ModuleTitle": "Working with React",
+          "Description": "Introduction to React and React Ecosystem, UI Libraries, Deployment & Unit Testing"
+        },
+        "Week 21-25": {
+          "ModuleTitle": "Sever Side Development",
+          "Description": "HTTP Protocols, Node.js & Node.js architecture, Express.js, MongoDB & Mongoose ORM, OAuth using Passport.js"
+        },
+        "Week 26-28": {
+          "ModuleTitle": "Interview Preparation",
+          "Description": "Projects and Peer Programming - Work on collaborative projects exploring all concepts and have pair programming sessions to improve the skills"
+        }
+      }
+    ]
+  },
+  "Instructors": {
+    "title": "Meet your Instructors",
+    "InstructorDetails": [
+      {
+        "Kishore Kammela": {
+          "images": [],
+          "profileLink": ["https://www.linkedin.com/in/kskishorebabu/"],
+          "workPlace": "Skill Safari"
+        }
+      },
+      {
+        "Sathish": {
+          "images": [],
+          "profileLink": ["https://www.linkedin.com/in/anotherinstructor/"],
+          "workPlace": "Skill Safari"
+        }
+      },
+      {
+        "Dilip": {
+          "images": [],
+          "profileLink": ["https://www.linkedin.com/in/anotherinstructor/"],
+          "workPlace": "Paypal"
+        }
+      }
+    ]
+  }
+}

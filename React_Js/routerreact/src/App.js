@@ -4,7 +4,7 @@ import {
   Routes,
   Link,
   Route,
-  Outlet,
+  // Outlet,
 } from "react-router-dom";
 
 function Home() {

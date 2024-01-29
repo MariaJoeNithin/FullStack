@@ -28,7 +28,7 @@ const App = () => {
 
   return (
     <>
-      <div className="fixed-bottom">
+      <div className="fixed-bottom d-flex justify-content-center flex-wrap gap-3">
         <button
           className="btn btn-primary mx-2"
           onClick={() => setCurrentPage("Count")}

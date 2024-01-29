@@ -1,0 +1,169 @@
+* {
+  font-family: "Space Mono", monospace;
+  box-sizing: border-box;
+}
+.pg1Credit {
+  height: 91.9vh;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    to right top,
+    #a2beeb,
+    #8ecfee,
+    #8edde5,
+    #a4e7d5,
+    #c7eec7
+  );
+}
+.flip-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+#card {
+  width: 320px;
+  height: 190px;
+  perspective: 1000px;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 600px) {
+  #content {
+    scale: 0.65;
+  }
+}
+
+.cardcnt .flip-card {
+  transform: rotateY(180deg);
+}
+.cardcnt #backside {
+  z-index: 1000;
+}
+
+#frontside {
+  width: 320px;
+  height: 190px;
+  padding: 18px;
+  position: relative;
+  /* background-color: black; */
+  background-image: linear-gradient(to top right, black, gray, black);
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  z-index: 5;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  color: white;
+  text-shadow: 0px 0px 2px black;
+}
+#backside {
+  background-image: linear-gradient(to top right, black, gray, black);
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  width: 320px;
+  height: 190px;
+  top: 0;
+  left: 0;
+  padding-top: 23px;
+  position: absolute;
+  background-color: blue;
+  transform: rotateY(180deg);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+#acntNo {
+  font-size: 20px;
+  width: 284px;
+  height: 29px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+.card-label {
+  font-size: 10px;
+  padding-left: 10px;
+  text-align: start;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+label {
+  font-size: 10px;
+  text-align: start;
+  letter-spacing: 2px;
+}
+.card-text {
+  font-size: 16px;
+  padding-left: 10px;
+  text-align: start;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.card-img {
+  height: 40px;
+  width: 40px;
+  margin-top: 20px;
+}
+.card-img img {
+  height: 40px;
+  width: 40px;
+}
+#box {
+  width: 320px;
+  height: 38px;
+  background-color: black;
+}
+#backcontent {
+  margin-top: 20px;
+  display: flex;
+  padding-top: 15px 15px;
+  position: relative;
+}
+#secret {
+  position: absolute;
+  background-color: aqua;
+  height: 40px;
+  top: -6px;
+  left: 20px;
+  width: 70% !important;
+}
+#cvvNo {
+  text-align: end;
+  margin-right: 20px;
+  margin-left: 50px;
+  background-color: white;
+}
+#form {
+  padding: 18px;
+  margin-top: 10px;
+  width: 320px;
+  margin: 0;
+}
+#holderName,
+#acntInput {
+  height: 46px;
+  margin-left: 10px;
+  margin-top: 5px;
+  width: 95%;
+  text-transform: uppercase;
+}
+#expcvc {
+  display: flex;
+}
+#expireDate,
+#cvc {
+  width: 100%;
+  height: 46px;
+  padding: 18px;
+  margin-top: 5px;
+}
+input {
+  border-radius: 10px;
+  border: none;
+}

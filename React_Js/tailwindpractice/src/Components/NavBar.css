@@ -1,0 +1,39 @@
+@media screen and (max-width: 767px) {
+  .navList {
+    left: 50% !important;
+    top: 75px;
+    transform: translateX(-50%);
+  }
+}
+
+.list {
+  transition: 0.2s;
+}
+
+.list:hover {
+  color: #fb8c00;
+}
+.dropArrow {
+  display: none;
+  width: fit-content;
+}
+
+.dropdown-content:hover .dropArrow {
+  display: block;
+}
+
+.dropdown-content {
+  width: 500px;
+}
+
+.iconnew {
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  width: fit-content;
+  border-radius: 5px;
+  height: 45px;
+  width: 45px;
+}

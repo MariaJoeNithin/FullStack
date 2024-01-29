@@ -8,7 +8,7 @@ import {
   Navigate,
 } from "react-router-dom";
 import { useParams } from "react-router-dom";
-// import { useRoutes, useNavigate } from "react-router-dom";
+import { useRoutes, useNavigate } from "react-router-dom";
 
 const BlogPosts = {
   "React Basics": {
@@ -89,6 +89,7 @@ function NoMatch() {
 }
 
 function Stats({ user }) {
+  console.log(user);
   if (!user) {
     return <Navigate to="/login" replace />;
   }
@@ -141,12 +142,12 @@ function Login({ onLogin }) {
 }
 function AppLayout() {
   const [user, setUser] = useState();
+
   const navigate = useNavigate();
   function logOut() {
     setUser(null);
     navigate("/");
   }
-
   return (
     <>
       <nav style={{ margin: 10 }}>

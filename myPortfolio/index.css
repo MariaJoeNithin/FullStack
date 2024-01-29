@@ -1,0 +1,84 @@
+* {
+  font-family: "Space Mono", monospace;
+  box-sizing: border-box;
+}
+
+#page1 {
+  min-height: 100vh;
+  background-image: url("https://cdn.wallpapersafari.com/79/73/TvuM20.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#cnt {
+  backdrop-filter: blur(8px);
+  min-height: 100vh;
+}
+
+#pg1Cnt {
+  backdrop-filter: blur(8px);
+  border-radius: 50px 0px 50px 0px;
+  background-color: rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.25);
+  /* min-height: 75vh; */
+}
+
+.flip-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform-style: preserve-3d;
+  animation: flipIt 5s ease-in-out 0s infinite normal backwards;
+}
+
+#card {
+  width: 75%;
+  height: auto;
+  perspective: 1000px;
+  flex-direction: column;
+  /* transform: rotate3d(2, 2, 2, -5deg); */
+}
+
+#frontside {
+  position: relative;
+  border-radius: 50px 0px 50px 0px;
+  z-index: 5;
+}
+#backside {
+  top: 0;
+  left: 0;
+  position: absolute;
+  transform: rotateY(180deg);
+}
+
+#frontside,
+#backside {
+  width: 100%;
+  height: auto;
+  border-radius: 50px 0px 50px 0px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+
+#frontside img,
+#backside img {
+  width: 100%;
+  min-height: 75vh;
+  object-fit: cover;
+}
+
+@keyframes flipIt {
+  0%,
+  25%,
+  90%,
+  to {
+    transform: rotateY(0deg);
+  }
+  55%,
+  75% {
+    transform: rotateY(-180deg);
+  }
+}
