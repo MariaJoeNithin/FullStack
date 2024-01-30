@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import JsonCardData from "../fullStackDev.json";
+import JsonCardData from "../learninghubdev.json";
 
 const FAQ = () => {
   const Faq = JsonCardData.FAQ;
@@ -10,10 +10,12 @@ const FAQ = () => {
   };
 
   return (
-    <div className="container rounded-md shadow-skillsafari mx-auto  pb-8 px-8">
-      <h2 className="text-2xl font-bold mb-4 py-5 border-b border-gray-300">
-        FAQ
-      </h2>
+    <div className="container mx-auto  pb-8 px-8">
+      <div className="flex justify-center items-center">
+        <h1 className="text-[32px] font-[700] mb-4 border-black border-b-4 text-center inline-block">
+          FAQ
+        </h1>
+      </div>
       <ul className="list-none grid gap-8 md:grid-cols-1 ">
         {Faq.map((item, index) => (
           <li

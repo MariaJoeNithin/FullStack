@@ -60,126 +60,92 @@
       ]
     }
   },
-
-  "Alchemyst Advantage": {
-    "Title": "What's unique about our Full stack developer Course?",
-    "subTopic": {
-      "images": [
-        "https://res.cloudinary.com/skill-safari/image/upload/v1651854913/website/sales_icons/Uniq_1_bmezkp.png",
-        "https://res.cloudinary.com/skill-safari/image/upload/v1651854913/website/sales_icons/uniq_3_tjzulj.png"
-      ],
-      "subTitle": ["Get a Quality Training", "What's really in it for you?"],
-      "Text": [
-        "Get best-in-class quality training from leading professionals working in India working with real-time projects.",
-        "We help students with determination and help them to acquire full-stack developer skills to secure their dream job."
-      ]
-    }
-  },
-  "How Skill Safari work": {
-    "Title": "How does Skill Safari's Full Stack Developer Program work? ",
-    "images": [
-      "https://res.cloudinary.com/skill-safari/image/upload/v1651854139/website/Infograph_2_obw0qm.png"
+  "Stage 2": {
+    "Title": "Stage 2: Choose your career path",
+    "subTopic": "With the help of our fundamentals Unleash your potential with our comprehensive courses designed for aspiring tech enthusiasts and Kick Start your career in IT in any one of the 3 career paths.",
+    "program": [
+      {
+        "Title": "MERN Stack Web Developer",
+        "images": [
+          "https://res.cloudinary.com/skill-safari/image/upload/v1688798287/website/web%20images/Mongo_DB_ogukup.png",
+          "https://res.cloudinary.com/skill-safari/image/upload/v1688798287/website/web%20images/Ex_teewen.png",
+          "https://res.cloudinary.com/skill-safari/image/upload/v1688798287/website/web%20images/Node_cvvhuf.png",
+          "https://res.cloudinary.com/skill-safari/image/upload/v1688798288/website/web%20images/react_rnqzkm.png"
+        ]
+      },
+      {
+        "Title": "Data Analyst",
+        "images": [
+          "https://res.cloudinary.com/skill-safari/image/upload/v1688798287/website/web%20images/Excel_mtnnxi.png",
+          "https://res.cloudinary.com/skill-safari/image/upload/v1688798288/website/web%20images/Python_iewp6w.png",
+          "https://res.cloudinary.com/skill-safari/image/upload/v1688798288/website/web%20images/Scikit_Learn_qtbtxx.png",
+          "https://res.cloudinary.com/skill-safari/image/upload/v1688798288/website/web%20images/Power_BI_qpifbg.png",
+          "https://res.cloudinary.com/skill-safari/image/upload/v1688798288/website/web%20images/Tableau_kmdryn.png"
+        ]
+      },
+      {
+        "Title": "QA/Automation Tester",
+        "images": [
+          "https://res.cloudinary.com/skill-safari/image/upload/v1688798287/website/web%20images/Java_odbpx3.png",
+          "https://res.cloudinary.com/skill-safari/image/upload/v1688798288/website/web%20images/Selenium_n5ferp.png",
+          "https://res.cloudinary.com/skill-safari/image/upload/v1688798288/website/web%20images/Cucumber_tazipp.png",
+          "https://res.cloudinary.com/skill-safari/image/upload/v1688798288/website/web%20images/Testng_esknk7.png"
+        ]
+      }
     ]
   },
+
   "Outcome Based Learning": {
     "Title": "Outcome Based Learning",
     "text": "We at Skill Safari religiously believe in the principles of outcome-based learning.",
     "images": [
-      "https://res.cloudinary.com/skill-safari/image/upload/v1651929561/website/infograph_2_ynnmkj.png"
-    ]
-  },
-  "Course Curriculum": {
-    "Title": "Full Stack Developer Course Curriculum",
-    "WeekSchedule": [
+      "https://res.cloudinary.com/skill-safari/image/upload/v1683791598/OBL_2_1_k04m36.webp"
+    ],
+    "newContent": [
       {
-        "week": "Week 1-5",
-        "moduleTitle": "Web Fundamentals",
-        "description": "Introduction to Web, Developer Tools, Fundamentals of Web Development using HTML, CSS. Version Control using Git & GitHub"
+        "title": "Collaborative Learning",
+        "cnt": "Where students have the opportunity to talk and learn with their peers and industry experts."
       },
       {
-        "week": "Week 6-10",
-        "moduleTitle": "Programming with JavaScript",
-        "description": "Introduction to Programming, Functions and OOP Programming, Data Structures and Algorithms with JavaScript"
+        "title": "Real-Time Learning",
+        "cnt": "As our sessions are live, students can contribute their ideas and opinions in each session effectively."
       },
       {
-        "week": "Week 11-15",
-        "moduleTitle": "JavaScript on the Browser",
-        "description": "Advanced JavaScript, Advanced CSS Working with DOM API & Local Storage"
+        "title": "Goal Based Learning",
+        "cnt": "As our sessions are live, students can contribute their ideas and opinions in each session effectively."
       },
       {
-        "week": "Week 16-20",
-        "moduleTitle": "Working with React",
-        "description": "Introduction to React and React Ecosystem, UI Libraries, Deployment & Unit Testing"
+        "title": "Accountability",
+        "cnt": "We also track quality measures and analyze performance indicators that meet the needs of companies."
       },
       {
-        "week": "Week 21-25",
-        "moduleTitle": "Sever Side Development",
-        "description": "HTTP Protocols, Node.js & Node.js architecture, Express.js, MongoDB & Mongoose ORM, OAuth using Passport.js"
-      },
-      {
-        "week": "Week 26-28",
-        "moduleTitle": "Interview Preparation",
-        "description": "Projects and Peer Programming - Work on collaborative projects exploring all concepts and have pair programming sessions to improve the skills"
+        "title": "Networking",
+        "cnt": "Students are exposed to industry wide experts, allowing them to create a strong network."
       }
     ]
-  },
-  "Instructors": {
-    "Title": "Meet your Instructors",
-    "InstructorDetails": [
-      {
-        "InstructorName": "Kishore Kammela",
-        "images": "https://res.cloudinary.com/skill-safari/image/upload/v1650004266/website/trainers/kishore_ruan1n.png",
-        "profileLink": ["https://www.linkedin.com/in/kskishorebabu/"],
-        "workPlace": "Skill Safari"
-      },
-      {
-        "InstructorName": "Sathish",
-        "images": "https://res.cloudinary.com/skill-safari/image/upload/v1650004276/website/trainers/Sathish_dxpwrt.png",
-        "profileLink": ["https://www.linkedin.com/in/anotherinstructor/"],
-        "workPlace": "Skill Safari"
-      },
-      {
-        "InstructorName": "Dilip",
-        "images": "https://res.cloudinary.com/skill-safari/image/upload/v1650004303/website/trainers/dilip_nqthaw.png",
-        "profileLink": ["https://www.linkedin.com/in/anotherinstructor/"],
-        "workPlace": "Paypal"
-      }
-    ]
-  },
-  "fees": {
-    "title": "Data Science and Machine Learning Experts Course Fees",
-    "card1": {
-      "title": "Upfront Course Fee",
-      "text1": "Pay program fee of ₹ 75000/",
-      "text2": "* Upto 50% Off - Closing soon"
-    },
-    "card2": {
-      "title": "EMI Options",
-      "text1": "Pay your fee in flexible installment"
-    }
   },
   "Certification": {
-    "Title": "Full Stack Developer Course Certification",
-    "text": "Complete all the assignment and projects to earn a certificate of Full Stack Developer Course from Skill Safari. Also, earn a certificate for clearing each module.",
+    "Title": "Get Certified",
+    "text": "You will be given a certificate proving your industry readiness after submitting your projects and passing the pre-placement test.",
     "images": [
-      "https://res.cloudinary.com/skill-safari/image/upload/v1689917271/internship-certificate_yvrmi3.jpg"
+      "https://res.cloudinary.com/skill-safari/image/upload/v1690278539/alchemyst-2.o-certificate_h1ayx1.jpg"
     ]
   },
   "companys": {
     "title": "Hiring Partners",
     "images": [
-      "https://res.cloudinary.com/skill-safari/image/upload/v1650549941/website/company-logo/3_udsdou.png",
-      "https://res.cloudinary.com/skill-safari/image/upload/v1650549940/website/company-logo/11_fagzql.png",
-      "https://res.cloudinary.com/skill-safari/image/upload/v1650549940/website/company-logo/13_tvprkr.png",
-      "https://res.cloudinary.com/skill-safari/image/upload/v1650549940/website/company-logo/12_hoj4gr.png",
-      "https://res.cloudinary.com/skill-safari/image/upload/v1650549940/website/company-logo/10_qfmlvn.png",
-      "https://res.cloudinary.com/skill-safari/image/upload/v1650549939/website/company-logo/5_wgt0xy.png",
-      "https://res.cloudinary.com/skill-safari/image/upload/v1650549939/website/company-logo/9_oiozex.png",
-      "https://res.cloudinary.com/skill-safari/image/upload/v1650549940/website/company-logo/16_w1til3.png",
+      "https://res.cloudinary.com/skill-safari/image/upload/v1683876564/two-hiring-partners/partner-1_msmjyq.webp",
+      "https://res.cloudinary.com/skill-safari/image/upload/v1683876565/two-hiring-partners/Asset_14_zgcnk5.webp",
+      "https://res.cloudinary.com/skill-safari/image/upload/v1683876564/two-hiring-partners/Asset_7_bwqbuf.webp",
+      "https://res.cloudinary.com/skill-safari/image/upload/v1683876564/two-hiring-partners/Asset_8_lbyf1f.webp",
+      "https://res.cloudinary.com/skill-safari/image/upload/v1683876565/two-hiring-partners/Asset_16_j2bscv.webp",
+      "https://res.cloudinary.com/skill-safari/image/upload/v1683876565/two-hiring-partners/Asset_10_gj8qzf.webp",
+      "https://res.cloudinary.com/skill-safari/image/upload/v1683876564/two-hiring-partners/Asset-13_xzdeac.webp",
+      "https://res.cloudinary.com/skill-safari/image/upload/v1683876565/two-hiring-partners/Asset_15_v6gnlq.webp",
       "https://res.cloudinary.com/skill-safari/image/upload/v1650549940/website/company-logo/19_pwqziy.png",
       "https://res.cloudinary.com/skill-safari/image/upload/v1650549940/website/company-logo/15_forjek.png",
-      "https://res.cloudinary.com/skill-safari/image/upload/v1650549941/website/company-logo/21_j5k5qa.png",
-      "https://res.cloudinary.com/skill-safari/image/upload/v1650549941/website/company-logo/24_efmagh.png"
+      "https://res.cloudinary.com/skill-safari/image/upload/v1683876565/two-hiring-partners/Asset_17_iamxxb.webp",
+      "https://res.cloudinary.com/skill-safari/image/upload/v1683876565/two-hiring-partners/Asset-2_z05d3l.webp"
     ],
     "text": "Follow here to know more about our hiring partners?"
   },
@@ -220,36 +186,44 @@
   },
   "FAQ": [
     {
-      "Question": "Who is a Full Stack Developer?",
-      "Answer": "A person who knows to develop both the frontend and backend portions of a web application alongside hosting it on a web server by connecting a database is called a &ldquo;Full Stack Web Developer&rdquo;."
+      "Question": "What is the duration of the program?",
+      "Answer": "The Fundamentals classes would take about two months to complete; after that, the duration would depend on the career path you select."
     },
     {
-      "Question": "Why do companies hire Full Stack Developers?",
-      "Answer": "Companies prefer developers who can be work-efficient and as well as cost-efficient. A Full Stack Developer can help with the whole design structure and he also knows to provide input on any level as need be."
+      "Question": "How do I choose my career path?",
+      "Answer": "In the Alchemyst 2.O program, you will be learning the fundamentals of programming for the first 2 months, and you can also decide which career path and skills to pursue. To upskill yourself to bring out the best in you."
     },
     {
-      "Question": "What are the skill sets of a Full Stack Developer?",
-      "Answer": "A Full Stack Developer major with front-end technology development languages like HTML5, CSS3, JavaScript, Bootstrap and should know at least one server-side programming language, basic design ability, server management, Version Control System (VCS), and knowledge of web services or API."
+      "Question": "How is the Alchemyst 2.0 program different from other courses?",
+      "Answer": "In the Alchemyst 2.O program you can learn the basics of programming and also decide which career path and skills to upskill yourself in order to bring out the best in you."
     },
     {
-      "Question": "What is MERN Stack Web Development?",
-      "Answer": "The term MERN Stack is abbreviated as MongoDB, ExpressJS, ReactJS, NodeJS. MERN is a Full Stack, It follows a 3-tier architectural pattern, including the front-end display tier (React.js), application tier (Express.js and Node.js), and database tier (MongoDB)"
+      "Question": "Is this program meant for beginners?",
+      "Answer": "Absolutely. The program is designed to help you understand fundamental concepts and build up to advanced concepts."
+    },
+    {
+      "Question": "I do not have a technical background. Is it possible for me to learn programming?",
+      "Answer": "Absolutely! You can still learn programming even if you come from a non-technical background. Anyone can quickly become prepared for a tech job with the help of SkillSafari's Alchemyst 2. O program. The programme is best suited for students in their final year, job seekers, and people who want to switch to a tech career. Programming is a skill that can be learned with practice, commitment, and the right direction. Nothing prevents you from joining the programme and landing a tech job, regardless of your degree, branch, grades, or backlogs. You are not required to have any prior coding experience. You’ll learn everything from scratch. Because of your prior experiences, you might be scared to code. However, our enthusiastic instructors will make every concept simple and incorporate teaching strategies supported by science."
+    },
+    {
+      "Question": "What if I can't make it to the training sessions?",
+      "Answer": "Can't make it to the training session? No problem! All sessions are recorded, and you will have lifetime access to the recordings."
+    },
+    {
+      "Question": "How many hours per day should I commit to this program?",
+      "Answer": "We would say you will need a minimum of 2 - 3 hours of commitment per day."
     },
     {
       "Question": "What are logistics required for this program?",
       "Answer": "Minimum 1 Mbps download speed.<br/><ul style={{ listStyleType: 'disc' }}><li>Minimum Computer Hardware Specs -<ul><li>&bull;1 GHz Processor</li><li>&bull;4 GB RAM</li><li>&bull;128 GB Hard Drive</li><li>&bull;Microphone</li><li>&bull;Webcam</li><li>&bull;Smart Mobile Phone for Skill Safari App Access</li></ul></li></ul>"
     },
     {
-      "Question": "What is the duration of the program?",
-      "Answer": "The course duration takes on an average of 7 months. If you are not able to complete the program within the stipulated time, after the one-on-one review, we may consider batch shifting or program extensions based on the discussion."
+      "Question": "When Will I get a certificate?",
+      "Answer": "You will receive a course completion certificate only after 100% completion of the program."
     },
     {
       "Question": "Will there be any possibility that the course might be extended beyond the given stipulated time?",
       "Answer": "The course will not be delayed from Skill Safari's end. But Yes, based on the candidates' request or personal reasons, we may extend the dates. However, this would be done with a proper intimation to the batch and based on the custom plan the progress will be intimated to all the students. We do this to ensure that none of the candidates are missed out on the pace of the program."
-    },
-    {
-      "Question": "What does our Full Stack Developer Course teach you?",
-      "Answer": "The Full Stack Developer Course enables you to build an interactive and responsive application using both front-end and back-end technologies. It covers the fundamentals of JavaScript and Advanced JavaScript concepts and guides you to build a remarkable user interface via Angular or React JS. Also, it provides knowledge to test and deploy code and store data using MongoDB."
     },
     {
       "Question": "What will be the evaluation process in the program?",
@@ -258,15 +232,49 @@
     {
       "Question": "What will happen if you fail the evaluation process?",
       "Answer": "You will be given multiple attempts and you have to redo any particular deliverable. However, if you are still not able to complete the evaluation, you will be shifted to another batch."
+    },
+    {
+      "Question": "Classes will be in online or offline mode?",
+      "Answer": "Skill Safari is the best institute for Mern Stack, Data Analytics, and Automation testing in Coimbatore. Currently, we are conducting only offline mode classes."
     }
   ],
-  "Join_Community": {
-    "images": "https://res.cloudinary.com/skill-safari/image/upload/v1651741962/website/web%20images/Artboard_1_whvu63.jpg",
-    "title": "Alchemyst Community",
-    "content": "Part of the hundreds of activities we have for you. From giveaways to coding challenges, we have everything to keep your mind busy. We also have you covered for the latest news in technology along with getting you new insights about what companies and recruiters are looking for in their candidates. So what are you waiting for? Join the adventure now!"
-  },
   "Knowmore": {
     "Title": "Want to know more about Alchemyst 2.0?",
     "Content": "Want to know how you can join the cohort? or if you have any questions, feel free to connect with our career counsellors."
+  },
+  "CardCarousel": {
+    "images": [
+      "https://res.cloudinary.com/skill-safari/image/upload/v1701061224/website/testimonials/Selvakumar_wuqaxn.webp",
+      "https://res.cloudinary.com/skill-safari/image/upload/v1701061234/website/testimonials/Krishnakumar_dismrh.webp",
+      "https://res.cloudinary.com/skill-safari/image/upload/v1701061226/website/testimonials/Aniket_ourmxh.webp",
+      "https://res.cloudinary.com/skill-safari/image/upload/v1701061233/website/testimonials/Meenaz_Farheen_rnzx1m.webp",
+      "https://res.cloudinary.com/skill-safari/image/upload/v1701061232/website/testimonials/Krithi_Hemanth_hyfarr.webp",
+      "https://res.cloudinary.com/skill-safari/image/upload/v1701061230/website/testimonials/Niharika_f6rynf.webp",
+      "https://res.cloudinary.com/skill-safari/image/upload/v1701061232/website/testimonials/Krithi_Hemanth_hyfarr.webp",
+      "https://res.cloudinary.com/skill-safari/image/upload/v1701061232/website/testimonials/Krithi_Hemanth_hyfarr.webp"
+    ],
+
+    "descriptions": [
+      "Now I have good exposure to building a website and knowledge of full-stack technology. During my training period, I developed various projects like tic-tac-toe, quote generator, to-do checklist, e-commerce. I got placed in a company through the interview provided by Skill Safari.",
+      "I was amazed by the kinds of technology that are out there in the market but didn't know how to use any of them. I was in a tight schedule trying hard to get enough time to balance my work and studies. The trainers, who are very well experienced and cooperative along with the supporting staff, made a lot of things easier in the journey.",
+      "Skill Safari is an awesome skill development platform. I have learned lots of things, not only technical skills but also real-life things. All teams are very helpful in any situation. Thank you, dear Skill Safari team for developing my career life.",
+      "The teaching from the beginning was carried out in the most professional and friendly way. The trainers were very involved in helping me out with doubts at every time. I feel great satisfaction in learning under you guys and glad that every penny that I spent is worth the knowledge that you guys provided me. It's completely rare to have friendly trainers; it's an important factor that you guys excelled in.",
+      "The best live educational platform I have ever come across. Each and every mentor over here takes utmost care of each and every person and helps in every way possible. I really feel overwhelmed and so grateful being one of the students of Skill Safari. Thank you Skill Safari!",
+      "I got to know about Skill Safari from my college mentor, and I'm very thankful for that. I wasn't a computer student in my schooling and PUC, and I lacked self-confidence, but from this program, it gave me self-confidence, and most importantly, I gained a lot of interest forever thankful for it.",
+      "One thing that impressed me about Skill Safari is if I have a question there is always a quick response. I'm already applying what I learned. Course content are Excellent, assignments that we build increase our knowledge, mentoring approach were good. The instructors did a good job of communicating and making it a more intimate arrangement.",
+      "We had a good conversation with mentors and the teaching skills were awesome and they were allowed us to contact them for any doubt and at any time and this might won't happen many times as their teaching was very good and we understood each and ever bit. It will be much worth each rupee you paid and it also not cost too much."
+    ],
+    "rating": ["4.7", "4.5", "4.3", "4.7", "4.5", "4.3", "4.5", "4.5"],
+    "reviewer": [
+      "SelvaKumar",
+      "Krishnakumar P B",
+      "Aniket Prakashrao Dhage",
+      "Dharshini",
+      "Meenaz Farheen Shaik",
+      "Niharika Kiran",
+      "Krithi Hemanth",
+      "Sumanth Valiveti"
+    ],
+    "place": ["Phicode, Coimbatore", "", "", "", "", "TCS, Kochi", "", ""]
   }
 }

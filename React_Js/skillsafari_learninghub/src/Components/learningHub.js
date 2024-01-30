@@ -4,6 +4,9 @@ import Knowmore from "./wantToknowmore";
 import ContactForm from "./clientForm";
 import Section2 from "./Section2";
 import Section3 from "./Section3";
+import FAQ from "./FAQ";
+import Certificate from "./certificate";
+import CardCarousel from "./StudentReview";
 
 const LearningHub = () => {
   const section1 = jsonData.Section1;
@@ -37,6 +40,15 @@ const LearningHub = () => {
       <section id="Section3">
         <Section3 />
       </section>
+      <div className="mt-5 lg:mx-auto max-w-7xl ">
+        <CardCarousel />
+      </div>
+      <div className="mt-5 lg:mx-auto max-w-7xl ">
+        <Certificate />
+      </div>
+      <div className="mt-5 lg:mx-auto max-w-7xl">
+        <FAQ />
+      </div>
       <section id="Section4">
         <Knowmore />
       </section>

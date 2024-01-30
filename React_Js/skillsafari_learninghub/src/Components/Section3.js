@@ -1,5 +1,10 @@
 import React from "react";
 import LearnhubNav from "./LearnhubNav";
+import Stage1 from "./Stage1";
+import Stage2 from "./Stage2";
+import Stage3 from "./Stage3";
+import OutcomeBased from "./OutcomeBased";
+import Company from "./hiring";
 
 const Section3 = () => {
   return (
@@ -11,9 +16,21 @@ const Section3 = () => {
           </div>
           <div className="lg:col-span-6 col">
             <div className="flex flex-col">
-              <div className="col mb-5" id="Alchemyst"></div>
-
-              <div className="col mt-5" id="FAQ"></div>
+              <div className="col mb-5" id="stage1">
+                <Stage1 />
+              </div>
+              <div className="col mb-5" id="stage2">
+                <Stage2 />
+              </div>
+              <div className="col mt-5" id={"OutcomeBased"}>
+                <OutcomeBased />
+              </div>
+              <div className="col mt-5" id="stage3">
+                <Stage3 />
+              </div>
+              <div className="col mt-5" id={"Company"}>
+                <Company />
+              </div>
             </div>
           </div>
         </div>

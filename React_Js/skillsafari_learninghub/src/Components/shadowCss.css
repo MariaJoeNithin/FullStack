@@ -52,3 +52,9 @@
 .button-2:hover {
   border-radius: 50px;
 }
+
+.careerpathTitle {
+  background: -webkit-linear-gradient(#2699fb, #f3274f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
